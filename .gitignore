@@ -1,0 +1,57 @@
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Library/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+obj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+/*.sln
+*.user
+*.unityproj
+*.booproj
+.vs/Supercharger/
+
+GGJ/.vs/GGJ/v15/Server/sqlite3/db.lock
+GGJ/.vs/GGJ/v15/Server/sqlite3/storage.ide
+GGJ/.vs/GGJ/v15/Server/sqlite3/storage.ide-shm
+GGJ/.vs/GGJ/v15/Server/sqlite3/storage.ide-wal
+GGJ/.vs/GGJ/v15/Server/sqlite3/db.lock
+GGJ/.vs/GGJ/v15/Server/sqlite3/storage.ide
+GGJ/.vs/GGJ/v15/Server/sqlite3/storage.ide-shm
+GGJ/.vs/GGJ/v15/Server/sqlite3/storage.ide-wal
+*.ide
+GGJ/.vs/GGJ/v15/Server/sqlite3/db.lock
+GGJ/.vs/GGJ/v15/Server/sqlite3/storage.ide
+GGJ/.vs/GGJ/v15/Server/sqlite3/storage.ide-shm
+GGJ/.vs/GGJ/v15/Server/sqlite3/storage.ide-wal
+Unity_Project_Vrij/.vs/Unity_Project_Vrij/v15/Server/sqlite3/db.lock
+Unity_Project_Vrij/.vs/Unity_Project_Vrij/v15/Server/sqlite3/storage.ide-shm
+Unity_Project_Vrij/.vs/Unity_Project_Vrij/v15/Server/sqlite3/storage.ide-wal
+Unity_Project_Vrij/Assets/_Materials.meta
+Unity_Project_Vrij/Assets/_Prefabs.meta
+Unity_Project_Vrij/Assets/_Sprites.meta
+Unity_Project_Vrij/Assets/_Textures.meta
+Unity_Project_Vrij/.vs/Unity_Project_Vrij/v15/Server/sqlite3/storage.ide-shm
+Unity_Project_Vrij/.vs/Unity_Project_Vrij/v15/Server/sqlite3/storage.ide-wal
+Unity_Project_Vrij/Assets/_Textures.meta
+Unity_Project_Vrij/Assets/_Sprites.meta
+Unity_Project_Vrij/Assets/_Prefabs.meta
+Unity_Project_Vrij/Assets/_Materials.meta
+Unity_Project_Vrij/.vs/Unity_Project_Vrij/v15/Server/sqlite3/storage.ide-wal
+Unity_Project_Vrij/.vs/Unity_Project_Vrij/v15/Server/sqlite3/storage.ide-shm
+Unity_Project_Vrij/ProjectSettings/TagManager.asset
+Unity_Project_Vrij/Assets/_Scenes/WaveTest.unity.meta
+Unity_Project_Vrij/Assets/_Scripts/ObjectPooler.cs.meta
+Unity_Project_Vrij/Assets/_Scripts/WaveSystem.meta
+Unity_Project_Vrij/Assets/_Scripts/WaveSystem/EnemySpawner.cs.meta
+Unity_Project_Vrij/ProjectSettings/ProjectVersion.txt
+
