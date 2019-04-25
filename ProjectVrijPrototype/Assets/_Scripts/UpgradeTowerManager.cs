@@ -4,36 +4,29 @@ using UnityEngine;
 
 public class UpgradeTowerManager : MonoBehaviour
 {
-    public Mesh ArrowTowerUpgradeMesh;
-    public Mesh BombTowerUpgradeMesh;
-    public Mesh MagicTowerUpgradeMesh;
+    public int GoldCost;
 
     private GameObject tower;
+
+    private void Start()
+    {
+        tower = this.transform.parent.gameObject;
+        
+    }
 
     public void UpgradeTower()
     {
         tower = this.transform.parent.gameObject;
-        switch(tower.gameObject.tag)
-        {
-            case "ArrowTower":
-                tower.GetComponent<MeshFilter>().mesh = ArrowTowerUpgradeMesh;
-                break;
-            case "BombTower":
-                tower.GetComponent<MeshFilter>().mesh = BombTowerUpgradeMesh;
-                break;
-            case "MagicTower":
-                tower.GetComponent<MeshFilter>().mesh = MagicTowerUpgradeMesh;
-                break;
-            default:
-                tower.GetComponent<MeshFilter>().mesh = BombTowerUpgradeMesh;
-                break;
-        }
 
+        if (tower.transform.GetChild(1).gameObject.activeSelf)
+            tower.transform.GetChild(2).gameObject.SetActive(true);
+        else
+            tower.transform.GetChild(1).gameObject.SetActive(true);
     }
 
     public void DeleteTower()
     {
         tower = this.transform.parent.gameObject;
-        Destroy(tower);
+        //Destroy(tower.gameObject);
     }
 }
