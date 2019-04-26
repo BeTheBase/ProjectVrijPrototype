@@ -27,6 +27,6 @@ public class UpgradeTowerManager : MonoBehaviour
     public void DeleteTower()
     {
         tower = this.transform.parent.gameObject;
-        //Destroy(tower.gameObject);
+        tower.SetActive(false);
     }
 }

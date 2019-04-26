@@ -1,12 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectTowerManager : MonoBehaviour
 {
     public GameObject ArcherTowerPrefab;
     public GameObject BombTowerPrefab;
     public GameObject MagicTowerPrefab;
+
+    private void Start()
+    {
+        
+    }
 
     public void SetArcherTower()
     {
@@ -25,4 +31,10 @@ public class SelectTowerManager : MonoBehaviour
         Instantiate(MagicTowerPrefab, transform.position - Vector3.up, Quaternion.identity);
         this.gameObject.SetActive(false);
     }
+
+    public void Debugging() => Debug.Log("Test" +
+        "");
+
+
+
 }
