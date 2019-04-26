@@ -270,7 +270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1045284971611166424}
-  - component: {fileID: 55292572402540589}
+  - component: {fileID: 6468798068150803359}
   m_Layer: 0
   m_Name: Crossbow_Tower
   m_TagString: Tower
@@ -296,7 +296,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &55292572402540589
+--- !u!114 &6468798068150803359
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,12 +305,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8408892748960204495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b51b4d7fd6b817438fec9697f89bd7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d57eb61575480949b684a78461da51a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
   Range: 5
-  FireRate: 5
+  FireRate: 3
   Damage: 1
-  CurrentTower: {fileID: 0}
+  objectPooler: {fileID: 0}
   FirePoint: {fileID: 1015139269}

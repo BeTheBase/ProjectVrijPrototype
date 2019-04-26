@@ -12,9 +12,9 @@ public class Turret : MonoBehaviour
     public float Damage;
 
     private GameObject Enemies;
-    ObjectPooler objectPooler;
+    [HideInInspector]
+    public ObjectPooler objectPooler;
     private float FireCooldown;
-    public Transform CurrentTower;
     public Transform FirePoint;
 
     // Start is called before the first frame update
@@ -85,15 +85,9 @@ public class Turret : MonoBehaviour
 
     }
 
-    void Shoot()
+    public virtual void Shoot()
     {    
-        GameObject Arrow = objectPooler.SpawnFromPool("Arrow", FirePoint.position, transform.rotation);
-        ArrowProjectile ArrowScript = Arrow.GetComponent<ArrowProjectile>();
-        if(ArrowScript != null)
-        {
-            ArrowScript.Target = Target;
-            ArrowScript.Damage = Damage;
-        }
+        //This Method is meant to be overridden.
     }
 
     private void OnDrawGizmosSelected()

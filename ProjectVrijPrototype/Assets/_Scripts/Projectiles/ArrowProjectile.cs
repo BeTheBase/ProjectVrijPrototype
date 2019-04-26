@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowProjectile : MonoBehaviour
+public class ArrowProjectile : BaseProjectile
 {
-    public Transform Target;
-
-    public float Damage;
-    public float Speed = 50f;
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
         if(Target == null)
         {
@@ -29,7 +25,7 @@ public class ArrowProjectile : MonoBehaviour
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
 
-    void HitTarget()
+    public override void HitTarget()
     {
         Target.GetComponent<BaseEnemy>().Health -= Damage;
         gameObject.SetActive(false);
