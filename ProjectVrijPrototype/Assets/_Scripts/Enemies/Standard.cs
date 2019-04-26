@@ -15,6 +15,8 @@ public class Standard : MonoBehaviour
 
     private EnemySpawner enemySpawner;
     private GameManager gameManager;
+    private ObjectPooler objectPooler;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class Standard : MonoBehaviour
         agent = GetComponentInChildren<NavMeshAgent>();
         enemySpawner = EnemySpawner.Instance;
         gameManager = GameManager.Instance;
+        objectPooler = ObjectPooler.Instance;
         agent.SetDestination((gameManager.EndPosition));
     }
 
@@ -35,9 +38,7 @@ public class Standard : MonoBehaviour
         }
         if(Health <= 0)
         {
-            enemySpawner.EnemiesAlive--;
-            gameManager.Gold += GoldGiven;
-            gameObject.SetActive(false);
+            Die();
         }
     }
 
@@ -48,5 +49,13 @@ public class Standard : MonoBehaviour
             enemySpawner.EnemiesAlive--;
             gameObject.SetActive(false);
         }
+    }
+
+    private void Die()
+    {
+        GameObject Effect = objectPooler.SpawnFromPool("Blood", transform.position, Quaternion.identity);
+        enemySpawner.EnemiesAlive--;
+        gameManager.Gold += GoldGiven;
+        gameObject.SetActive(false);
     }
 }

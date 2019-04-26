@@ -397,6 +397,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 55292572402540589, guid: b807dbaab1c05f74ebd1fae24802598a,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b807dbaab1c05f74ebd1fae24802598a, type: 3}
 --- !u!1001 &465386578
@@ -840,10 +845,14 @@ MonoBehaviour:
   - tag: Enemy1
     prefab: {fileID: 7395922299695963067, guid: 8459ee4fc2c44b8478d8b24188370a16,
       type: 3}
-    size: 100
+    size: 200
   - tag: Arrow
     prefab: {fileID: 135609444929465615, guid: c88ae39879389a5409cf10461ada6ad0, type: 3}
     size: 1000
+  - tag: Blood
+    prefab: {fileID: 5383252717422978897, guid: 29c264c997cbeb645bca37ef11bb1620,
+      type: 3}
+    size: 250
 --- !u!4 &1433016243
 Transform:
   m_ObjectHideFlags: 0
