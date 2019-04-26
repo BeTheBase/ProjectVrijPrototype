@@ -193,7 +193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6435262008806598678}
-  - component: {fileID: 1410586534397055591}
+  - component: {fileID: 5937671051683078047}
   m_Layer: 0
   m_Name: Bomb_Tower
   m_TagString: Tower
@@ -219,7 +219,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1410586534397055591
+--- !u!114 &5937671051683078047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,15 +228,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4219267441123661209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b51b4d7fd6b817438fec9697f89bd7e, type: 3}
+  m_Script: {fileID: 11500000, guid: ab6502704a831b74cb7e98062ed2bd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  Range: 5
-  FireRate: 1
-  Damage: 3
+  Range: 100
+  FireRate: 0
+  Damage: 0
   objectPooler: {fileID: 0}
-  FirePoint: {fileID: 113049959}
+  FirePoint: {fileID: 0}
 --- !u!1 &4893571466030317675
 GameObject:
   m_ObjectHideFlags: 0

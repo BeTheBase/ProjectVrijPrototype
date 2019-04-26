@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class BombProjectile : BaseProjectile
 {
+    protected float Animation;
+    private Vector3 TargetPosition;
+    public SphereCollider Trigger;
+    Vector3 dir;
+
+    private void Start()
+    {
+        TargetPosition = Target.position;
+        dir = Target.position - transform.position;        
+    }
+
     // Update is called once per frame
     public override void Update()
     {
@@ -12,22 +23,30 @@ public class BombProjectile : BaseProjectile
             gameObject.SetActive(false);
             return;
         }
-        transform.LookAt(Target);
-        Vector3 dir = Target.position - transform.position;
         float distanceThisFrame = Speed * Time.deltaTime;
+        transform.Translate(dir.normalized * distanceThisFrame * 0.35f, Space.World);
+    }
 
-        if (dir.magnitude <= distanceThisFrame)
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.transform.tag == "Ground" || collision.transform.tag == "Enemy")
         {
-            HitTarget();
-            return;
+            print("dasd");
+
+            Trigger.enabled = true;
+            Trigger.enabled = false;
+            gameObject.SetActive(false);
+        }
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Enemy")
+        {
+            print("BOOP");
+            Target.GetComponent<BaseEnemy>().Health -= Damage;
+
         }
 
-        transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
 
-    public override void HitTarget()
-    {
-        Target.GetComponent<BaseEnemy>().Health -= Damage;
-        gameObject.SetActive(false);
-    }
 }
