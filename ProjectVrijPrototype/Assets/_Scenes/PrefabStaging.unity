@@ -213,11 +213,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SelectTowerUpgradeUI
       objectReference: {fileID: 0}
-    - target: {fileID: 9119772138370124563, guid: 231f299ba32d1d34daa8ad3013767d8c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9119772138370124559, guid: 231f299ba32d1d34daa8ad3013767d8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -231,7 +226,7 @@ PrefabInstance:
     - target: {fileID: 9119772138370124559, guid: 231f299ba32d1d34daa8ad3013767d8c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.21548456
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9119772138370124559, guid: 231f299ba32d1d34daa8ad3013767d8c,
         type: 3}
@@ -276,12 +271,12 @@ PrefabInstance:
     - target: {fileID: 9119772138370124559, guid: 231f299ba32d1d34daa8ad3013767d8c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -15.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9119772138370124559, guid: 231f299ba32d1d34daa8ad3013767d8c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.34
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9119772138370124559, guid: 231f299ba32d1d34daa8ad3013767d8c,
         type: 3}
@@ -328,6 +323,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2075541731}
+    - target: {fileID: 1256447881, guid: 231f299ba32d1d34daa8ad3013767d8c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 231f299ba32d1d34daa8ad3013767d8c, type: 3}
 --- !u!1 &455477278 stripped
