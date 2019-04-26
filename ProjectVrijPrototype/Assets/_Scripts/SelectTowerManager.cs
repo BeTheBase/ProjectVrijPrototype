@@ -10,19 +10,19 @@ public class SelectTowerManager : MonoBehaviour
 
     public void SetArcherTower()
     {
-        Instantiate(ArcherTowerPrefab, transform.position - Vector3.up, Quaternion.identity);
+        Instantiate(ArcherTowerPrefab, transform.position - Vector3.up, Quaternion.identity, transform.parent);
         this.gameObject.SetActive(false);
     }
 
     public void SetBombTower()
     {
-        Instantiate(BombTowerPrefab, transform.position - Vector3.up, Quaternion.identity);
+        Instantiate(BombTowerPrefab, transform.position - Vector3.up, Quaternion.identity, transform.parent);
         this.gameObject.SetActive(false);
     }
 
     public void SetMagicTower()
     {
-        Instantiate(MagicTowerPrefab, transform.position - Vector3.up, Quaternion.identity);
+        Instantiate(MagicTowerPrefab, transform.position - Vector3.up, Quaternion.identity, transform.parent);
         this.gameObject.SetActive(false);
     }
 }
