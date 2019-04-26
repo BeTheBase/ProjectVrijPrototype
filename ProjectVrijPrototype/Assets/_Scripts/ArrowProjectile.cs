@@ -31,7 +31,7 @@ public class ArrowProjectile : MonoBehaviour
 
     void HitTarget()
     {
-        Target.GetComponent<Standard>().Health -= Damage;
+        Target.GetComponent<BaseEnemy>().Health -= Damage;
         gameObject.SetActive(false);
     }
 }

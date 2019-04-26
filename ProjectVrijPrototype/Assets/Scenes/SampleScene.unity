@@ -627,7 +627,7 @@ MonoBehaviour:
   EnemiesAlive: 0
   waves:
   - enemyPrefabs:
-    - {fileID: 7395922299695963067, guid: 8459ee4fc2c44b8478d8b24188370a16, type: 3}
+    - {fileID: 8985831865071370129, guid: 8459ee4fc2c44b8478d8b24188370a16, type: 3}
     enemyAmounts: 64000000
     spawnRate: 1
   enemiesToSpawn: 0
@@ -843,7 +843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pools:
   - tag: Enemy1
-    prefab: {fileID: 7395922299695963067, guid: 8459ee4fc2c44b8478d8b24188370a16,
+    prefab: {fileID: 8985831865071370129, guid: 8459ee4fc2c44b8478d8b24188370a16,
       type: 3}
     size: 200
   - tag: Arrow
