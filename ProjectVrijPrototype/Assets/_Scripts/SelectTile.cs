@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SelectTile : MonoBehaviour
 {
+    public static SelectTile Instance;
     public GameObject SelectedGameObject;
     public GameObject UISelectTowerPrefab;
     public GameObject UISelectUpgradePrefab;
@@ -13,6 +14,7 @@ public class SelectTile : MonoBehaviour
     // Use this for initialization
     public void Awake()
     {
+        Instance = this;
         _mainCamera = Camera.main;
     }
 
