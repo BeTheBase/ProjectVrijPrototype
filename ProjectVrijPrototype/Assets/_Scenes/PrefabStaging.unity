@@ -305,7 +305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -349,6 +349,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+--- !u!1001 &604996519
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 129229053, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+      propertyPath: m_Name
+      value: TowerTileFIXED (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.08499102
+      objectReference: {fileID: 0}
+    - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9963817
+      objectReference: {fileID: 0}
+    - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
 --- !u!1 &767848860
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +417,7 @@ GameObject:
   - component: {fileID: 767848862}
   - component: {fileID: 767848861}
   - component: {fileID: 767848863}
+  - component: {fileID: 767848864}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -413,6 +471,31 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &767848864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767848860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294556bd66d9be246a9f44be0f242725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TowerDatas:
+  - name: CrossBowTower
+    Tower: {fileID: 6594468594117995904, guid: 9e78f503e628dc243abf0794f63a17ef, type: 3}
+    GoldCost: 90
+    UpgradeGoldCost: 110
+  - name: BombTower
+    Tower: {fileID: 5891830963228214072, guid: 42607e074230b88448e0e7f8bed51afd, type: 3}
+    GoldCost: 120
+    UpgradeGoldCost: 200
+  - name: MagicTower
+    Tower: {fileID: 7120660010649485998, guid: 04de35a1d2d837944aed8ca9d0dc0bbc, type: 3}
+    GoldCost: 160
+    UpgradeGoldCost: 300
 --- !u!1 &1136492675 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4338419613744223807, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,

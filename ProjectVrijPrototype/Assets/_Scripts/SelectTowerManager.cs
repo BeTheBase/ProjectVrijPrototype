@@ -5,30 +5,43 @@ using UnityEngine.UI;
 
 public class SelectTowerManager : MonoBehaviour
 {
-    public GameObject ArcherTowerPrefab;
-    public GameObject BombTowerPrefab;
-    public GameObject MagicTowerPrefab;
+    public static bool CheckTowerStatus = true;
+
+    public string TowerCostString = "Tower Cost:";
+
+    public Text[] TowerCostTextFields;
+
+    private void Awake()
+    {
+        gameObject.SetActive(false);
+    }
 
     private void Start()
     {
-        
+        if (TowerDataManager.Instance.TowerDatas != null)
+        {
+            for (int index = 0; index <= TowerCostTextFields.Length -1; index++)
+            {
+                TowerCostTextFields[index].text = TowerCostString + TowerDataManager.Instance.TowerDatas[index].GoldCost;
+            }
+        }
     }
 
     public void SetArcherTower()
     {
-        Instantiate(ArcherTowerPrefab, transform.position - Vector3.up, Quaternion.identity);
+        Instantiate(TowerDataManager.Instance.TowerDatas[0].Tower, transform.position - Vector3.up, Quaternion.identity);
         this.gameObject.SetActive(false);
     }
 
     public void SetBombTower()
     {
-        Instantiate(BombTowerPrefab, transform.position - Vector3.up, Quaternion.identity);
+        Instantiate(TowerDataManager.Instance.TowerDatas[1].Tower, transform.position - Vector3.up, Quaternion.identity);
         this.gameObject.SetActive(false);
     }
 
     public void SetMagicTower()
     {
-        Instantiate(MagicTowerPrefab, transform.position - Vector3.up, Quaternion.identity);
+        Instantiate(TowerDataManager.Instance.TowerDatas[2].Tower, transform.position - Vector3.up, Quaternion.identity);
         this.gameObject.SetActive(false);
     }
 
