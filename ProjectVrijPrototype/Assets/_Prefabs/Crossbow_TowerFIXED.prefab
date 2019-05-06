@@ -241,6 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3206122179704512801}
   - component: {fileID: 4802484124826668900}
+  - component: {fileID: 2288574457307133496}
   m_Layer: 0
   m_Name: Crossbow_TowerFIXED
   m_TagString: Tower
@@ -278,3 +279,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &2288574457307133496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6594468594117995904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d57eb61575480949b684a78461da51a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  Range: 5
+  FireRate: 3
+  Damage: 1
+  objectPooler: {fileID: 0}
+  FirePoint: {fileID: 3194186749119297837}
