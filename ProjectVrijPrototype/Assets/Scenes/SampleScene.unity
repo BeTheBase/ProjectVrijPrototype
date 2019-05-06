@@ -787,7 +787,7 @@ MonoBehaviour:
   - tag: Bomb
     prefab: {fileID: 6094023973490576796, guid: 98c8836cdde2e1a47b74374b4828553d,
       type: 3}
-    size: 500
+    size: 2
 --- !u!4 &1433016243
 Transform:
   m_ObjectHideFlags: 0
@@ -1270,17 +1270,22 @@ PrefabInstance:
     - target: {fileID: 5937671051683078047, guid: b14f57825caafe146993a1314ad24861,
         type: 3}
       propertyPath: FireRate
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5937671051683078047, guid: b14f57825caafe146993a1314ad24861,
         type: 3}
       propertyPath: Damage
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5937671051683078047, guid: b14f57825caafe146993a1314ad24861,
         type: 3}
       propertyPath: FirePoint
       value: 
       objectReference: {fileID: 113049959}
+    - target: {fileID: 5937671051683078047, guid: b14f57825caafe146993a1314ad24861,
+        type: 3}
+      propertyPath: Range
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b14f57825caafe146993a1314ad24861, type: 3}

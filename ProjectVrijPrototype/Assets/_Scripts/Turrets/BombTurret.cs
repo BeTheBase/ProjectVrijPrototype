@@ -12,6 +12,8 @@ public class BombTurret : Turret
         {
             BombScript.Target = Target;
             BombScript.Damage = Damage;
+            BombScript.FirePoint = FirePoint;
+            //BombScript.CreateTrajectory();
         }
     }
 

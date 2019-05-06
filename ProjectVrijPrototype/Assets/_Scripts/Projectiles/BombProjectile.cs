@@ -8,12 +8,44 @@ public class BombProjectile : BaseProjectile
     private Vector3 TargetPosition;
     public SphereCollider Trigger;
     Vector3 dir;
+    public Transform Trajectory;
+    public Transform FirePoint;
+    private MeshRenderer meshRenderer;
+    private Rigidbody rigidBody;
 
     private void Start()
     {
+        rigidBody = GetComponent<Rigidbody>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.enabled = true;
+        Trigger.enabled = false;
         TargetPosition = Target.position;
-        dir = Target.position - transform.position;        
+        dir = Target.position - transform.position;
     }
+
+    private void OnEnable()
+    {
+        rigidBody = GetComponent<Rigidbody>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.enabled = true;
+        Trigger.enabled = false;
+        if(Target != null)
+        {
+            TargetPosition = Target.position;
+            dir = Target.position - transform.position;
+        }
+
+    }
+
+    //Trajectory for parabola
+    /*
+    public void CreateTrajectory()
+    {
+        Trajectory.GetChild(0).position = FirePoint.positio;
+        Trajectory.GetChild(1).position = new Vector3(Vector3.Distance(transform.position, Target.transform.position) / 2, transform.position.y + 4f, Vector3.Distance(transform.position, Target.transform.position) / 2);
+        Trajectory.GetChild(2).position = Target.transform.position;
+    }
+    */
 
     // Update is called once per frame
     public override void Update()
@@ -23,30 +55,46 @@ public class BombProjectile : BaseProjectile
             gameObject.SetActive(false);
             return;
         }
+        Vector3 dir = TargetPosition - transform.position;
+
         float distanceThisFrame = Speed * Time.deltaTime;
+
+
+        if (dir.magnitude <= distanceThisFrame)
+        {
+            HitTarget();
+            return;
+        }
+
         transform.Translate(dir.normalized * distanceThisFrame * 0.35f, Space.World);
+
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public override void HitTarget()
     {
-        if(collision.transform.tag == "Ground" || collision.transform.tag == "Enemy")
-        {
-            print("dasd");
-
-            Trigger.enabled = true;
-            Trigger.enabled = false;
-            gameObject.SetActive(false);
-        }
+        StartCoroutine(Explode());
     }
-    public void OnTriggerEnter(Collider other)
+    
+    IEnumerator Explode()
     {
-        if(other.tag == "Enemy")
-        {
-            print("BOOP");
-            Target.GetComponent<BaseEnemy>().Health -= Damage;
-
-        }
-
+        rigidBody.isKinematic = true;
+        meshRenderer.enabled = false;
+        Trigger.enabled = true;
+        yield return new WaitForSeconds(0.25f);
+        Trigger.enabled = false;
+        gameObject.SetActive(false);
+        meshRenderer.enabled = true;
+        rigidBody.isKinematic = false;
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, Trigger.radius /5f);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        other.GetComponent<BaseEnemy>().Health -= Damage;
+    }
 }
