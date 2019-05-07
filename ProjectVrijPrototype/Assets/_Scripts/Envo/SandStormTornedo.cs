@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SandStormTornedo : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class SandStormTornedo : MonoBehaviour
 
     private void UpdateTarget()
     {
-        StartCoroutine(StartDelay(DelayTime));
+        //StartCoroutine(StartDelay(DelayTime));
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
@@ -43,13 +44,13 @@ public class SandStormTornedo : MonoBehaviour
                 //target.gameObject.AddComponent<Rigidbody>();
                 AttackEnemy();
             }
-
+            /*
             if (nearestEnemy != null && shortestDistance <= PickRange)
             {
                 target = nearestEnemy.transform;
                 //target.gameObject.AddComponent<Rigidbody>();
-                TornedoSwirl();
-            }
+                //TornedoSwirl();
+            }*/
         }
 
     }
@@ -70,13 +71,23 @@ public class SandStormTornedo : MonoBehaviour
 
     }
 
+    private void TornedoPull()
+    {
+        target.GetComponent<NavMeshAgent>().enabled = false;
+        Vector3 direction = transform.position - target.transform.position;
+
+        target.GetComponent<Rigidbody>().AddForce(direction * TwirlForce * (1 / Vector3.Distance(transform.position, target.transform.position)), ForceMode.Impulse);
+    }
+
     private void TornedoSwirl()
     {
+        target.GetComponent<NavMeshAgent>().enabled = false;
+
         Vector3 direction = transform.position - target.transform.position;
         float distance = Vector3.Distance(transform.position, target.transform.position) * MoveRange;
         float swirlForce = SwirlForce - distance;
-        if (swirlForce < -5) swirlForce = -5;
-        if (swirlForce > 5) swirlForce = 5;
+        if (swirlForce < 0) swirlForce = 0;
+        if (swirlForce > 3) swirlForce = 3;
 
         //Adding rigidbody and force to enemy
         Rigidbody targetBody = target.gameObject.GetComponent<Rigidbody>();
@@ -89,14 +100,25 @@ public class SandStormTornedo : MonoBehaviour
         Foo = Foo * -1;
         final = Quaternion.Euler(0, 90, 0) * Foo;
         target.gameObject.GetComponent<Rigidbody>().AddForce(final * (swirlForce / TwirlForce));
+        StartCoroutine(WaitAndDie());
+        //InvokeRepeating("UpdateTarget", 0f, 0.5f);
+
+    }
+
+    private IEnumerator WaitAndDie()
+    {
+        yield return new WaitForSeconds(DelayTime);
+        target.GetComponent<BaseEnemy>().Die();
 
     }
 
     private void Update()
     {
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y + 10 * Time.deltaTime, transform.localEulerAngles.z);
         if (target == null) return;
 
         TornedoSwirl();
+        //TornedoPull();
     }
 
     private void OnDrawGizmosSelected()

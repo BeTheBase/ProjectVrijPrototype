@@ -48,7 +48,7 @@ public class BaseEnemy : MonoBehaviour
             MadeIt();
     }
 
-    private void Die()
+    public void Die()
     {
         GameObject Effect = objectPooler.SpawnFromPool("Blood", transform.position, Quaternion.identity);
         enemySpawner.EnemiesAlive--;
