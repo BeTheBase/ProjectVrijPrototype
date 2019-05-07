@@ -204,7 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
   Damage: 3
-  Speed: 50
+  Speed: 30
   Trigger: {fileID: 11918074898350676}
   Trajectory: {fileID: 8817127953919656996}
   FirePoint: {fileID: 0}
@@ -359,7 +359,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 8
+  m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8038799511793214225
 GameObject:

@@ -232,11 +232,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  Range: 100
-  FireRate: 0
-  Damage: 0
+  Range: 5
+  FireRate: 0.5
+  Damage: 2
   objectPooler: {fileID: 0}
-  FirePoint: {fileID: 0}
+  FirePoint: {fileID: 113049959}
 --- !u!1 &4893571466030317675
 GameObject:
   m_ObjectHideFlags: 0

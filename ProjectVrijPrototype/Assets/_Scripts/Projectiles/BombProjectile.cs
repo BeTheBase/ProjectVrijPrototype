@@ -12,9 +12,11 @@ public class BombProjectile : BaseProjectile
     public Transform FirePoint;
     private MeshRenderer meshRenderer;
     private Rigidbody rigidBody;
+    private ObjectPooler objectPooler;
 
     private void Start()
     {
+        objectPooler = ObjectPooler.Instance;
         rigidBody = GetComponent<Rigidbody>();
         meshRenderer = GetComponent<MeshRenderer>();
         meshRenderer.enabled = true;
@@ -23,19 +25,6 @@ public class BombProjectile : BaseProjectile
         dir = Target.position - transform.position;
     }
 
-    private void OnEnable()
-    {
-        rigidBody = GetComponent<Rigidbody>();
-        meshRenderer = GetComponent<MeshRenderer>();
-        meshRenderer.enabled = true;
-        Trigger.enabled = false;
-        if(Target != null)
-        {
-            TargetPosition = Target.position;
-            dir = Target.position - transform.position;
-        }
-
-    }
 
     //Trajectory for parabola
     /*
@@ -78,6 +67,8 @@ public class BombProjectile : BaseProjectile
     IEnumerator Explode()
     {
         rigidBody.isKinematic = true;
+        GameObject Effect = objectPooler.SpawnFromPool("Explosion", transform.position, Quaternion.identity);
+        Effect.transform.localScale = new Vector3(Trigger.radius, Trigger.radius, Trigger.radius) / 2.5f;
         meshRenderer.enabled = false;
         Trigger.enabled = true;
         yield return new WaitForSeconds(0.25f);

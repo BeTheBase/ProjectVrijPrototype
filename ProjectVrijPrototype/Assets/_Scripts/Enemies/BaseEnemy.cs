@@ -17,6 +17,8 @@ public class BaseEnemy : MonoBehaviour
     private GameManager gameManager;
     private ObjectPooler objectPooler;
 
+    public bool IsSlowed;
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,9 +55,19 @@ public class BaseEnemy : MonoBehaviour
 
     private void Die()
     {
-        GameObject Effect = objectPooler.SpawnFromPool("Blood", transform.position, Quaternion.identity);
+        objectPooler.SpawnFromPool("Blood", transform.position, Quaternion.identity);
         enemySpawner.EnemiesAlive--;
         gameManager.Gold += GoldGiven;
         gameObject.SetActive(false);
+    }
+
+    public IEnumerator Slow(float slowMultiplier, float slowTime)
+    {
+        IsSlowed = true;
+        float baseSpeed = agent.speed;
+        agent.speed *= slowMultiplier;
+        yield return new WaitForSeconds(slowTime);
+        agent.speed = baseSpeed;
+        IsSlowed = false;
     }
 }
