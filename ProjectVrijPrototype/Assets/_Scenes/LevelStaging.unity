@@ -1084,114 +1084,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725229406}
   m_CullTransparentMesh: 0
---- !u!1 &767848860
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 767848862}
-  - component: {fileID: 767848861}
-  - component: {fileID: 767848863}
-  - component: {fileID: 767848864}
-  - component: {fileID: 767848865}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &767848861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767848860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d499e765b0e9c343b2752c7adffce36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SelectedGameObject: {fileID: 0}
-  UISelectTowerPrefab: {fileID: 840630799}
-  UISelectUpgradePrefab: {fileID: 455477278}
---- !u!4 &767848862
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767848860}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 947.105, y: 322.55325, z: 322.6307}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &767848863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767848860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38535b313e8688746af5ad5c66b9f17b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &767848864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767848860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 294556bd66d9be246a9f44be0f242725, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TowerDatas:
-  - name: CrossBowTower
-    Tower: {fileID: 6594468594117995904, guid: 9e78f503e628dc243abf0794f63a17ef, type: 3}
-    GoldCost: 90
-    UpgradeGoldCost: 110
-  - name: BombTower
-    Tower: {fileID: 5891830963228214072, guid: 42607e074230b88448e0e7f8bed51afd, type: 3}
-    GoldCost: 120
-    UpgradeGoldCost: 200
-  - name: MagicTower
-    Tower: {fileID: 7120660010649485998, guid: 04de35a1d2d837944aed8ca9d0dc0bbc, type: 3}
-    GoldCost: 160
-    UpgradeGoldCost: 300
---- !u!114 &767848865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767848860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c341e760810bed345b27ab609128b585, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EndPosition: {x: 22.9, y: 1.72, z: 4.7}
-  GoldText: {fileID: 725229408}
-  LivesText: {fileID: 1695172888}
-  Gold: 1000
-  Lives: 3
 --- !u!1001 &793735245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1327,7 +1219,7 @@ MonoBehaviour:
     spawnRate: 1
   enemiesToSpawn: 0
   spawnPoints:
-  - {x: -22.8, y: 1.72, z: -4.7}
+  - {fileID: 422445132}
 --- !u!4 &838961048
 Transform:
   m_ObjectHideFlags: 0
@@ -2327,7 +2219,7 @@ GameObject:
   - component: {fileID: 1667550114}
   m_Layer: 0
   m_Name: EndPointA
-  m_TagString: Untagged
+  m_TagString: End
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3061,3 +2953,97 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1001 &6526810247087315869
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6526810247720380929, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380931, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 947.105
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380931, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 322.55325
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380931, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 322.6307
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380931, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380931, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380931, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380931, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380931, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380931, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380931, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380931, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380928, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: UISelectTowerPrefab
+      value: 
+      objectReference: {fileID: 840630799}
+    - target: {fileID: 6526810247720380928, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: UISelectUpgradePrefab
+      value: 
+      objectReference: {fileID: 455477278}
+    - target: {fileID: 6526810247720380988, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: EndPosition
+      value: 
+      objectReference: {fileID: 1667550114}
+    - target: {fileID: 6526810247720380988, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: GoldText
+      value: 
+      objectReference: {fileID: 725229408}
+    - target: {fileID: 6526810247720380988, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: LivesText
+      value: 
+      objectReference: {fileID: 1695172888}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4df7691316f35f54fbce5cc612bef6b7, type: 3}

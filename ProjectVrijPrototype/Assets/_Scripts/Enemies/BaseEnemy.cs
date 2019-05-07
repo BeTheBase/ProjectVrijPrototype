@@ -25,7 +25,7 @@ public class BaseEnemy : MonoBehaviour
         enemySpawner = EnemySpawner.Instance;
         gameManager = GameManager.Instance;
         objectPooler = ObjectPooler.Instance;
-        agent.SetDestination((gameManager.EndPosition));
+        agent.SetDestination((gameManager.EndPosition.position));
     }
 
     // Update is called once per frame
@@ -42,13 +42,10 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void LateUpdate()
     {
-        if(collision.transform.tag == "End")
-        {
-            enemySpawner.EnemiesAlive--;
-            gameObject.SetActive(false);
-        }
+        if (Vector3.Distance(gameManager.EndPosition.position, transform.position) < 5f)
+            MadeIt();
     }
 
     private void Die()
@@ -57,5 +54,12 @@ public class BaseEnemy : MonoBehaviour
         enemySpawner.EnemiesAlive--;
         gameManager.Gold += GoldGiven;
         gameObject.SetActive(false);
+    }
+
+    private void MadeIt()
+    {
+        enemySpawner.EnemiesAlive--;
+        gameObject.SetActive(false);
+        gameManager.Lives--;
     }
 }
