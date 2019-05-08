@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class ArrowProjectile : BaseProjectile
 {
+    ObjectPooler objectPooler;
+    public Transform FirePoint;
+
+
+    private void Start()
+    {
+        objectPooler = ObjectPooler.Instance;
+    }
+
     // Update is called once per frame
     public override void Update()
     {
@@ -27,6 +36,14 @@ public class ArrowProjectile : BaseProjectile
 
     public override void HitTarget()
     {
+        GameObject BloodHit = objectPooler.SpawnFromPool("BloodHit", FirePoint.position, transform.rotation);
+
+        Vector3 dir = FirePoint.position - Target.position;
+
+        BloodHit.transform.position = Target.position + dir.normalized * 0.5f;
+
+        BloodHit.transform.rotation = Quaternion.LookRotation(dir);
+
         Target.GetComponent<BaseEnemy>().Health -= Damage;
         gameObject.SetActive(false);
     }

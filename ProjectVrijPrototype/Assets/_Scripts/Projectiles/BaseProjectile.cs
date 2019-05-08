@@ -5,6 +5,8 @@ using UnityEngine;
 public class BaseProjectile : MonoBehaviour
 {
     public Transform Target;
+    private ObjectPooler objectPooler;
+
 
     public float Damage;
     public float Speed = 50f;

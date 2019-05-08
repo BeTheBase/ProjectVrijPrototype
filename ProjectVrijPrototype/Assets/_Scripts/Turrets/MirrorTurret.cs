@@ -17,38 +17,40 @@ public class MirrorTurret : Turret
         lineRenderer = GetComponent<LineRenderer>(); 
     }
 
-    public override void Shoot()
-    {
-    }
-
     public override void Update()
     {
         base.Update();
+        Laser();
+    }
+
+    void Laser()
+    {
         lineRenderer.SetPosition(0, FirePoint.position);
-        if(Target == null)
+        if (Target == null)
         {
             lineRenderer.enabled = false;
             SparkEffect.Stop();
             return;
         }
-        if(Target != null)
+        if (Target != null)
         {
             if (!lineRenderer.enabled)
             {
                 lineRenderer.enabled = true;
                 SparkEffect.Play();
-            }           
+            }
             lineRenderer.SetPosition(1, Target.position);
 
             Vector3 dir = FirePoint.position - Target.position;
 
             SparkEffect.transform.position = Target.position + dir.normalized * 0.5f;
 
+            SparkEffect.transform.rotation = Quaternion.LookRotation(dir);
 
             BaseEnemy EnemyScript = Target.GetComponent<BaseEnemy>();
 
             EnemyScript.GetComponent<BaseEnemy>().Health -= Damage / 120;
-            if(!EnemyScript.IsSlowed)
+            if (!EnemyScript.IsSlowed)
             {
                 StartCoroutine(EnemyScript.Slow(0.6f, 2.5f));
             }
