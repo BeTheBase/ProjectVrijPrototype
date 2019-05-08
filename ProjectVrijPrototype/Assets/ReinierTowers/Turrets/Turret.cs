@@ -16,7 +16,7 @@ public class Turret : MonoBehaviour
     public ObjectPooler objectPooler;
     private float FireCooldown;
     public Transform FirePoint;
-
+    public bool HasFireDelay;
     // Start is called before the first frame update
 
     private void Awake()
@@ -24,11 +24,11 @@ public class Turret : MonoBehaviour
         objectPooler = ObjectPooler.Instance;
     }
 
-    void Start()
+    public virtual void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.25f);
         InvokeRepeating("CheckTargetStatus", 0f, 0.05f);
-
+        print("TurretSetup");
         FireCooldown = 0;
     }
 
@@ -66,7 +66,7 @@ public class Turret : MonoBehaviour
         }
     }
 
-    void Update()
+    public virtual void Update()
     {
         if(FireCooldown >= 0)
         {
@@ -81,8 +81,10 @@ public class Turret : MonoBehaviour
             Shoot();
             FireCooldown = 1 / FireRate;
         }
-        transform.LookAt(Target);
-
+        if(!HasFireDelay)
+        {
+            transform.LookAt(Target);
+        }
     }
 
     public virtual void Shoot()

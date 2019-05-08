@@ -241,6 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1250188945213231374}
   - component: {fileID: 282466809627808023}
+  - component: {fileID: 1877070600963817975}
   m_Layer: 0
   m_Name: Bomb_TowerFIXED
   m_TagString: Tower
@@ -278,3 +279,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1877070600963817975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5891830963228214072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82dae7236db958e498271f1316aed640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  Range: 100
+  FireRate: 3
+  Damage: 2
+  objectPooler: {fileID: 0}
+  FirePoint: {fileID: 1250188945213231374}
+  HasFireDelay: 0
