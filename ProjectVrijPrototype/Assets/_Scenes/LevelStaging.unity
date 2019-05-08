@@ -539,6 +539,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2075541731}
+    - target: {fileID: 455477282, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_RenderMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1256447881, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1427,11 +1431,11 @@ MonoBehaviour:
   waves:
   - enemyPrefabs:
     - {fileID: 8985831865071370129, guid: 8459ee4fc2c44b8478d8b24188370a16, type: 3}
-    enemyAmounts: 64000000
+    enemyAmounts: 14000000
     spawnRate: 1
   - enemyPrefabs:
     - {fileID: 8985831865071370129, guid: 8459ee4fc2c44b8478d8b24188370a16, type: 3}
-    enemyAmounts: 64000000
+    enemyAmounts: 28000000
     spawnRate: 1
   enemiesToSpawn: 0
   spawnPoints:
@@ -7862,13 +7866,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075541729}
-  m_LocalRotation: {x: 0.5580337, y: -0, z: -0, w: 0.8298183}
-  m_LocalPosition: {x: 0.3, y: 19.4, z: -12.1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.3, y: 19.4, z: -2.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 67.840004, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &6526810247087315869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7974,6 +7978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SandStormTornedo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646313516292585108, guid: 203ec0a1d169b2b47857958e8cc72a85,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tower
       objectReference: {fileID: 0}
     - target: {fileID: 7646313516292585105, guid: 203ec0a1d169b2b47857958e8cc72a85,
         type: 3}

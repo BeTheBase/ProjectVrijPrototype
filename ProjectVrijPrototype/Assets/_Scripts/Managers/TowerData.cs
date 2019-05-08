@@ -13,4 +13,11 @@ public class TowerData
     public int GoldCost;
     [SerializeField]
     public int UpgradeGoldCost;
+    [Header("Stats for each tower level")]
+    [SerializeField]
+    public List<float> TowerRanges;
+    [SerializeField]
+    public List<float> TowerDamages;
+    [SerializeField]
+    public List<float> TowerFireRates;
 }

@@ -24,7 +24,7 @@ public class SandStormTornedo : MonoBehaviour
 
     private void UpdateTarget()
     {
-        //StartCoroutine(StartDelay(DelayTime));
+        StartCoroutine(StartDelay(DelayTime));
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
@@ -44,13 +44,12 @@ public class SandStormTornedo : MonoBehaviour
                 //target.gameObject.AddComponent<Rigidbody>();
                 AttackEnemy();
             }
-            /*
+            
             if (nearestEnemy != null && shortestDistance <= PickRange)
             {
                 target = nearestEnemy.transform;
-                //target.gameObject.AddComponent<Rigidbody>();
-                //TornedoSwirl();
-            }*/
+                Invoke("TornedoSwirl", 0f);
+            }
         }
 
     }
@@ -91,25 +90,22 @@ public class SandStormTornedo : MonoBehaviour
 
         //Adding rigidbody and force to enemy
         Rigidbody targetBody = target.gameObject.GetComponent<Rigidbody>();
-        target.gameObject.GetComponent<Rigidbody>().AddForce(direction * swirlForce);
-        target.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * (swirlForce * UpwardsForce));
+        targetBody.AddForce(direction * swirlForce);
+        targetBody.AddForce(Vector3.up * (swirlForce * UpwardsForce));
 
         //Twirling
         Vector3 Foo = new Vector3(transform.position.x, 0, transform.position.x) - new Vector3(target.transform.position.x, 0, target.transform.position.z);
         Vector3 final;
         Foo = Foo * -1;
         final = Quaternion.Euler(0, 90, 0) * Foo;
-        target.gameObject.GetComponent<Rigidbody>().AddForce(final * (swirlForce / TwirlForce));
+        targetBody.AddForce(final * (swirlForce / TwirlForce));
         StartCoroutine(WaitAndDie());
-        //InvokeRepeating("UpdateTarget", 0f, 0.5f);
-
     }
 
     private IEnumerator WaitAndDie()
     {
-        yield return new WaitForSeconds(DelayTime);
+        yield return new WaitForSeconds(3f);
         target.GetComponent<BaseEnemy>().Die();
-
     }
 
     private void Update()
