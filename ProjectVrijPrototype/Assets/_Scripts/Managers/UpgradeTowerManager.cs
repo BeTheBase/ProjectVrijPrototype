@@ -8,6 +8,7 @@ public class UpgradeTowerManager : MonoBehaviour
     public static bool CheckFillBarStatus = true;
 
     public Text UpgradeCostTextField;
+    public Text DeleteMoneyBackTextField;
     public Slider LoadingSlider;
     public float LoadingSpeed;
 
@@ -17,13 +18,18 @@ public class UpgradeTowerManager : MonoBehaviour
     private Transform upgradeChildButton;
     private Transform deleteChildButton;
     private Transform getChildUI = null;
+    private GameManager gameManager;
 
     private void Awake()
     {
         upgradeChildButton = transform.GetChild(0);
         deleteChildButton = transform.GetChild(1);
         gameObject.SetActive(false);
+    }
 
+    private void Start()
+    {
+        gameManager = GameManager.Instance; 
     }
 
     private void OnEnable()
@@ -38,6 +44,7 @@ public class UpgradeTowerManager : MonoBehaviour
         else
             goldCost = 90;
         UpgradeCostTextField.text = "Upgrade Cost:" + goldCost;
+        DeleteMoneyBackTextField.text = "Delete/Money Back:" + goldCost / 2;
 
         for (int childIndex = 0; childIndex < tower.transform.childCount; childIndex++)
         {
@@ -57,12 +64,13 @@ public class UpgradeTowerManager : MonoBehaviour
 
     public void UpgradeTower()
     {
-        GameManager.Instance.Gold -= (int)goldCost;
+        gameManager.Gold -= (int)goldCost;
         StartCoroutine(WaitForLoadingBar());       
     }
 
     public void DeleteTower()
     {
+        gameManager.Gold += (int)goldCost / 2;
         tower.SetActive(false);
         tower.transform.parent.GetComponent<BoxCollider>().enabled = true;
         this.gameObject.SetActive(false);
