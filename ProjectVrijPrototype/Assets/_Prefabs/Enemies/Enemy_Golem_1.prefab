@@ -105,8 +105,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307841435}
   m_LocalRotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 1115304445}
   m_Father: {fileID: 0}
@@ -195,7 +195,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 307841435}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.2
+  m_Radius: 0.0036165565
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -204,8 +204,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.01
+  m_Height: 0.01768462
+  m_BaseOffset: 0.00884231
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!65 &307841440
@@ -219,8 +219,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4142868, y: 0.8846795, z: 0.7665714}
-  m_Center: {x: 0.078042395, y: 0.44189122, z: -0.021630049}
+  m_Size: {x: 0.004142868, y: 0.008846795, z: 0.007665714}
+  m_Center: {x: 0.0007804239, y: 0.0044189123, z: -0.00021630037}
 --- !u!54 &7914664160494654127
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -384,7 +384,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 424193123}
   m_HandleRect: {fileID: 0}
@@ -427,7 +427,7 @@ RectTransform:
   m_GameObject: {fileID: 1115304444}
   m_LocalRotation: {x: -0.00000008146034, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.000050000006, y: 0.00005, z: 0.000050000006}
   m_Children:
   - {fileID: 570715885}
   m_Father: {fileID: 307841439}

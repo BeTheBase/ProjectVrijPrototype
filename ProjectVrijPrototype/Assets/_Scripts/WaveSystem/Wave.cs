@@ -9,5 +9,4 @@ public class Wave{
     [Header("Enemy Amounts")]
     public List<int> enemyAmounts;
     public float spawnRate;
-    public float NextWaveTime;
 }
