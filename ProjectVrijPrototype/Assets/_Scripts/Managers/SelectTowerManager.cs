@@ -11,6 +11,12 @@ public class SelectTowerManager : MonoBehaviour
 
     public Text[] TowerCostTextFields;
 
+    private GameManager gameManager;
+    private TowerDataManager towerDataManager;
+    private GameObject parentGameObject;
+
+    private int index = 0;
+
     private void Awake()
     {
         gameObject.SetActive(false);
@@ -18,31 +24,41 @@ public class SelectTowerManager : MonoBehaviour
 
     private void Start()
     {
-        if (TowerDataManager.Instance.TowerDatas != null)
+        gameManager = GameManager.Instance;
+        towerDataManager = TowerDataManager.Instance;
+
+        if (towerDataManager.TowerDatas != null)
         {
             for (int index = 0; index <= TowerCostTextFields.Length -1; index++)
             {
-                TowerCostTextFields[index].text = TowerCostString + TowerDataManager.Instance.TowerDatas[index].GoldCost;
+                TowerCostTextFields[index].text = TowerCostString + towerDataManager.TowerDatas[index].GoldCost;
             }
         }
     }
 
-    public void SetArcherTower()
+    public void PlaceTower(int index)
     {
-        Instantiate(TowerDataManager.Instance.TowerDatas[0].Tower, transform.position - Vector3.up, Quaternion.identity);
+        var towerCost = ReturnGoldCost(index);
+        if (!ContinueProgramm(towerCost)) return;
+        parentGameObject = transform.parent.gameObject;
+        parentGameObject.GetComponent<BoxCollider>().enabled = false;
+        gameManager.Gold -= towerCost;
+        GameObject towerPlaceHolder = Instantiate(towerDataManager.TowerDatas[index].Tower, transform.position - Vector3.up, Quaternion.identity);
+        towerPlaceHolder.transform.SetParent(parentGameObject.transform);
         this.gameObject.SetActive(false);
     }
 
-    public void SetBombTower()
+    private int ReturnGoldCost(int _index)
     {
-        Instantiate(TowerDataManager.Instance.TowerDatas[1].Tower, transform.position - Vector3.up, Quaternion.identity);
-        this.gameObject.SetActive(false);
+        return towerDataManager.TowerDatas[_index].GoldCost;
     }
 
-    public void SetMagicTower()
+    private bool ContinueProgramm(int _cost)
     {
-        Instantiate(TowerDataManager.Instance.TowerDatas[2].Tower, transform.position - Vector3.up, Quaternion.identity);
-        this.gameObject.SetActive(false);
+        if (gameManager.Gold < _cost)
+            return false;
+        else
+            return true;
     }
 
     public void Debugging() => Debug.Log("Test" +

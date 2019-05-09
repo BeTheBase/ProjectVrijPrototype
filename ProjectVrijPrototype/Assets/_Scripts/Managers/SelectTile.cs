@@ -43,13 +43,15 @@ public class SelectTile : MonoBehaviour
         {
             if (UISelectTowerPrefab == null) return;
             UISelectTowerPrefab.SetActive(true);
-            //UISelectTowerPrefab.transform.SetParent(SelectedGameObject.transform);
+            UISelectTowerPrefab.transform.SetParent(SelectedGameObject.transform);
             UISelectTowerPrefab.transform.position = SelectedGameObject.transform.position + new Vector3(0, 1f, 0);
         }
         else if(SelectedGameObject.tag == "Tower")
         {
+            UISelectTowerPrefab.SetActive(false);
             if (UISelectUpgradePrefab == null) return;
             if (!UpgradeTowerManager.CheckFillBarStatus) return;
+            
             UISelectUpgradePrefab.transform.SetParent(SelectedGameObject.transform);
             UISelectUpgradePrefab.transform.position = SelectedGameObject.transform.position + new Vector3(0, 3f, 0);
             UISelectUpgradePrefab.SetActive(true);

@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour {
     public static int waveIndex = 0;
 
     ObjectPooler objectPooler;
-    public List<Vector3> spawnPoints;
+    public List<Transform> spawnPoints;
 
     private void Awake()
     {
@@ -69,7 +69,7 @@ public class EnemySpawner : MonoBehaviour {
         if (Spawning == true)
         {
             EnemiesAlive++;
-            Vector3 spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Count)];
+            Vector3 spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Count)].position;
             objectPooler.SpawnFromPool(enemy, spawnPosition, Quaternion.identity);
         }
     }

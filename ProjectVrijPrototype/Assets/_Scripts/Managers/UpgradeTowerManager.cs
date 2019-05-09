@@ -14,10 +14,16 @@ public class UpgradeTowerManager : MonoBehaviour
     private GameObject tower;
     private float goldCost;
     private TowerData upgradeTowerData;
+    private Transform upgradeChildButton;
+    private Transform deleteChildButton;
+    private Transform getChildUI = null;
 
     private void Awake()
     {
+        upgradeChildButton = transform.GetChild(0);
+        deleteChildButton = transform.GetChild(1);
         gameObject.SetActive(false);
+
     }
 
     private void OnEnable()
@@ -33,20 +39,32 @@ public class UpgradeTowerManager : MonoBehaviour
             goldCost = 90;
         UpgradeCostTextField.text = "Upgrade Cost:" + goldCost;
 
+        for (int childIndex = 0; childIndex < tower.transform.childCount; childIndex++)
+        {
+            getChildUI = tower.transform.GetChild(childIndex);
+        }
+        if (tower.transform.childCount == 2 || tower.transform.childCount <= 0)
+        {
+            transform.position += Vector3.up*4;
+            return;
+        }
+        
         if (tower.transform.GetChild(2).gameObject.activeSelf)
-            tower.transform.GetChild(3).gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            upgradeChildButton.gameObject.SetActive(false);
         else
-            tower.transform.GetChild(3).gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            upgradeChildButton.gameObject.SetActive(true);
     }
 
     public void UpgradeTower()
     {
+        GameManager.Instance.Gold -= (int)goldCost;
         StartCoroutine(WaitForLoadingBar());       
     }
 
     public void DeleteTower()
     {
         tower.SetActive(false);
+        tower.transform.parent.GetComponent<BoxCollider>().enabled = true;
         this.gameObject.SetActive(false);
     }
 
@@ -58,8 +76,26 @@ public class UpgradeTowerManager : MonoBehaviour
 
     private IEnumerator FillLoadingBar()
     {
-        tower.transform.GetChild(3).gameObject.transform.GetChild(0).gameObject.SetActive(false);
-        tower.transform.GetChild(3).gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        
+        /*
+        switch(tower.transform.childCount)
+        {
+            case 1:
+                getChildUI = tower.transform.GetChild(0);
+                break;
+            case 2:
+                getChildUI = tower.transform.GetChild(1);
+                break;
+            case 3:
+                getChildUI = tower.transform.GetChild(2);
+                break;
+                
+        }*/
+
+
+
+        transform.GetChild(0).gameObject.SetActive(false);
+        transform.GetChild(1).gameObject.SetActive(false);
 
         float duration = LoadingSpeed; 
         float normalizedTime = 0;
@@ -71,17 +107,34 @@ public class UpgradeTowerManager : MonoBehaviour
         }
         CheckFillBarStatus = true;
 
-        if (tower.transform.GetChild(1).gameObject.activeSelf)
-            tower.transform.GetChild(2).gameObject.SetActive(true);
-        else
-            tower.transform.GetChild(1).gameObject.SetActive(true);
+        Object type;
+        switch(upgradeTowerData.name)
+        {
+            case "CrossBowTower":
+                type = tower.gameObject.GetComponent<CrossBowTurret>();
+                break;
+            case "BombTower":
+                type = tower.gameObject.GetComponent<BombTurret>();
+                break;
+            case "MagicTower":
+                //type = tower.gameObject.GetComponent<MirrorTurret>();
+                break;
+        }
 
-        if (tower.transform.GetChild(3).gameObject.activeSelf)
+        if (tower.transform.childCount > 2)
+        {
+            if (tower.transform.GetChild(1).gameObject.activeSelf)
+                tower.transform.GetChild(2).gameObject.SetActive(true);
+            else
+                tower.transform.GetChild(1).gameObject.SetActive(true);
+        }
+
+        if (getChildUI.gameObject.activeSelf)
         {
             LoadingSlider.value = 0;
-            tower.transform.GetChild(3).gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            tower.transform.GetChild(3).gameObject.transform.GetChild(1).gameObject.SetActive(true);
-            tower.transform.GetChild(3).gameObject.SetActive(false);
+            transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(1).gameObject.SetActive(true);
+            getChildUI.gameObject.SetActive(false);
         }
     }
 }
