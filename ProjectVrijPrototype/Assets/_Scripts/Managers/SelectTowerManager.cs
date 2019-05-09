@@ -13,6 +13,7 @@ public class SelectTowerManager : MonoBehaviour
 
     private GameManager gameManager;
     private TowerDataManager towerDataManager;
+    private GameObject parentGameObject;
 
     private int index = 0;
 
@@ -35,33 +36,15 @@ public class SelectTowerManager : MonoBehaviour
         }
     }
 
-    public void SetArcherTower()
+    public void PlaceTower(int index)
     {
-        index = 0;
         var towerCost = ReturnGoldCost(index);
         if (!ContinueProgramm(towerCost)) return;
+        parentGameObject = transform.parent.gameObject;
+        parentGameObject.GetComponent<BoxCollider>().enabled = false;
         gameManager.Gold -= towerCost;
-        Instantiate(towerDataManager.TowerDatas[index].Tower, transform.position - Vector3.up, Quaternion.identity);
-        this.gameObject.SetActive(false);
-    }
-
-    public void SetBombTower()
-    {
-        index = 1;
-        var towerCost = ReturnGoldCost(index);
-        if (!ContinueProgramm(towerCost)) return;
-        gameManager.Gold -= towerCost;
-        Instantiate(towerDataManager.TowerDatas[index].Tower, transform.position - Vector3.up, Quaternion.identity);
-        this.gameObject.SetActive(false);
-    }
-
-    public void SetMagicTower()
-    {
-        index = 2;
-        var towerCost = ReturnGoldCost(index);
-        if (!ContinueProgramm(towerCost)) return;
-        gameManager.Gold -= towerCost;
-        Instantiate(towerDataManager.TowerDatas[index].Tower, transform.position - Vector3.up, Quaternion.identity);
+        GameObject towerPlaceHolder = Instantiate(towerDataManager.TowerDatas[index].Tower, transform.position - Vector3.up, Quaternion.identity);
+        towerPlaceHolder.transform.SetParent(parentGameObject.transform);
         this.gameObject.SetActive(false);
     }
 

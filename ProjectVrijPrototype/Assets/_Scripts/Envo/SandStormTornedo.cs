@@ -19,12 +19,11 @@ public class SandStormTornedo : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        InvokeRepeating("UpdateTarget", 0f, DelayTime);
     }
 
     private void UpdateTarget()
     {
-        StartCoroutine(StartDelay(DelayTime));
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
@@ -42,16 +41,15 @@ public class SandStormTornedo : MonoBehaviour
             {
                 target = nearestEnemy.transform;
                 //target.gameObject.AddComponent<Rigidbody>();
-                AttackEnemy();
+                //AttackEnemy();
+                StartCoroutine(WaitAndDie());
             }
-            
+
             if (nearestEnemy != null && shortestDistance <= PickRange)
             {
                 target = nearestEnemy.transform;
-                Invoke("TornedoSwirl", 0f);
             }
         }
-
     }
 
     private IEnumerator StartDelay(float delayTime)
@@ -99,13 +97,12 @@ public class SandStormTornedo : MonoBehaviour
         Foo = Foo * -1;
         final = Quaternion.Euler(0, 90, 0) * Foo;
         targetBody.AddForce(final * (swirlForce / TwirlForce));
-        StartCoroutine(WaitAndDie());
     }
 
     private IEnumerator WaitAndDie()
     {
         yield return new WaitForSeconds(3f);
-        target.GetComponent<BaseEnemy>().Die();
+        target.GetComponent<BaseEnemy>().Health = 0;
     }
 
     private void Update()
