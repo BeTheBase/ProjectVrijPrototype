@@ -1557,7 +1557,7 @@ MonoBehaviour:
   EnemiesAlive: 0
   waves:
   - enemyPrefabs:
-    - {fileID: 307841435, guid: 8c81f2daeba64d246bb27242d6a350c7, type: 3}
+    - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
     enemyAmounts: 14000000
     spawnRate: 1
     NextWaveTime: 10
@@ -1779,9 +1779,12 @@ MonoBehaviour:
     prefab: {fileID: 6260661574424466246, guid: 3c6137df55413d143991030d16c857df,
       type: 3}
     size: 200
-  - tag: DustStorm
-    prefab: {fileID: 1344314377593938, guid: 9e03786a9517b604d8e930182607a128, type: 3}
+  - tag: DustProjectile
+    prefab: {fileID: 744332127, guid: ce5da91af18284d48acfb56e0b91d91d, type: 3}
     size: 20
+  - tag: Golem_1_Animated
+    prefab: {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
+    size: 200
 --- !u!4 &841622442
 Transform:
   m_ObjectHideFlags: 0
@@ -7907,13 +7910,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075541729}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.3, y: 19.4, z: -1.96}
+  m_LocalRotation: {x: 0.50256765, y: -0, z: -0, w: 0.8645379}
+  m_LocalPosition: {x: 0.3, y: 15.28, z: -9.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 60.340004, y: 0, z: 0}
 --- !u!1001 &6526810247087315869
 PrefabInstance:
   m_ObjectHideFlags: 0
