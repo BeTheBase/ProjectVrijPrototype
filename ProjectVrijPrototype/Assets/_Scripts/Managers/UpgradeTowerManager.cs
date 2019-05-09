@@ -43,7 +43,7 @@ public class UpgradeTowerManager : MonoBehaviour
         {
             getChildUI = tower.transform.GetChild(childIndex);
         }
-        if (tower.transform.childCount >= 2 || tower.transform.childCount <= 0)
+        if (tower.transform.childCount == 2 || tower.transform.childCount <= 0)
         {
             transform.position += Vector3.up*4;
             return;
@@ -64,6 +64,7 @@ public class UpgradeTowerManager : MonoBehaviour
     public void DeleteTower()
     {
         tower.SetActive(false);
+        tower.transform.parent.GetComponent<BoxCollider>().enabled = true;
         this.gameObject.SetActive(false);
     }
 
