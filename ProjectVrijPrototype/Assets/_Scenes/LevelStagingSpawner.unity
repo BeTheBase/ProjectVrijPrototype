@@ -1582,8 +1582,7 @@ MonoBehaviour:
     prefab: {fileID: 135609444929465615, guid: 3b4f16f7b49f2984d8cfa6af2be44b71, type: 3}
     size: 1000
   - tag: Spark
-    prefab: {fileID: 7403209370465406284, guid: 8d1163006ab5f354f866904e5b9db2f7,
-      type: 3}
+    prefab: {fileID: 1000011945391522, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e, type: 3}
     size: 50
   - tag: Enemy_Golem_1
     prefab: {fileID: 307841435, guid: 8c81f2daeba64d246bb27242d6a350c7, type: 3}
@@ -1594,6 +1593,10 @@ MonoBehaviour:
     size: 200
   - tag: Explosion
     prefab: {fileID: 1025285306637258, guid: e9a320f6e5b1c2344b59b66cb08a529a, type: 3}
+    size: 200
+  - tag: BloodHit
+    prefab: {fileID: 4384990470017186315, guid: d97f754f3302a034886b8b66ee4ebe4a,
+      type: 3}
     size: 200
 --- !u!4 &841622442
 Transform:
@@ -2958,7 +2961,7 @@ GameObject:
   - component: {fileID: 1788101872}
   - component: {fileID: 1788101871}
   m_Layer: 0
-  m_Name: BasTornedo
+  m_Name: BasTornado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
