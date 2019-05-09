@@ -12,6 +12,8 @@ public class CrossBowTurret : Turret
         {
             ArrowScript.Target = Target;
             ArrowScript.Damage = Damage;
+            ArrowScript.FirePoint = FirePoint;
+
         }
     }
 }

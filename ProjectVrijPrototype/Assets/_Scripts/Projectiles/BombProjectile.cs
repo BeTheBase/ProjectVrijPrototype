@@ -5,7 +5,6 @@ using UnityEngine;
 public class BombProjectile : BaseProjectile
 {
     protected float Animation;
-    private Vector3 TargetPosition;
     public SphereCollider Trigger;
     Vector3 dir;
     public Transform Trajectory;
@@ -13,6 +12,7 @@ public class BombProjectile : BaseProjectile
     private MeshRenderer meshRenderer;
     private Rigidbody rigidBody;
     private ObjectPooler objectPooler;
+    bool hit;
 
     private void Start()
     {
@@ -21,8 +21,6 @@ public class BombProjectile : BaseProjectile
         meshRenderer = GetComponent<MeshRenderer>();
         meshRenderer.enabled = true;
         Trigger.enabled = false;
-        TargetPosition = Target.position;
-        dir = Target.position - transform.position;
     }
 
 
@@ -44,13 +42,14 @@ public class BombProjectile : BaseProjectile
             gameObject.SetActive(false);
             return;
         }
-        Vector3 dir = TargetPosition - transform.position;
+        Vector3 dir = Target.position - transform.position;
 
         float distanceThisFrame = Speed * Time.deltaTime;
 
 
-        if (dir.magnitude <= distanceThisFrame)
+        if (dir.magnitude <= distanceThisFrame && !hit)
         {
+            hit = true;
             HitTarget();
             return;
         }
@@ -68,7 +67,7 @@ public class BombProjectile : BaseProjectile
     {
         rigidBody.isKinematic = true;
         GameObject Effect = objectPooler.SpawnFromPool("Explosion", transform.position, Quaternion.identity);
-        Effect.transform.localScale = new Vector3(Trigger.radius, Trigger.radius, Trigger.radius) / 2.5f;
+        Effect.transform.localScale = new Vector3(Trigger.radius, Trigger.radius, Trigger.radius) / 7f;
         meshRenderer.enabled = false;
         Trigger.enabled = true;
         yield return new WaitForSeconds(0.25f);
