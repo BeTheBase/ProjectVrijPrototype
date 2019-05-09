@@ -42,12 +42,12 @@ public class SandStormTornedo : MonoBehaviour
                 target = nearestEnemy.transform;
                 //target.gameObject.AddComponent<Rigidbody>();
                 //AttackEnemy();
-                StartCoroutine(WaitAndDie());
             }
 
             if (nearestEnemy != null && shortestDistance <= PickRange)
             {
                 target = nearestEnemy.transform;
+                StartCoroutine(WaitAndDie());
             }
         }
     }
