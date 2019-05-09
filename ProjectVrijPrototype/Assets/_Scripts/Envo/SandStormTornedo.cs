@@ -62,7 +62,7 @@ public class SandStormTornedo : MonoBehaviour
 
     private void AttackEnemy()
     {
-        GameObject dustAttack = objectPooler.SpawnFromPool("DustStorm", transform.position, transform.rotation);
+        GameObject dustAttack = objectPooler.SpawnFromPool("DustProjectile", transform.position, transform.rotation);
         DustProjectille dustProjectilleScript = dustAttack.GetComponent<DustProjectille>();
         if (dustProjectilleScript != null)
         {
