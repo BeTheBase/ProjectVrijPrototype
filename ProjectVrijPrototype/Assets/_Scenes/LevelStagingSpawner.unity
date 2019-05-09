@@ -1575,7 +1575,7 @@ MonoBehaviour:
       type: 3}
     size: 200
   - tag: Blood
-    prefab: {fileID: 5383252717422978897, guid: 29c264c997cbeb645bca37ef11bb1620,
+    prefab: {fileID: 4384990470017186315, guid: 9ada47963a3169f4181d67f1bbe1b9e9,
       type: 3}
     size: 1000
   - tag: Arrow
@@ -7761,6 +7761,7 @@ MonoBehaviour:
   LivesText: {fileID: 1695172888}
   WaveText: {fileID: 1755402828}
   WaveTimerText: {fileID: 1872301700}
+  CurrentTime: 0
 --- !u!1 &1872301698
 GameObject:
   m_ObjectHideFlags: 0
