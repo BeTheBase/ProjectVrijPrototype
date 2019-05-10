@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  Range: 100
+  Range: 10
   FireRate: 0
   Damage: 1
   objectPooler: {fileID: 0}
@@ -435,6 +435,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3614482042510584481}
     m_Modifications:
+    - target: {fileID: 7403209370465406284, guid: 8d1163006ab5f354f866904e5b9db2f7,
+        type: 3}
+      propertyPath: m_Name
+      value: Spark
+      objectReference: {fileID: 0}
     - target: {fileID: 5746727234101172591, guid: 8d1163006ab5f354f866904e5b9db2f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -489,11 +494,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7403209370465406284, guid: 8d1163006ab5f354f866904e5b9db2f7,
-        type: 3}
-      propertyPath: m_Name
-      value: Spark
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d1163006ab5f354f866904e5b9db2f7, type: 3}

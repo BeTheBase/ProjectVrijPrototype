@@ -1753,10 +1753,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - tag: Enemy1
-    prefab: {fileID: 8985831865071370129, guid: 8459ee4fc2c44b8478d8b24188370a16,
-      type: 3}
-    size: 200
   - tag: Blood
     prefab: {fileID: 5383252717422978897, guid: 29c264c997cbeb645bca37ef11bb1620,
       type: 3}
@@ -1767,9 +1763,6 @@ MonoBehaviour:
   - tag: Spark
     prefab: {fileID: 1000011945391522, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e, type: 3}
     size: 50
-  - tag: Enemy_Golem_1
-    prefab: {fileID: 307841435, guid: 8c81f2daeba64d246bb27242d6a350c7, type: 3}
-    size: 200
   - tag: Bomb
     prefab: {fileID: 6094023973490576796, guid: 38ece42de4ca45b41a418ba32d230d1c,
       type: 3}
