@@ -14,6 +14,7 @@ public class EnemySpawner : MonoBehaviour {
 
     public static bool Spawning = true;
 
+    [HideInInspector]
     public int enemiesToSpawn;
 
     public static int waveIndex = 0;

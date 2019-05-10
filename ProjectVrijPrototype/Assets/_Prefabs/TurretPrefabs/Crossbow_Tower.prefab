@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  Range: 5
+  Range: 10
   FireRate: 3
   Damage: 1
   objectPooler: {fileID: 0}
