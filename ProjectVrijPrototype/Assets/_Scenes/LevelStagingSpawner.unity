@@ -1598,6 +1598,9 @@ MonoBehaviour:
     prefab: {fileID: 4384990470017186315, guid: d97f754f3302a034886b8b66ee4ebe4a,
       type: 3}
     size: 200
+  - tag: DustProjectile
+    prefab: {fileID: 744332127, guid: ce5da91af18284d48acfb56e0b91d91d, type: 3}
+    size: 200
 --- !u!4 &841622442
 Transform:
   m_ObjectHideFlags: 0
@@ -2113,7 +2116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.32156864}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
