@@ -44,7 +44,7 @@ public class SandStormTornedo : MonoBehaviour
             {
                 target = nearestEnemy.transform;
                 //target.gameObject.AddComponent<Rigidbody>();
-                AttackEnemy();
+                Invoke("AttackEnemy", 0.5f);
             }
 
             if (nearestEnemy != null && shortestDistance <= PickRange && CanSwirl)
