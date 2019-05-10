@@ -8,7 +8,7 @@ public class SceneHandler : MonoBehaviour
 
     public void LoadScene(int sceneIndex)
     {
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadSceneAsync(sceneIndex);
     }
 
 

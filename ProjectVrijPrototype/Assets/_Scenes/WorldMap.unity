@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 78704436}
   - component: {fileID: 78704435}
   - component: {fileID: 78704439}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TowerTileFIXED (2)
   m_TagString: TowerTile
   m_Icon: {fileID: 0}
@@ -2453,7 +2453,7 @@ GameObject:
   - component: {fileID: 371616993}
   - component: {fileID: 371616992}
   - component: {fileID: 371616996}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TowerTileFIXED (3)
   m_TagString: TowerTile
   m_Icon: {fileID: 0}
@@ -3098,8 +3098,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndPosition: {fileID: 0}
-  GoldText: {fileID: 1577308043}
-  LivesText: {fileID: 0}
   Gold: 1000
   Lives: 0
 --- !u!114 &454583088
@@ -5396,7 +5394,7 @@ GameObject:
   - component: {fileID: 920081733}
   - component: {fileID: 920081732}
   - component: {fileID: 920081736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TowerTileFIXED (1)
   m_TagString: TowerTile
   m_Icon: {fileID: 0}
@@ -11270,6 +11268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerTileFIXED
       objectReference: {fileID: 0}
+    - target: {fileID: 129229053, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 129229057, guid: 87db9de8c583f054a9a4594d5fe034af, type: 3}
       propertyPath: m_LocalPosition.x
       value: -958.9
@@ -11352,7 +11354,7 @@ GameObject:
   - component: {fileID: 2135661701}
   - component: {fileID: 2135661700}
   - component: {fileID: 2135661704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TowerTileFIXED
   m_TagString: TowerTile
   m_Icon: {fileID: 0}
