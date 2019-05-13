@@ -40,7 +40,7 @@ public class UpgradeTowerManager : MonoBehaviour
             upgradeTowerData = TowerDataManager.Instance.TowerDatas.Find(t => t.Tower.gameObject.name.Equals(tower.name.Replace("(Clone)", "")));
         }
         if (upgradeTowerData != null)
-            goldCost = upgradeTowerData.UpgradeGoldCost;
+            goldCost = upgradeTowerData.UpgradeGoldCosts[tower.GetComponent<Turret>().TowerLevel];
         else
             goldCost = 90;
         UpgradeCostTextField.text = "Upgrade Cost:" + goldCost;
