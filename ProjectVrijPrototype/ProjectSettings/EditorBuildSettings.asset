@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/WorldMap.unity
     guid: 810c410229c18c84bac2a5fe819ca771
+  - enabled: 0
+    path: Assets/_Scenes/LevelStaging.unity
+    guid: 11c404c0f599f1b44a8a21b28780b220
+  - enabled: 1
+    path: Assets/_Scenes/LevelSjors.unity
+    guid: 3911dcfeebe3bd9419d76b5dfdf36a2b
   m_configObjects: {}

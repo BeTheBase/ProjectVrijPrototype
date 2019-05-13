@@ -612,7 +612,7 @@ GameObject:
   - component: {fileID: 4435827185531887171}
   - component: {fileID: 2593780969040652075}
   - component: {fileID: 6065854105153361542}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Golem_1_Animated
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -667,9 +667,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71061d69ad46fd43abe2935d9107444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 3
-  Health: 3
-  GoldGiven: 1
+  MaxHealth: 15
+  Health: 15
+  GoldGiven: 3
   IsSlowed: 0
 --- !u!195 &6748191590327504492
 NavMeshAgent:
@@ -681,7 +681,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.01
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -690,7 +690,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.04
-  m_BaseOffset: 0
+  m_BaseOffset: 0.05
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!54 &4435827185531887171
