@@ -10,6 +10,7 @@ public class Turret : MonoBehaviour
     public float Range = 100f;
     public float FireRate;
     public float Damage;
+    public int TowerLevel = 1;
 
     private GameObject Enemies;
     [HideInInspector]

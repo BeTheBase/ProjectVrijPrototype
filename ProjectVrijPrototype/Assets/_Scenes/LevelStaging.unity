@@ -1768,8 +1768,7 @@ MonoBehaviour:
       type: 3}
     size: 200
   - tag: Explosion
-    prefab: {fileID: 6260661574424466246, guid: 3c6137df55413d143991030d16c857df,
-      type: 3}
+    prefab: {fileID: 1025285306637258, guid: e9a320f6e5b1c2344b59b66cb08a529a, type: 3}
     size: 200
   - tag: DustProjectile
     prefab: {fileID: 744332127, guid: ce5da91af18284d48acfb56e0b91d91d, type: 3}
@@ -8007,6 +8006,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
+      propertyPath: TowerDatas.Array.data[0].TowerRanges.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].TowerDamages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].TowerFireRates.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].TowerRanges.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].TowerDamages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].TowerFireRates.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].TowerRanges.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].TowerDamages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].TowerFireRates.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
       propertyPath: TowerDatas.Array.data[0].Tower
       value: 
       objectReference: {fileID: 8408892748960204495, guid: 22a5380dd6d0f1643a79ca7a6d7046b0,
@@ -8023,6 +8067,126 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4172490301956651611, guid: f0c082d6ebe0e2a488c03d6db3a46c6c,
         type: 3}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].TowerRanges.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].TowerRanges.Array.data[1]
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].TowerRanges.Array.data[2]
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].TowerDamages.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].TowerDamages.Array.data[1]
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].TowerDamages.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].TowerFireRates.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].TowerFireRates.Array.data[1]
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].TowerFireRates.Array.data[2]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].TowerRanges.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].TowerRanges.Array.data[1]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].TowerRanges.Array.data[2]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].TowerDamages.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].TowerDamages.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].TowerDamages.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].TowerFireRates.Array.data[0]
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].TowerFireRates.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].TowerFireRates.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].TowerRanges.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].TowerRanges.Array.data[1]
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].TowerRanges.Array.data[2]
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].TowerDamages.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].TowerDamages.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].TowerDamages.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df7691316f35f54fbce5cc612bef6b7, type: 3}
 --- !u!1001 &7646313517340504007
