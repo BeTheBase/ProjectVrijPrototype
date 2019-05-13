@@ -44,7 +44,7 @@ public class SandStormTornedo : MonoBehaviour
             {
                 target = nearestEnemy.transform;
                 //target.gameObject.AddComponent<Rigidbody>();
-                Invoke("AttackEnemy", 0.5f);
+                Invoke("AttackEnemy", 0f);
             }
 
             if (nearestEnemy != null && shortestDistance <= PickRange && CanSwirl)
@@ -70,8 +70,6 @@ public class SandStormTornedo : MonoBehaviour
             dustProjectilleScript.Damage = Damage;
         }
     }
-
-
 
     private void PullEnemy()
     {
