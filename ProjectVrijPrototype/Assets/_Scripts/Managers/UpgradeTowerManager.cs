@@ -65,7 +65,14 @@ public class UpgradeTowerManager : MonoBehaviour
     public void UpgradeTower()
     {
         gameManager.Gold -= (int)goldCost;
-        StartCoroutine(WaitForLoadingBar());       
+        var towerTurretScript =  tower.GetComponent<Turret>();
+        towerTurretScript.TowerLevel += 1;
+        var towerLevel = towerTurretScript.TowerLevel;
+        towerTurretScript.Damage = upgradeTowerData.TowerDamages[towerLevel];
+        towerTurretScript.Range = upgradeTowerData.TowerRanges[towerLevel];
+        towerTurretScript.FireRate = upgradeTowerData.TowerFireRates[towerLevel];
+        StartCoroutine(WaitForLoadingBar());
+
     }
 
     public void DeleteTower()
@@ -84,7 +91,9 @@ public class UpgradeTowerManager : MonoBehaviour
 
     private IEnumerator FillLoadingBar()
     {
-        
+        tower.GetComponent<Turret>().enabled = false;
+
+
         /*
         switch(tower.transform.childCount)
         {
@@ -115,20 +124,6 @@ public class UpgradeTowerManager : MonoBehaviour
         }
         CheckFillBarStatus = true;
 
-        Object type;
-        switch(upgradeTowerData.name)
-        {
-            case "CrossBowTower":
-                type = tower.gameObject.GetComponent<CrossBowTurret>();
-                break;
-            case "BombTower":
-                type = tower.gameObject.GetComponent<BombTurret>();
-                break;
-            case "MagicTower":
-                //type = tower.gameObject.GetComponent<MirrorTurret>();
-                break;
-        }
-
         if (tower.transform.childCount > 2)
         {
             if (tower.transform.GetChild(1).gameObject.activeSelf)
@@ -144,5 +139,8 @@ public class UpgradeTowerManager : MonoBehaviour
             transform.GetChild(1).gameObject.SetActive(true);
             getChildUI.gameObject.SetActive(false);
         }
+
+        tower.GetComponent<Turret>().enabled = true;
+
     }
 }

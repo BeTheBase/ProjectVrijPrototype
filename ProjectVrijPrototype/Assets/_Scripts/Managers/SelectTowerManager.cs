@@ -45,6 +45,10 @@ public class SelectTowerManager : MonoBehaviour
         gameManager.Gold -= towerCost;
         GameObject towerPlaceHolder = Instantiate(towerDataManager.TowerDatas[index].Tower, transform.position - Vector3.up, Quaternion.identity);
         towerPlaceHolder.transform.SetParent(parentGameObject.transform);
+        var towerTurretScript = towerPlaceHolder.GetComponent<Turret>();
+        towerTurretScript.Damage = towerDataManager.TowerDatas[index].TowerDamages[0];
+        towerTurretScript.Range = towerDataManager.TowerDatas[index].TowerRanges[0];
+        towerTurretScript.FireRate = towerDataManager.TowerDatas[index].TowerFireRates[0];
         this.gameObject.SetActive(false);
     }
 
