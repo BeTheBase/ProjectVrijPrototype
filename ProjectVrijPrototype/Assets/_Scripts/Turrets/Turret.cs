@@ -34,7 +34,7 @@ public class Turret : MonoBehaviour
     }
 
     //Update the current Target.
-    void UpdateTarget()
+    public virtual void UpdateTarget()
     {
         GameObject[] Enemies = GameObject.FindGameObjectsWithTag("Enemy");
         float shortestDistance = Mathf.Infinity;
