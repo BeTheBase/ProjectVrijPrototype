@@ -31,7 +31,7 @@ public class BaseEnemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         if(transform.position.y <= -5)
         {
@@ -82,5 +82,17 @@ public class BaseEnemy : MonoBehaviour
         yield return new WaitForSeconds(slowTime);
         agent.speed = baseSpeed;
         IsSlowed = false;
+    }
+
+    public void Heal(float healAmount)
+    {
+        if(healAmount <= (MaxHealth - Health))
+        {
+            Health += healAmount;
+        }
+        else
+        {
+            Health = MaxHealth;
+        }       
     }
 }
