@@ -40,7 +40,7 @@ public class UpgradeTowerManager : MonoBehaviour
             upgradeTowerData = TowerDataManager.Instance.TowerDatas.Find(t => t.Tower.gameObject.name.Equals(tower.name.Replace("(Clone)", "")));
         }
         if (upgradeTowerData != null)
-            goldCost = upgradeTowerData.UpgradeGoldCost;
+            goldCost = upgradeTowerData.UpgradeGoldCosts[tower.GetComponent<Turret>().TowerLevel];
         else
             goldCost = 90;
         UpgradeCostTextField.text = "Upgrade Cost:" + goldCost;
@@ -52,7 +52,6 @@ public class UpgradeTowerManager : MonoBehaviour
         }
         if (tower.transform.childCount == 2 || tower.transform.childCount <= 0)
         {
-            transform.position += Vector3.up*4;
             return;
         }
         
@@ -71,8 +70,9 @@ public class UpgradeTowerManager : MonoBehaviour
         towerTurretScript.Damage = upgradeTowerData.TowerDamages[towerLevel];
         towerTurretScript.Range = upgradeTowerData.TowerRanges[towerLevel];
         towerTurretScript.FireRate = upgradeTowerData.TowerFireRates[towerLevel];
+        if (tower.transform.childCount == 2 && towerLevel >= 2)
+            tower.GetComponent<SandStormTornedo>().CanSwirl = true;
         StartCoroutine(WaitForLoadingBar());
-
     }
 
     public void DeleteTower()
