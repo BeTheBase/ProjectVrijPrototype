@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 110127981184159802}
   - component: {fileID: 4299178283926020285}
   - component: {fileID: 6286949719126305022}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: tower_placement
   m_TagString: TowerTile
   m_Icon: {fileID: 0}
