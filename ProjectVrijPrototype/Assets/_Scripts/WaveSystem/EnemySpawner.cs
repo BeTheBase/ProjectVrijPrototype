@@ -8,10 +8,9 @@ public class EnemySpawner : MonoBehaviour {
 
     public static EnemySpawner Instance;
 
-    [HideInInspector]
     public int EnemiesAlive = 0;
 
-    public Wave[] Waves;
+    public Wave[] waves;
 
     public static bool Spawning = true;
 
@@ -37,18 +36,22 @@ public class EnemySpawner : MonoBehaviour {
         objectPooler = ObjectPooler.Instance;
     }
 
-    public void NextWave()
+    private void Update()
     {
-        StartCoroutine(SpawnWave());
+        if (Input.GetKeyDown(KeyCode.Return) && waveIndex < waves.Length)
+        {
+            print("Wave: " + waveIndex);
+            StartCoroutine(SpawnWave());
+        }
     }
 
     IEnumerator SpawnWave()
     {
         yield return new WaitForSeconds(0.1f);
 
-        if(waveIndex < Waves.Length)
+        if(waveIndex < waves.Length)
         {
-            Wave wave = Waves[waveIndex];
+            Wave wave = waves[waveIndex];
             StartCoroutine(SpawnAfterTime(wave.NextWaveTime));
         
             waveIndex++;

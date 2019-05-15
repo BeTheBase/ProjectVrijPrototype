@@ -15,7 +15,6 @@ public class UIManager : MonoBehaviour
     public Text LivesText;
     public Text WaveText;
     public Text WaveTimerText;
-    public Image TimerImage;
 
     public float CurrentTime;
 
@@ -42,15 +41,11 @@ public class UIManager : MonoBehaviour
     {
         GoldText.text = "Gold:" + gameManager.Gold;
         LivesText.text = "Lives:" + gameManager.Lives;
-        WaveText.text = "Wave:" + EnemySpawner.waveIndex + "/" + enemySpawner.Waves.Length;
+        WaveText.text = "Wave:" + EnemySpawner.waveIndex + "/" + enemySpawner.waves.Length;
         if(CurrentTime >= 0)
         {
             CurrentTime -= Time.deltaTime;
         }
         WaveTimerText.text = "Time:" + Mathf.RoundToInt(CurrentTime);
-        if(EnemySpawner.waveIndex < enemySpawner.Waves.Length)
-        {
-            TimerImage.fillAmount = CurrentTime / enemySpawner.Waves[EnemySpawner.waveIndex].NextWaveTime;
-        }
     }
 }
