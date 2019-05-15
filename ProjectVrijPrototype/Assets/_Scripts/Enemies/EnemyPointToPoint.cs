@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class BaseEnemy : MonoBehaviour
+public class EnemyPointToPoint : MonoBehaviour
 {
     public MovePoints AllMovePoints;
     public int NextPoint = 0;
@@ -35,11 +34,10 @@ public class BaseEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, AllMovePoints.EnemyMovePoints[NextPoint].position) < 1f)
+        if (Vector3.Distance(transform.position, AllMovePoints.EnemyMovePoints[NextPoint].position) < 0.1f)
             NextPoint++;
 
         transform.position = Vector3.MoveTowards(transform.position, AllMovePoints.EnemyMovePoints[NextPoint].position, EnemyWalkSpeed * Time.deltaTime);
-        transform.LookAt(AllMovePoints.EnemyMovePoints[NextPoint].transform.position);
         if (transform.position.y <= -5)
         {
             enemySpawner.EnemiesAlive--;

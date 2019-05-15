@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7646313516292585106}
   m_Layer: 0
   m_Name: SandStormTornedo
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,9 +42,9 @@ SphereCollider:
   m_GameObject: {fileID: 7646313516292585108}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 2
   m_Center: {x: 0, y: -2, z: 0}
 --- !u!114 &7646313516292585106
 MonoBehaviour:
@@ -58,15 +58,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d82ff6c92bc61c4ab6c746595bb51a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  Range: 8
+  FireRate: 5
+  Damage: 0
+  TowerLevel: 1
+  objectPooler: {fileID: 0}
+  FirePoint: {fileID: 0}
+  HasFireDelay: 0
   TwirlForce: 7
   UpwardsForce: 4
   SwirlForce: 10
-  Damage: 0
-  DelayTime: 5
-  PickRange: 11
-  MoveRange: 0.5
-  DamageRange: 8
-  enemyTag: Enemy
+  EnemyMoveRange: 0.5
+  CanSwirl: 1
 --- !u!1001 &7646313517347601352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 8024078386774133514, guid: e41f69a488ee21845ba01f9fec920e89,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.662692
+      value: -4.76
       objectReference: {fileID: 0}
     - target: {fileID: 8024078386774133514, guid: e41f69a488ee21845ba01f9fec920e89,
         type: 3}
@@ -134,21 +138,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8024078386774133514, guid: e41f69a488ee21845ba01f9fec920e89,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8024078386774133514, guid: e41f69a488ee21845ba01f9fec920e89,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8024078386774133514, guid: e41f69a488ee21845ba01f9fec920e89,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7501976321199477832, guid: e41f69a488ee21845ba01f9fec920e89,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -163,11 +152,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593441965612808749, guid: e41f69a488ee21845ba01f9fec920e89,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6593441965612808749, guid: e41f69a488ee21845ba01f9fec920e89,
         type: 3}
