@@ -48,6 +48,9 @@ public class UIManager : MonoBehaviour
             CurrentTime -= Time.deltaTime;
         }
         WaveTimerText.text = "Time:" + Mathf.RoundToInt(CurrentTime);
-        TimerImage.fillAmount = CurrentTime / enemySpawner.Waves[EnemySpawner.waveIndex].NextWaveTime;
+        if(EnemySpawner.waveIndex < enemySpawner.Waves.Length)
+        {
+            TimerImage.fillAmount = CurrentTime / enemySpawner.Waves[EnemySpawner.waveIndex].NextWaveTime;
+        }
     }
 }

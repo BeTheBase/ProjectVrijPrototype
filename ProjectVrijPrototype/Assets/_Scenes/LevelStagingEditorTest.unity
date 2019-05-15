@@ -687,6 +687,68 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1792283272, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 89c51dc0fca3cfa40b9e9fc199368571,
+        type: 3}
+    - target: {fileID: 1792283272, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792283272, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792283272, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_Text
+      value: 'Cost: 90'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2034408456, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 89c51dc0fca3cfa40b9e9fc199368571,
+        type: 3}
+    - target: {fileID: 2034408456, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2034408456, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 759718604, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.23529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 759718604, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.23529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 759718604, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.23529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 759718604, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_Color.a
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245712460, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.23529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245712460, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.23529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245712460, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.23529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245712460, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
+      propertyPath: m_Color.a
+      value: 0.39215687
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8952bf3111308da4a9e2fc53405911c3, type: 3}
 --- !u!1001 &248459970
@@ -1578,7 +1640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 0.5647059}
+  m_Color: {r: 0.23529412, g: 0.23529412, b: 0.23529412, a: 0.39215687}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1790,6 +1852,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2075541731}
+    - target: {fileID: 1369236964, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 89c51dc0fca3cfa40b9e9fc199368571,
+        type: 3}
+    - target: {fileID: 254488388, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 89c51dc0fca3cfa40b9e9fc199368571,
+        type: 3}
+    - target: {fileID: 659103205, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 89c51dc0fca3cfa40b9e9fc199368571,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
 --- !u!1 &840630799 stripped
