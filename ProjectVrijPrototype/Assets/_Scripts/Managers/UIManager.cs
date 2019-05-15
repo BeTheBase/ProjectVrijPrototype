@@ -41,7 +41,7 @@ public class UIManager : MonoBehaviour
     {
         GoldText.text = "Gold:" + gameManager.Gold;
         LivesText.text = "Lives:" + gameManager.Lives;
-        WaveText.text = "Wave:" + EnemySpawner.waveIndex + "/" + enemySpawner.waves.Length;
+        WaveText.text = "Wave:" + EnemySpawner.waveIndex + "/" + enemySpawner.Waves.Length;
         if(CurrentTime >= 0)
         {
             CurrentTime -= Time.deltaTime;

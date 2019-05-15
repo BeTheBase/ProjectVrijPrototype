@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour {
 
     public int EnemiesAlive = 0;
 
-    public Wave[] waves;
+    public Wave[] Waves;
 
     public static bool Spawning = true;
 
@@ -38,7 +38,7 @@ public class EnemySpawner : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) && waveIndex < waves.Length)
+        if (Input.GetKeyDown(KeyCode.Return) && waveIndex < Waves.Length)
         {
             print("Wave: " + waveIndex);
             StartCoroutine(SpawnWave());
@@ -49,9 +49,9 @@ public class EnemySpawner : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.1f);
 
-        if(waveIndex < waves.Length)
+        if(waveIndex < Waves.Length)
         {
-            Wave wave = waves[waveIndex];
+            Wave wave = Waves[waveIndex];
             StartCoroutine(SpawnAfterTime(wave.NextWaveTime));
         
             waveIndex++;
