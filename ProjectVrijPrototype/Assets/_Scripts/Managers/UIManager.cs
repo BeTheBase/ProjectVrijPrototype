@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     public Text LivesText;
     public Text WaveText;
     public Text WaveTimerText;
+    public Image TimerImage;
 
     public float CurrentTime;
 
@@ -47,5 +48,6 @@ public class UIManager : MonoBehaviour
             CurrentTime -= Time.deltaTime;
         }
         WaveTimerText.text = "Time:" + Mathf.RoundToInt(CurrentTime);
+        TimerImage.fillAmount = CurrentTime / enemySpawner.Waves[EnemySpawner.waveIndex].NextWaveTime;
     }
 }
