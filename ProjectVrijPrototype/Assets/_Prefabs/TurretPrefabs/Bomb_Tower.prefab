@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  Range: 10
+  Range: 5
   FireRate: 0.5
   Damage: 2
   objectPooler: {fileID: 0}
