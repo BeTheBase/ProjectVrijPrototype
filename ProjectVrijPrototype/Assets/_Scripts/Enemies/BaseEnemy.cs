@@ -33,7 +33,7 @@ public class BaseEnemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         if (Vector3.Distance(transform.position, AllMovePoints.EnemyMovePoints[NextPoint].position) < 1f)
             NextPoint++;
@@ -89,5 +89,17 @@ public class BaseEnemy : MonoBehaviour
         yield return new WaitForSeconds(slowTime);
         EnemyWalkSpeed = baseSpeed;
         IsSlowed = false;
+    }
+
+    public void Heal(float healAmount)
+    {
+        if (healAmount <= (MaxHealth - Health))
+        {
+            Health += healAmount;
+        }
+        else
+        {
+            Health = MaxHealth;
+        }
     }
 }

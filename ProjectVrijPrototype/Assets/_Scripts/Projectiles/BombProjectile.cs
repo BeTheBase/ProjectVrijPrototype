@@ -87,8 +87,5 @@ public class BombProjectile : BaseProjectile
     {
         other.GetComponent<BaseEnemy>().Health -= Damage;
     }
-    private void OnCollisionEnter(Collider other)
-    {
-        return;
-    }
+
 }
