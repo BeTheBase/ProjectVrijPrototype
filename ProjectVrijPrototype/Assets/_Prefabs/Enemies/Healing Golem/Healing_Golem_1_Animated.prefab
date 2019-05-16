@@ -734,13 +734,12 @@ MonoBehaviour:
   AllMovePoints: {fileID: 0}
   NextPoint: 0
   EnemyWalkSpeed: 5
-  MaxHealth: 0
-  Health: 0
-  GoldGiven: 0
+  Health: 40
+  GoldGiven: 5
   IsSlowed: 0
   Range: 5
-  HealCooldown: 0
-  HealAmount: 0
+  HealCooldown: 10
+  HealAmount: 10
   Targets: []
 --- !u!1 &1492955681
 GameObject:
