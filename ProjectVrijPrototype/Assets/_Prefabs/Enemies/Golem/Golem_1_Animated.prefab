@@ -669,8 +669,8 @@ MonoBehaviour:
   AllMovePoints: {fileID: 0}
   NextPoint: 0
   EnemyWalkSpeed: 4
-  MaxHealth: 15
-  Health: 15
+  MaxHealth: 20
+  Health: 20
   GoldGiven: 3
   IsSlowed: 0
 --- !u!195 &6748191590327504492
