@@ -9,10 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6526810247720380931}
-  - component: {fileID: 6526810247720380928}
-  - component: {fileID: 6526810247720380930}
-  - component: {fileID: 6526810247720380989}
   - component: {fileID: 6526810247720380988}
+  - component: {fileID: 6526810247720380928}
+  - component: {fileID: 6526810247720380989}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -34,6 +33,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6526810247720380988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6526810247720380929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c341e760810bed345b27ab609128b585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EndPosition: {fileID: 0}
+  Gold: 1000
+  Lives: 20
 --- !u!114 &6526810247720380928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,23 +63,6 @@ MonoBehaviour:
   SelectedGameObject: {fileID: 0}
   UISelectTowerPrefab: {fileID: 0}
   UISelectUpgradePrefab: {fileID: 0}
---- !u!114 &6526810247720380930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6526810247720380929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38535b313e8688746af5ad5c66b9f17b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &6526810247720380989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,28 +80,20 @@ MonoBehaviour:
     Tower: {fileID: 6594468594117995904, guid: 9e78f503e628dc243abf0794f63a17ef, type: 3}
     GoldCost: 90
     UpgradeGoldCost: 110
+    TowerRanges: []
+    TowerDamages: []
+    TowerFireRates: []
   - name: BombTower
     Tower: {fileID: 5891830963228214072, guid: 42607e074230b88448e0e7f8bed51afd, type: 3}
     GoldCost: 120
     UpgradeGoldCost: 200
+    TowerRanges: []
+    TowerDamages: []
+    TowerFireRates: []
   - name: MagicTower
     Tower: {fileID: 7120660010649485998, guid: 04de35a1d2d837944aed8ca9d0dc0bbc, type: 3}
     GoldCost: 160
     UpgradeGoldCost: 300
---- !u!114 &6526810247720380988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6526810247720380929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c341e760810bed345b27ab609128b585, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EndPosition: {fileID: 0}
-  GoldText: {fileID: 0}
-  LivesText: {fileID: 0}
-  Gold: 1000
-  Lives: 20
+    TowerRanges: []
+    TowerDamages: []
+    TowerFireRates: []

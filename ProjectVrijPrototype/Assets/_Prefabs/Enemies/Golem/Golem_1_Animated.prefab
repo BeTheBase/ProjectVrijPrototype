@@ -608,7 +608,6 @@ GameObject:
   - component: {fileID: 1465958686}
   - component: {fileID: 1465958685}
   - component: {fileID: 2442148532883186566}
-  - component: {fileID: 6748191590327504492}
   - component: {fileID: 4435827185531887171}
   - component: {fileID: 2593780969040652075}
   - component: {fileID: 6065854105153361542}
@@ -628,7 +627,7 @@ Transform:
   m_GameObject: {fileID: 1465958684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 75, y: 75, z: 75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1558147636}
   - {fileID: 86223922}
@@ -671,28 +670,6 @@ MonoBehaviour:
   Health: 10
   GoldGiven: 1
   IsSlowed: 0
---- !u!195 &6748191590327504492
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465958684}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.01
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.04
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!54 &4435827185531887171
 Rigidbody:
   m_ObjectHideFlags: 0
