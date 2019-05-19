@@ -10,8 +10,10 @@ public class BaseEnemy : MonoBehaviour
     public float EnemyWalkSpeed = 5f;
 
     public float MaxHealth;
-
     public float Health;
+
+    public float MaxShield;
+    public float CurrentShield;
 
     public int GoldGiven;
 
@@ -21,6 +23,7 @@ public class BaseEnemy : MonoBehaviour
 
     public bool IsSlowed;
 
+    public bool HasShield;
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +67,11 @@ public class BaseEnemy : MonoBehaviour
             enemySpawner.EnemiesAlive--;
             gameObject.SetActive(false);
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        Health -= damage;
     }
 
     public void Die()

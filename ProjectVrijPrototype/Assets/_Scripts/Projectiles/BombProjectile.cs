@@ -85,10 +85,7 @@ public class BombProjectile : BaseProjectile
 
     private void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<BaseEnemy>().Health -= Damage;
+        other.GetComponent<BaseEnemy>().TakeDamage(Damage);
     }
-    private void OnCollisionEnter(Collider other)
-    {
-        return;
-    }
+
 }

@@ -49,7 +49,7 @@ public class MirrorTurret : Turret
 
             BaseEnemy EnemyScript = Target.GetComponent<BaseEnemy>();
 
-            EnemyScript.GetComponent<BaseEnemy>().Health -= Damage / 120;
+            EnemyScript.GetComponent<BaseEnemy>().TakeDamage(Damage / 120);
             if (!EnemyScript.IsSlowed)
             {
                 StartCoroutine(EnemyScript.Slow(0.6f, 2.5f));
