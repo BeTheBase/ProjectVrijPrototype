@@ -27,7 +27,6 @@ public class BaseEnemy : MonoBehaviour
         enemySpawner = EnemySpawner.Instance;
         gameManager = GameManager.Instance;
         objectPooler = ObjectPooler.Instance;
-        agent.SetDestination((gameManager.EndPosition.position));
     }
 
     // Update is called once per frame
