@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 
 public class SelectTile : MonoBehaviour
 {
@@ -8,8 +10,8 @@ public class SelectTile : MonoBehaviour
     public GameObject SelectedGameObject;
     public GameObject UISelectTowerPrefab;
     public GameObject UISelectUpgradePrefab;
-
     private Camera _mainCamera;
+
 
     // Use this for initialization
     public void Awake()
@@ -21,6 +23,7 @@ public class SelectTile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             SetHudActive();
@@ -56,6 +59,10 @@ public class SelectTile : MonoBehaviour
             UISelectUpgradePrefab.transform.position = SelectedGameObject.transform.position + new Vector3(0, 3f, 0);
             UISelectUpgradePrefab.SetActive(true);
         }
+        if(SelectedGameObject.name == "Empty")
+        {
+            Destroy(SelectedGameObject);
+        }
         //UIPrefab.transform.localScale = new Vector3(1, 1, 1);
     }
 
@@ -66,12 +73,27 @@ public class SelectTile : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
             if (hit.transform.tag == "TowerTile")
+            {
                 return hit.transform.gameObject;
+
+            }
             else if (hit.transform.tag == "Tower")
+            {
                 return hit.transform.gameObject;
+            }
+            else if(EventSystem.current.IsPointerOverGameObject())
+            {
+                GameObject Empty = new GameObject("Empty");
+                return Empty;
+            }
             else
+            {
+                print(hit.transform.gameObject);
                 return null;
+            }
         else
+        {
             return null;
+        }
     }
 }

@@ -41,7 +41,7 @@ public class SelectTowerManager : MonoBehaviour
         var towerCost = ReturnGoldCost(index);
         if (!ContinueProgramm(towerCost)) return;
         parentGameObject = transform.parent.gameObject;
-        parentGameObject.GetComponent<BoxCollider>().enabled = false;
+        parentGameObject.GetComponent<CapsuleCollider>().enabled = false;
         gameManager.Gold -= towerCost;
         GameObject towerPlaceHolder = Instantiate(towerDataManager.TowerDatas[index].Tower, transform.position - Vector3.up, Quaternion.identity);
         towerPlaceHolder.transform.SetParent(parentGameObject.transform);
