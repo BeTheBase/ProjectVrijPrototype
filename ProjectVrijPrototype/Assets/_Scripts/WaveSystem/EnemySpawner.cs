@@ -83,7 +83,10 @@ public class EnemySpawner : MonoBehaviour {
         {
             EnemiesAlive++;
             Vector3 spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Count)].position;
-            objectPooler.SpawnFromPool(enemy, spawnPosition, Quaternion.identity);
+            GameObject Enemy = objectPooler.SpawnFromPool(enemy, spawnPosition, Quaternion.identity);
+            Enemy.transform.position = new Vector3(spawnPosition.x, Enemy.transform.localScale.y * 2.5f, spawnPosition.z);
+
+            print(Enemy.transform.position);
         }
     }
 }

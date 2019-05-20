@@ -15,8 +15,6 @@ public class SelectTowerManager : MonoBehaviour
     private TowerDataManager towerDataManager;
     private GameObject parentGameObject;
 
-    private int index = 0;
-
     private void Awake()
     {
         gameObject.SetActive(false);

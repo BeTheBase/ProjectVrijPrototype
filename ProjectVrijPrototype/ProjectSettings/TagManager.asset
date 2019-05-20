@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - End
   - WorldUI
+  - MovePoints
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - PostProcessing
   - WorldUI
   - Enemies
-  - 
+  - Towers
   - 
   - 
   - 

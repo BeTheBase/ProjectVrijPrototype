@@ -5,17 +5,21 @@ using UnityEngine.AI;
 
 public class BaseEnemy : MonoBehaviour
 {
+    public float Speed;
+
+    [HideInInspector]
+    public int NextPoint = 0;
+
     public float MaxHealth;
 
     public float Health;
 
     public int GoldGiven;
 
-    private NavMeshAgent agent;
-
     private EnemySpawner enemySpawner;
     private GameManager gameManager;
     private ObjectPooler objectPooler;
+    public WavePath WavePath;
 
     public bool IsSlowed;
 
@@ -23,20 +27,55 @@ public class BaseEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        agent = GetComponentInChildren<NavMeshAgent>();
+        WavePath = WavePath.Instance;
         enemySpawner = EnemySpawner.Instance;
         gameManager = GameManager.Instance;
         objectPooler = ObjectPooler.Instance;
+        NextPoint = 0;
     }
 
     // Update is called once per frame
     public virtual void Update()
     {
-        if(transform.position.y <= -5)
+        Vector3 nextPointPosition;
+        nextPointPosition = new Vector3(WavePath.EnemyMovePoints[NextPoint].position.x, transform.position.y, WavePath.EnemyMovePoints[NextPoint].position.z);
+        //Move from point to point
+        if (NextPoint < WavePath.EnemyMovePoints.Count - 1)
+        {
+            if (Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(WavePath.EnemyMovePoints[NextPoint].position.x, 0, WavePath.EnemyMovePoints[NextPoint].position.z)) < 0.1f)
+            {
+                print("H");
+                NextPoint++;
+            }
+
+
+            transform.position = Vector3.MoveTowards(transform.position, nextPointPosition, Speed * Time.deltaTime);
+            transform.LookAt(nextPointPosition);
+        }
+        /*
+        //Move from point to point
+        if (NextPoint < WavePath.EnemyMovePoints.Count -1)
+        {
+            if (Vector3.Distance(transform.position, WavePath.EnemyMovePoints[NextPoint].position) < 25f)
+            {
+                print("H");
+                NextPoint++;
+            }
+
+            transform.position = Vector3.MoveTowards(transform.position, WavePath.EnemyMovePoints[NextPoint].position, Speed * Time.deltaTime);
+            transform.LookAt(WavePath.EnemyMovePoints[NextPoint].transform.position);
+        }
+        */
+
+
+        //Disable if fall from map
+        if (transform.position.y <= -5)
         {
             enemySpawner.EnemiesAlive--;
             gameObject.SetActive(false);
         }
+
+        //If health is less than 0 execute Die function
         if(Health <= 0)
         {
             Die();
@@ -49,6 +88,7 @@ public class BaseEnemy : MonoBehaviour
             MadeIt();
     }
 
+    /*
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.transform.tag == "End")
@@ -57,7 +97,7 @@ public class BaseEnemy : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
+    */
     public void Die()
     {
         objectPooler.SpawnFromPool("Blood", transform.position, Quaternion.identity);
@@ -76,10 +116,10 @@ public class BaseEnemy : MonoBehaviour
     public IEnumerator Slow(float slowMultiplier, float slowTime)
     {
         IsSlowed = true;
-        float baseSpeed = agent.speed;
-        agent.speed *= slowMultiplier;
+        float baseSpeed = Speed;
+        Speed *= slowMultiplier;
         yield return new WaitForSeconds(slowTime);
-        agent.speed = baseSpeed;
+        Speed = baseSpeed;
         IsSlowed = false;
     }
 
