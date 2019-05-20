@@ -68,6 +68,7 @@ public class UpgradeTowerManager : MonoBehaviour
         var towerTurretScript =  tower.GetComponent<Turret>();
         towerTurretScript.TowerLevel += 1;
         var towerLevel = towerTurretScript.TowerLevel;
+        if (upgradeTowerData.TowerDamages.Count < 3) return;
         towerTurretScript.Damage = upgradeTowerData.TowerDamages[towerLevel];
         towerTurretScript.Range = upgradeTowerData.TowerRanges[towerLevel];
         towerTurretScript.FireRate = upgradeTowerData.TowerFireRates[towerLevel];
