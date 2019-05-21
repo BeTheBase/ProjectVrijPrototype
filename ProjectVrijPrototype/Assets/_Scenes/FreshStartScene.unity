@@ -313,8 +313,10 @@ MonoBehaviour:
   EnemiesAlive: 0
   Waves:
   - enemyPrefabs:
-    - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
-    enemyAmounts: 0a000000
+    - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
+    - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
+    - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
+    enemyAmounts: 01000000030000000a000000
     spawnRate: 1
     NextWaveTime: 20
   - enemyPrefabs:
@@ -857,6 +859,9 @@ MonoBehaviour:
   - tag: BloodHit
     prefab: {fileID: 4384990470017186315, guid: 26c47ec6f5863994e9480d07d487e5a6,
       type: 3}
+    size: 100
+  - tag: Shield Golem
+    prefab: {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
     size: 100
 --- !u!4 &976218857
 Transform:
@@ -1518,6 +1523,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4482394641334157062, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8,
+        type: 3}
+      propertyPath: m_Name
+      value: GameUI
+      objectReference: {fileID: 0}
     - target: {fileID: 4482394639985444221, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1577,11 +1587,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Press this button to start the next wave
-      objectReference: {fileID: 0}
-    - target: {fileID: 4482394641334157062, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8,
-        type: 3}
-      propertyPath: m_Name
-      value: GameUI
       objectReference: {fileID: 0}
     - target: {fileID: 4482394641334157114, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8,
         type: 3}

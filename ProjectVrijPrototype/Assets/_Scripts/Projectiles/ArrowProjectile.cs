@@ -44,7 +44,7 @@ public class ArrowProjectile : BaseProjectile
 
         BloodHit.transform.rotation = Quaternion.LookRotation(dir);
 
-        Target.GetComponent<BaseEnemy>().Health -= Damage;
+        Target.GetComponent<BaseEnemy>().TakeDamage(Damage);
         gameObject.SetActive(false);
     }
 }

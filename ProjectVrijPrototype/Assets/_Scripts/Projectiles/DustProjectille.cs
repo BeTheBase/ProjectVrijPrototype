@@ -27,7 +27,7 @@ public class DustProjectille : BaseProjectile
 
     public override void HitTarget()
     {
-        Target.GetComponent<BaseEnemy>().Health -= Damage;
+        Target.GetComponent<BaseEnemy>().TakeDamage(Damage);
         gameObject.SetActive(false);
     }
 }
