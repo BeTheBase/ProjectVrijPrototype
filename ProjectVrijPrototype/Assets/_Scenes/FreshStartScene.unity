@@ -227,6 +227,11 @@ MonoBehaviour:
     enemyAmounts: 01000000
     spawnRate: 1
     NextWaveTime: 20
+  - enemyPrefabs:
+    - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
+    enemyAmounts: 01000000
+    spawnRate: 1
+    NextWaveTime: 20
   enemiesToSpawn: 0
   spawnPoints:
   - {fileID: 1907559446}
@@ -714,6 +719,19 @@ MonoBehaviour:
   pools:
   - tag: Golem_1_Animated
     prefab: {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
+    size: 100
+  - tag: Healing_Golem_1_Animated
+    prefab: {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
+    size: 100
+  - tag: Arrow
+    prefab: {fileID: 135609444929465615, guid: bcbde476e99f13f4abf048c53df15843, type: 3}
+    size: 500
+  - tag: Bomb
+    prefab: {fileID: 6094023973490576796, guid: 38ece42de4ca45b41a418ba32d230d1c,
+      type: 3}
+    size: 100
+  - tag: DustProjectile
+    prefab: {fileID: 744332127, guid: ce5da91af18284d48acfb56e0b91d91d, type: 3}
     size: 100
 --- !u!4 &976218857
 Transform:
