@@ -78,16 +78,13 @@ public class SandStormTornedo : MonoBehaviour
 
     private void TornedoPull()
     {
-        target.GetComponent<NavMeshAgent>().enabled = false;
         Vector3 direction = transform.position - target.transform.position;
 
         target.GetComponent<Rigidbody>().AddForce(direction * TwirlForce * (1 / Vector3.Distance(transform.position, target.transform.position)), ForceMode.Impulse);
     }
 
     private void TornedoSwirl()
-    {
-        target.GetComponent<NavMeshAgent>().enabled = false;
- 
+    { 
         Vector3 direction = transform.position - target.transform.position;
         float distance = Vector3.Distance(transform.position, target.transform.position) * MoveRange;
         float swirlForce = SwirlForce - distance;
