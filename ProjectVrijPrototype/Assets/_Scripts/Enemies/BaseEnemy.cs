@@ -142,7 +142,7 @@ public class BaseEnemy : MonoBehaviour
 
     public void TakeDamage(float Damage)
     {
-        if(HasShield && Shield <= 0)
+        if(HasShield && Shield > 0)
         {
             Shield -= Damage;
         }

@@ -313,10 +313,8 @@ MonoBehaviour:
   EnemiesAlive: 0
   Waves:
   - enemyPrefabs:
-    - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
     - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
-    - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
-    enemyAmounts: 01000000030000000a000000
+    enemyAmounts: 01000000
     spawnRate: 1
     NextWaveTime: 20
   - enemyPrefabs:
