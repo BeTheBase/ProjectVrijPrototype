@@ -608,7 +608,6 @@ GameObject:
   - component: {fileID: 1465958686}
   - component: {fileID: 1465958685}
   - component: {fileID: 2502081057753649222}
-  - component: {fileID: 6748191590327504492}
   - component: {fileID: 4435827185531887171}
   - component: {fileID: 2593780969040652075}
   - component: {fileID: 6065854105153361542}
@@ -667,36 +666,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471fcb465304ae64ea23269e775285cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 0
+  NextPoint: 0
   MaxHealth: 50
   Health: 50
   GoldGiven: 1
+  WavePath: {fileID: 0}
   IsSlowed: 0
   Range: 15
   HealCooldown: 3
   HealAmount: 3
   Targets: []
---- !u!195 &6748191590327504492
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465958684}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.01
-  m_Speed: 1.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.04
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!54 &4435827185531887171
 Rigidbody:
   m_ObjectHideFlags: 0

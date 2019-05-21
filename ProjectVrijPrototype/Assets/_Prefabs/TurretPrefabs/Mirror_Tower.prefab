@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 4172490301956651611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 661441067448254068}
   - {fileID: 3345260576534265227}
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  Range: 10
+  Range: 75
   FireRate: 0
   Damage: 1
   TowerLevel: 1
@@ -132,7 +132,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -436,11 +436,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3614482042510584481}
     m_Modifications:
-    - target: {fileID: 7403209370465406284, guid: 8d1163006ab5f354f866904e5b9db2f7,
-        type: 3}
-      propertyPath: m_Name
-      value: Spark
-      objectReference: {fileID: 0}
     - target: {fileID: 5746727234101172591, guid: 8d1163006ab5f354f866904e5b9db2f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -495,6 +490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403209370465406284, guid: 8d1163006ab5f354f866904e5b9db2f7,
+        type: 3}
+      propertyPath: m_Name
+      value: Spark
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d1163006ab5f354f866904e5b9db2f7, type: 3}

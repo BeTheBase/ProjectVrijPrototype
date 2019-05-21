@@ -40,11 +40,10 @@ public class BaseEnemy : MonoBehaviour
         Vector3 nextPointPosition;
         nextPointPosition = new Vector3(WavePath.EnemyMovePoints[NextPoint].position.x, transform.position.y, WavePath.EnemyMovePoints[NextPoint].position.z);
         //Move from point to point
-        if (NextPoint < WavePath.EnemyMovePoints.Count - 1)
+        if (NextPoint < WavePath.EnemyMovePoints.Count)
         {
             if (Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(WavePath.EnemyMovePoints[NextPoint].position.x, 0, WavePath.EnemyMovePoints[NextPoint].position.z)) < 0.1f)
             {
-                print("H");
                 NextPoint++;
             }
 

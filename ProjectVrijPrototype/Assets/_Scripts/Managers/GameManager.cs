@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 
     public Transform EndPosition;
 
+    public GameObject WaveSpawner;
+    public GameObject EnemySpawner;
+
     public int Gold;
     public int Lives;
 

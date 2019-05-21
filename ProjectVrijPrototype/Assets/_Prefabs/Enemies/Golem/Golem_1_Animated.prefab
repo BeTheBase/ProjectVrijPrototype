@@ -608,7 +608,6 @@ GameObject:
   - component: {fileID: 1465958686}
   - component: {fileID: 1465958685}
   - component: {fileID: 2442148532883186566}
-  - component: {fileID: 2593780969040652075}
   - component: {fileID: 6065854105153361542}
   - component: {fileID: 4569901853549387064}
   m_Layer: 10
@@ -627,7 +626,7 @@ Transform:
   m_GameObject: {fileID: 1465958684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1558147636}
   - {fileID: 86223922}
@@ -666,26 +665,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71061d69ad46fd43abe2935d9107444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 20
+  Speed: 5
   NextPoint: 0
   MaxHealth: 10
   Health: 10
   GoldGiven: 1
   WavePath: {fileID: 0}
   IsSlowed: 0
---- !u!65 &2593780969040652075
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465958684}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6065854105153361542
 BoxCollider:
   m_ObjectHideFlags: 0

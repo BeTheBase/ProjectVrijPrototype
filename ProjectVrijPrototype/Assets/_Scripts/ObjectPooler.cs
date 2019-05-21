@@ -33,6 +33,7 @@ public class ObjectPooler : MonoBehaviour {
 
         foreach(Pool pool in pools)
         {
+            pool.tag = pool.prefab.name;
             GameObject containerObject = new GameObject(pool.tag);
             Queue<GameObject> objectPool = new Queue<GameObject>();
 

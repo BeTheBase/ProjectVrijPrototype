@@ -85,6 +85,10 @@ public class BombProjectile : BaseProjectile
 
     private void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<BaseEnemy>().Health -= Damage;
+        if(other.tag == "Enemy")
+        {
+            other.GetComponent<BaseEnemy>().Health -= Damage;
+        }
     }
+
 }

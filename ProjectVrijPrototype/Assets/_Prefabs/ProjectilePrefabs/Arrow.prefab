@@ -92,5 +92,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
   Damage: 0
-  Speed: 50
+  Speed: 250
   FirePoint: {fileID: 0}

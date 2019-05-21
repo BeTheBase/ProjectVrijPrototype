@@ -79,7 +79,7 @@ public class UpgradeTowerManager : MonoBehaviour
     {
         gameManager.Gold += (int)goldCost / 2;
         tower.SetActive(false);
-        tower.transform.parent.GetComponent<BoxCollider>().enabled = true;
+        tower.transform.parent.GetComponent<CapsuleCollider>().enabled = true;
         this.gameObject.SetActive(false);
     }
 
