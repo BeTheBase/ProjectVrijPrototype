@@ -87,7 +87,7 @@ public class BombProjectile : BaseProjectile
     {
         if(other.tag == "Enemy")
         {
-            other.GetComponent<BaseEnemy>().Health -= Damage;
+            other.GetComponent<BaseEnemy>().TakeDamage(Damage);
         }
     }
 

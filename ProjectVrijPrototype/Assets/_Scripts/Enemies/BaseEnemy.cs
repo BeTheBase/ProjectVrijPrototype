@@ -11,8 +11,10 @@ public class BaseEnemy : MonoBehaviour
     public int NextPoint = 0;
 
     public float MaxHealth;
-
     public float Health;
+
+    public float MaxShield;
+    public float Shield;
 
     public int GoldGiven;
 
@@ -23,6 +25,8 @@ public class BaseEnemy : MonoBehaviour
 
     public bool IsSlowed;
 
+    public bool HasShield;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +36,8 @@ public class BaseEnemy : MonoBehaviour
         gameManager = GameManager.Instance;
         objectPooler = ObjectPooler.Instance;
         NextPoint = 0;
+        Health = MaxHealth;
+        Shield = MaxShield;
     }
 
     // Update is called once per frame
@@ -132,5 +138,17 @@ public class BaseEnemy : MonoBehaviour
         {
             Health = MaxHealth;
         }       
+    }
+
+    public void TakeDamage(float Damage)
+    {
+        if(HasShield && Shield > 0)
+        {
+            Shield -= Damage;
+        }
+        else
+        {
+            Health -= Damage;
+        }
     }
 }
