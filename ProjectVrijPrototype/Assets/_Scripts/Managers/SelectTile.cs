@@ -88,7 +88,6 @@ public class SelectTile : MonoBehaviour
             }
             else
             {
-                print(hit.transform.gameObject);
                 return null;
             }
         else
