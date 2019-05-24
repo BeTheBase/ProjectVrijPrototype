@@ -11,6 +11,7 @@ public class SelectTile : MonoBehaviour
     public GameObject UISelectTowerPrefab;
     public GameObject UISelectUpgradePrefab;
     private Camera _mainCamera;
+    private GameObject currentTowerUI;
 
 
     // Use this for initialization
@@ -51,6 +52,7 @@ public class SelectTile : MonoBehaviour
         }
         else if(SelectedGameObject.tag == "Tower")
         {
+
             UISelectTowerPrefab.SetActive(false);
             if (UISelectUpgradePrefab == null) return;
             if (!UpgradeTowerManager.CheckFillBarStatus) return;
@@ -58,9 +60,21 @@ public class SelectTile : MonoBehaviour
             UISelectUpgradePrefab.transform.SetParent(SelectedGameObject.transform);
             UISelectUpgradePrefab.transform.position = SelectedGameObject.transform.position + new Vector3(0, 3f, 0);
             UISelectUpgradePrefab.SetActive(true);
+
+            //TowerUI
+            if (currentTowerUI != null)
+            {
+                currentTowerUI.SetActive(false);
+            }
+            currentTowerUI = SelectedGameObject.GetComponent<Turret>().TowerUI;
+            currentTowerUI.SetActive(true);
         }
         if(SelectedGameObject.name == "Empty")
         {
+            if(currentTowerUI != null)
+            {
+                currentTowerUI.SetActive(false);
+            }
             Destroy(SelectedGameObject);
         }
         //UIPrefab.transform.localScale = new Vector3(1, 1, 1);
