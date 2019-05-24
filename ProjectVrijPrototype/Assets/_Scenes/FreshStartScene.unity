@@ -313,9 +313,10 @@ MonoBehaviour:
   EnemiesAlive: 0
   Waves:
   - enemyPrefabs:
-    - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
-    enemyAmounts: 01000000
-    spawnRate: 1
+    - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
+    - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
+    enemyAmounts: 0300000001000000
+    spawnRate: 0.1
     NextWaveTime: 20
   - enemyPrefabs:
     - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
@@ -451,61 +452,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 455477283, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 455477283, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 455477283, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256447881, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 455477282, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1320848559}
-    - target: {fileID: 759718602, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1245712458, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 191585062, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 191585061, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_TagString
-      value: WorldUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 191585061, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 759718601, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_TagString
-      value: WorldUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1245712457, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_TagString
-      value: WorldUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1300300748, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1245712459, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-    - {fileID: 759718603, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
 --- !u!1 &230488773 stripped
 GameObject:
@@ -513,160 +464,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 230488772}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &230488774 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 455477279, guid: 55cf7a36229ebe24b87dcaeddaaa852e,
-    type: 3}
-  m_PrefabInstance: {fileID: 230488772}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 230488773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf0a47a357811749a56d1b2aa9595de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &251322772 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1245712457, guid: 55cf7a36229ebe24b87dcaeddaaa852e,
-    type: 3}
-  m_PrefabInstance: {fileID: 230488772}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &251322774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251322772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 251322775}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 230488774}
-        m_MethodName: DeleteTower
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &251322775 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1245712460, guid: 55cf7a36229ebe24b87dcaeddaaa852e,
-    type: 3}
-  m_PrefabInstance: {fileID: 230488772}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251322772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &464207740 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 759718601, guid: 55cf7a36229ebe24b87dcaeddaaa852e,
-    type: 3}
-  m_PrefabInstance: {fileID: 230488772}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &464207742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464207740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 464207743}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 230488774}
-        m_MethodName: UpgradeTower
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &464207743 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 759718604, guid: 55cf7a36229ebe24b87dcaeddaaa852e,
-    type: 3}
-  m_PrefabInstance: {fileID: 230488772}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464207740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &712971926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -860,6 +657,9 @@ MonoBehaviour:
     size: 100
   - tag: Shield Golem
     prefab: {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
+    size: 100
+  - tag: HealingEffect
+    prefab: {fileID: 1000011945391522, guid: a4a6cf0dee709c44fa7c02956ac21f75, type: 3}
     size: 100
 --- !u!4 &976218857
 Transform:
@@ -1163,6 +963,11 @@ PrefabInstance:
       propertyPath: EndPosition
       value: 
       objectReference: {fileID: 2034132924}
+    - target: {fileID: 6526810247720380988, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: EnemySpawner
+      value: 
+      objectReference: {fileID: 215601190}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[0].TowerRanges.Array.size
@@ -1910,53 +1715,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4338419613744223803, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 4338419613744223803, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 4338419613744223803, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.09
-      objectReference: {fileID: 0}
     - target: {fileID: 4338419613744223802, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1320848559}
-    - target: {fileID: 1369236964, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 89c51dc0fca3cfa40b9e9fc199368571,
-        type: 3}
-    - target: {fileID: 1369236964, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 254488388, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 89c51dc0fca3cfa40b9e9fc199368571,
-        type: 3}
-    - target: {fileID: 254488388, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 659103205, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 89c51dc0fca3cfa40b9e9fc199368571,
-        type: 3}
-    - target: {fileID: 659103205, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 28
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
 --- !u!1 &1825037232 stripped

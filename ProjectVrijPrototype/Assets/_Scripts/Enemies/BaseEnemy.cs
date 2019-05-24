@@ -18,9 +18,9 @@ public class BaseEnemy : MonoBehaviour
 
     public int GoldGiven;
 
-    private EnemySpawner enemySpawner;
-    private GameManager gameManager;
-    private ObjectPooler objectPooler;
+    public EnemySpawner enemySpawner;
+    public GameManager gameManager;
+    public ObjectPooler objectPooler;
     public WavePath WavePath;
 
     public bool IsSlowed;
@@ -29,7 +29,7 @@ public class BaseEnemy : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         WavePath = WavePath.Instance;
         enemySpawner = EnemySpawner.Instance;
@@ -89,6 +89,7 @@ public class BaseEnemy : MonoBehaviour
 	
 	private void LateUpdate()
     {
+        print(gameManager);
         if (Vector3.Distance(gameManager.EndPosition.position, transform.position) < 5f)
             MadeIt();
     }

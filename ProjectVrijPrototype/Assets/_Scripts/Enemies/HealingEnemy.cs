@@ -10,7 +10,6 @@ public class HealingEnemy : BaseEnemy
     private float healCooldownTimer;
     public List<GameObject> Targets;
 
-
     public override void Update()
     {
         base.Update();
@@ -39,6 +38,12 @@ public class HealingEnemy : BaseEnemy
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
             if (distanceToEnemy <= Range)
             {
+                BaseEnemy baseEnemy = enemy.GetComponent<BaseEnemy>();
+                if (baseEnemy.Health < baseEnemy.MaxHealth)
+                {
+                    GameObject HealingEffect = objectPooler.SpawnFromPool("HealingEffect", enemy.transform.localPosition, Quaternion.Euler(new Vector3(-90, 0, 0)));
+                    HealingEffect.transform.parent = enemy.transform;
+                }
                 enemy.GetComponent<BaseEnemy>().Heal(HealAmount);
             }
         }
