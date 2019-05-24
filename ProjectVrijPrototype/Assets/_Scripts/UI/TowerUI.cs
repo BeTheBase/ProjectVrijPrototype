@@ -10,6 +10,7 @@ public class TowerUI : MonoBehaviour
     public Text DamageText;
     public Text RangeText;
     public Text FireText;
+
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -18,10 +19,10 @@ public class TowerUI : MonoBehaviour
     
     void SetStatsText()
     {
-        //Add break space
-        DamageText.text = "Damage" + turret.Damage;
-        RangeText.text = "Range" + turret.Range;
-        FireText.text = "Fire Rate" + turret.FireRate;
+        print(DamageText + "   " + turret);
+        DamageText.text = "Damage\n" + turret.Damage;
+        RangeText.text = "Range\n" + turret.Range;
+        FireText.text = "Fire Rate\n" + turret.FireRate;
 
     }
 }
