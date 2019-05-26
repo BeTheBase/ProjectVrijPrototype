@@ -35,11 +35,11 @@ RectTransform:
   m_Father: {fileID: 8562953887852906252}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 150}
-  m_Pivot: {x: 0.5, y: 0}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &8270722235684916010
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -170,9 +170,9 @@ GameObject:
   - component: {fileID: 6984328714100269999}
   - component: {fileID: 5446983534536878563}
   - component: {fileID: 3873442119009522185}
-  - component: {fileID: 3833779155254078219}
+  - component: {fileID: 1940780858734110904}
   m_Layer: 5
-  m_Name: TowerUI
+  m_Name: TowerInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &3833779155254078219
+--- !u!114 &1940780858734110904
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,10 +267,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4138757746811974843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07b5c212df928e4b9abf4392f89be14, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f21c319cd8e925458b0a8d1dfe30f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turret: {fileID: 0}
+  Index: 0
   DamageText: {fileID: 8413259285319269803}
   RangeText: {fileID: 8193685129502207008}
   FireText: {fileID: 4983584105513445915}

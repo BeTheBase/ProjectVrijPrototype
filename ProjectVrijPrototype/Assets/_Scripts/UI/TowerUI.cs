@@ -19,7 +19,6 @@ public class TowerUI : MonoBehaviour
     
     void SetStatsText()
     {
-        print(DamageText + "   " + turret);
         DamageText.text = "Damage\n" + turret.Damage;
         RangeText.text = "Range\n" + turret.Range;
         FireText.text = "Fire Rate\n" + turret.FireRate;
