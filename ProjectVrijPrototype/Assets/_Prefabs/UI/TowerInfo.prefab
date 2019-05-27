@@ -177,7 +177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8562953887852906252
 RectTransform:
   m_ObjectHideFlags: 0
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f21c319cd8e925458b0a8d1dfe30f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 0
+  Index: 2
   DamageText: {fileID: 8413259285319269803}
   RangeText: {fileID: 8193685129502207008}
   FireText: {fileID: 4983584105513445915}

@@ -27,8 +27,14 @@ public class SetTowerButton : MonoBehaviour
         {
             selectTowerManager.currentButton.enabled = true;
         }
-        selectTowerManager.currentCheckmark = transform.GetChild(0).gameObject;
+        if(selectTowerManager.currentTowerInfo != null)
+        {
+            selectTowerManager.currentTowerInfo.SetActive(false);
+        }
+        selectTowerManager.currentCheckmark = transform.Find("CheckMark").gameObject;
+        selectTowerManager.currentTowerInfo = transform.Find("TowerStats").gameObject;
         selectTowerManager.currentCheckmark.SetActive(true);
+        selectTowerManager.currentTowerInfo.SetActive(true);
         selectTowerManager.currentButton = towerButton;
         selectTowerManager.currentButton.enabled = false;
     }

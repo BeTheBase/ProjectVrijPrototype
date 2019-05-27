@@ -11,15 +11,18 @@ public class SelectTowerManager : MonoBehaviour
 
     public Text[] TowerCostTextFields;
 
+    public static SelectTowerManager Instance;
     private GameManager gameManager;
     private TowerDataManager towerDataManager;
     private GameObject parentGameObject;
     public GameObject currentCheckmark;
+    public GameObject currentTowerInfo;
     public Button currentButton;
 
 
     private void Awake()
     {
+        Instance = this;
         gameObject.SetActive(false);
     }
 

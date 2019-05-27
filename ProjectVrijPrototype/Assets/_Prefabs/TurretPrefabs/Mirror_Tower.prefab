@@ -444,11 +444,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerUI
       objectReference: {fileID: 0}
-    - target: {fileID: 4138757746811974843, guid: 6a6ae2fcb00004d4485d58835a941c71,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8562953887852906252, guid: 6a6ae2fcb00004d4485d58835a941c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -666,11 +661,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerInfo
       objectReference: {fileID: 0}
-    - target: {fileID: 4138757746811974843, guid: 1c7c2ee633d00b04381277f8e74f2631,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8562953887852906252, guid: 1c7c2ee633d00b04381277f8e74f2631,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -775,11 +765,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1940780858734110904, guid: 1c7c2ee633d00b04381277f8e74f2631,
-        type: 3}
-      propertyPath: Index
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c7c2ee633d00b04381277f8e74f2631, type: 3}

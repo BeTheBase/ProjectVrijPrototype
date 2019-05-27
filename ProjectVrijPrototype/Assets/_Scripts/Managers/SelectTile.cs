@@ -12,6 +12,7 @@ public class SelectTile : MonoBehaviour
     public GameObject UISelectUpgradePrefab;
     private Camera _mainCamera;
     private GameObject currentTowerUI;
+    public GameObject currentTowerInfo;
     private List<SetTowerButton> setTowerButtons;
 
 
@@ -54,6 +55,10 @@ public class SelectTile : MonoBehaviour
             if(currentTowerUI != null)
             {
                 currentTowerUI.SetActive(false);
+            }
+            if (currentTowerInfo != null)
+            {
+                currentTowerInfo.SetActive(false);
             }
             foreach (SetTowerButton button in setTowerButtons)
             {
