@@ -1044,12 +1044,12 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[0].TowerFireRates.Array.data[0]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].TowerRanges.Array.data[0]
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -1064,7 +1064,7 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[2].TowerRanges.Array.data[0]
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -1074,7 +1074,7 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[2].TowerFireRates.Array.data[0]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6526810247720380930, guid: 4df7691316f35f54fbce5cc612bef6b7, type: 3}
@@ -1536,6 +1536,11 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4482394641334157112, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 823
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
 --- !u!1 &1712886806
@@ -1715,11 +1720,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4338419613744223802, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1320848559}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
 --- !u!1 &1825037232 stripped

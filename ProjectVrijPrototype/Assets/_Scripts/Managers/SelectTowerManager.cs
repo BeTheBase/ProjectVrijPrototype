@@ -11,12 +11,18 @@ public class SelectTowerManager : MonoBehaviour
 
     public Text[] TowerCostTextFields;
 
+    public static SelectTowerManager Instance;
     private GameManager gameManager;
     private TowerDataManager towerDataManager;
     private GameObject parentGameObject;
+    public GameObject currentCheckmark;
+    public GameObject currentTowerInfo;
+    public Button currentButton;
+
 
     private void Awake()
     {
+        Instance = this;
         gameObject.SetActive(false);
     }
 
@@ -24,14 +30,6 @@ public class SelectTowerManager : MonoBehaviour
     {
         gameManager = GameManager.Instance;
         towerDataManager = TowerDataManager.Instance;
-
-        if (towerDataManager.TowerDatas != null)
-        {
-            for (int index = 0; index <= TowerCostTextFields.Length -1; index++)
-            {
-                TowerCostTextFields[index].text = TowerCostString + towerDataManager.TowerDatas[index].GoldCost;
-            }
-        }
     }
 
     public void PlaceTower(int index)
@@ -39,15 +37,17 @@ public class SelectTowerManager : MonoBehaviour
         var towerCost = ReturnGoldCost(index);
         if (!ContinueProgramm(towerCost)) return;
         parentGameObject = transform.parent.gameObject;
-        parentGameObject.GetComponent<CapsuleCollider>().enabled = false;
-        gameManager.Gold -= towerCost;
-        GameObject towerPlaceHolder = Instantiate(towerDataManager.TowerDatas[index].Tower, transform.position - Vector3.up, Quaternion.identity);
-        towerPlaceHolder.transform.SetParent(parentGameObject.transform);
-        var towerTurretScript = towerPlaceHolder.GetComponent<Turret>();
-        towerTurretScript.Damage = towerDataManager.TowerDatas[index].TowerDamages[0];
-        towerTurretScript.Range = towerDataManager.TowerDatas[index].TowerRanges[0];
-        towerTurretScript.FireRate = towerDataManager.TowerDatas[index].TowerFireRates[0];
-        this.gameObject.SetActive(false);
+        if(parentGameObject.transform.childCount < 2)
+        {      
+            parentGameObject.GetComponent<CapsuleCollider>().enabled = false;
+            gameManager.Gold -= towerCost;
+            GameObject towerPlaceHolder = Instantiate(towerDataManager.TowerDatas[index].Tower, transform.position - Vector3.up, Quaternion.identity);
+            towerPlaceHolder.transform.SetParent(parentGameObject.transform);
+            var towerTurretScript = towerPlaceHolder.GetComponent<Turret>();
+            towerTurretScript.Damage = towerDataManager.TowerDatas[index].TowerDamages[0];
+            towerTurretScript.Range = towerDataManager.TowerDatas[index].TowerRanges[0];
+            towerTurretScript.FireRate = towerDataManager.TowerDatas[index].TowerFireRates[0];
+        }
     }
 
     private int ReturnGoldCost(int _index)
