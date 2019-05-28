@@ -37,7 +37,7 @@ public class SelectTowerManager : MonoBehaviour
         var towerCost = ReturnGoldCost(index);
         if (!ContinueProgramm(towerCost)) return;
         parentGameObject = transform.parent.gameObject;
-        if(parentGameObject.transform.childCount < 2)
+        if(parentGameObject.transform.childCount < 2 || !parentGameObject.transform.GetChild(1).gameObject.activeSelf)
         {      
             parentGameObject.GetComponent<CapsuleCollider>().enabled = false;
             gameManager.Gold -= towerCost;

@@ -20,7 +20,6 @@ public class SetTowerButton : MonoBehaviour
         //Disable previous checkmark
         if(selectTowerManager.currentCheckmark != null)
         {
-            print("hi");
             selectTowerManager.currentCheckmark.SetActive(false);
         }
         if (selectTowerManager.currentButton != null)
