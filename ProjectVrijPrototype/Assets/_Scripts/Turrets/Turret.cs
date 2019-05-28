@@ -18,6 +18,7 @@ public class Turret : MonoBehaviour
     private float FireCooldown;
     public Transform FirePoint;
     public bool HasFireDelay;
+    public GameObject TowerUI;
     // Start is called before the first frame update
 
     private void Awake()

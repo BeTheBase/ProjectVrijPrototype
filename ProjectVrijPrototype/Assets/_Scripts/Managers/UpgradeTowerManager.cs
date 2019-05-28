@@ -19,12 +19,14 @@ public class UpgradeTowerManager : MonoBehaviour
     private Transform deleteChildButton;
     private Transform getChildUI = null;
     private GameManager gameManager;
+    private SelectTile selectTile;
 
     private void Awake()
     {
         upgradeChildButton = transform.GetChild(0);
         deleteChildButton = transform.GetChild(1);
         gameObject.SetActive(false);
+
     }
 
     private void Start()
