@@ -69,6 +69,8 @@ public class SelectTile : MonoBehaviour
 
         if (SelectedGameObject.tag == "TowerTile")
         {
+            FindObjectOfType<AudioManager>().Play("TowerPlacement");
+
             if (UISelectTowerPrefab == null) return;
             UISelectTowerPrefab.SetActive(true);
             UISelectTowerPrefab.transform.SetParent(SelectedGameObject.transform);
@@ -76,7 +78,8 @@ public class SelectTile : MonoBehaviour
         }
         else if(SelectedGameObject.tag == "Tower")
         {
-
+            FindObjectOfType<AudioManager>().Play("TowerPlacement");
+    
             UISelectTowerPrefab.SetActive(false);
             if (UISelectUpgradePrefab == null) return;
             if (!UpgradeTowerManager.CheckFillBarStatus) return;

@@ -671,14 +671,14 @@ MonoBehaviour:
   Health: 50
   MaxShield: 0
   Shield: 0
-  GoldGiven: 1
+  GoldGiven: 4
   enemySpawner: {fileID: 0}
   gameManager: {fileID: 0}
   objectPooler: {fileID: 0}
   WavePath: {fileID: 0}
   IsSlowed: 0
   HasShield: 0
-  Range: 100
+  Range: 25
   HealCooldown: 3
   HealAmount: 3
   Targets: []
