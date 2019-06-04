@@ -41,7 +41,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.9386792, g: 0.99116427, b: 1, a: 1}
+  m_Color: {r: 0.7104397, g: 0.9390408, b: 0.9716981, a: 1}
   m_Intensity: 5
   m_Range: 2
   m_SpotAngle: 30
@@ -4767,7 +4767,7 @@ ParticleSystemRenderer:
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
@@ -4828,7 +4828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318754016726832282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.43, z: 16.1}
+  m_LocalPosition: {x: 0, y: 0.4, z: 21.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 318754015362460605}
@@ -9584,7 +9584,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318754017183751318}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 6.92}
+  m_LocalPosition: {x: 0, y: -14.66, z: 18.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 318754015362460605}
@@ -9673,7 +9673,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -9842,7 +9842,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 20
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10158,7 +10158,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 3
+    maxNumParticles: 2
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -10583,7 +10583,7 @@ ParticleSystem:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-      cycleCount: 3
+      cycleCount: 1
       repeatInterval: 0.01
       probability: 1
   SizeModule:
@@ -10597,8 +10597,8 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 0
+          time: 0.0040160646
+          value: 0.2592559
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -10615,18 +10615,18 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.8323019
-          value: 0.19025534
+          time: 0.88541776
+          value: 0.9309971
           inSlope: -4.388462
-          outSlope: -1.1345111
+          outSlope: -0.41065884
           tangentMode: 65
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: -1.1345111
+          time: 0.98794556
+          value: 0.8888931
+          inSlope: -0.41065884
           outSlope: 1
           tangentMode: 5
           weightedMode: 0
@@ -14319,8 +14319,8 @@ ParticleSystemRenderer:
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_ShadowBias: 0
-  m_RenderAlignment: 0
-  m_Pivot: {x: 0, y: 0, z: 0}
+  m_RenderAlignment: 3
+  m_Pivot: {x: 0, y: -0.5, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1

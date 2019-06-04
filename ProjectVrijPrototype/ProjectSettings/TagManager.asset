@@ -11,6 +11,8 @@ TagManager:
   - End
   - WorldUI
   - MovePoints
+  - WavePath1
+  - WavePath2
   layers:
   - Default
   - TransparentFX

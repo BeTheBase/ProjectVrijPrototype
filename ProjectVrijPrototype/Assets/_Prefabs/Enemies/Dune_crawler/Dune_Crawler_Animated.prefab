@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthBar: {fileID: 871108038}
+  ShieldBar: {fileID: 0}
 --- !u!1 &871108036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,9 +1356,15 @@ MonoBehaviour:
   NextPoint: 0
   MaxHealth: 10
   Health: 10
-  GoldGiven: 1
+  MaxShield: 0
+  Shield: 0
+  GoldGiven: 3
+  enemySpawner: {fileID: 0}
+  gameManager: {fileID: 0}
+  objectPooler: {fileID: 0}
   WavePath: {fileID: 0}
   IsSlowed: 0
+  HasShield: 0
 --- !u!1 &2237415863633774426
 GameObject:
   m_ObjectHideFlags: 0

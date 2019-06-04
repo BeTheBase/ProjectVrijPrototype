@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightningStrike : BaseProjectile
+public class FireStrike : BaseProjectile
 {
     public float AreaRange;
     public float TimeToWait = 1f;
