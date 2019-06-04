@@ -18,7 +18,7 @@ public class BaseEnemy : MonoBehaviour
 
     public int GoldGiven;
 
-    public EnemySpawner enemySpawner;
+    public NewEnemySpawner enemySpawner;
     public GameManager gameManager;
     public ObjectPooler objectPooler;
     public WavePath WavePath;
@@ -27,12 +27,10 @@ public class BaseEnemy : MonoBehaviour
 
     public bool HasShield;
 
-
     // Start is called before the first frame update
     public virtual void Start()
     {
-        WavePath = WavePath.Instance;
-        enemySpawner = EnemySpawner.Instance;
+        enemySpawner = NewEnemySpawner.Instance;
         gameManager = GameManager.Instance;
         objectPooler = ObjectPooler.Instance;
         NextPoint = 0;

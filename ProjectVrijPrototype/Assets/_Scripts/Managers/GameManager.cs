@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,5 +24,11 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         FindObjectOfType<AudioManager>().Play("theme1");
+    }
+
+    private void LateUpdate()
+    {
+        if(Lives <= 0)
+            SceneManager.LoadSceneAsync(0);
     }
 }
