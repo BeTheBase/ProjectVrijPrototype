@@ -136,7 +136,7 @@ MonoBehaviour:
         mode: 1
         log:
           slope: {r: 1, g: 1, b: 1, a: 0}
-          power: {r: 1, g: 1, b: 1, a: -0.08}
+          power: {r: 1, g: 1, b: 1, a: 0.0000000014156103}
           offset: {r: 1, g: 1, b: 1, a: -0.03846154}
         linear:
           lift: {r: 1, g: 1, b: 1, a: 0}
@@ -323,7 +323,7 @@ MonoBehaviour:
       mode: 0
       color: {r: 0.14328942, g: 0.20055407, b: 0.26415092, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.587
+      intensity: 0.373
       smoothness: 0.365
       roundness: 0.821
       mask: {fileID: 0}

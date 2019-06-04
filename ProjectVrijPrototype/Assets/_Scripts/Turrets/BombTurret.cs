@@ -6,6 +6,7 @@ public class BombTurret : Turret
 {
     public override void Shoot()
     {
+        FindObjectOfType<AudioManager>().Play("explosion");
         GameObject Bomb = objectPooler.SpawnFromPool("Bomb", FirePoint.position, transform.rotation);
         BombProjectile BombScript = Bomb.GetComponent<BombProjectile>();
         if (BombScript != null)
