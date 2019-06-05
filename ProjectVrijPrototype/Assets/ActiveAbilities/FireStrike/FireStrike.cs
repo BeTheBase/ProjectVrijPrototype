@@ -12,6 +12,11 @@ public class FireStrike : BaseProjectile
         StartCoroutine(Deactivate(TimeToWait));
     }
 
+    private void Start()
+    {
+        transform.position = new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z);
+    }
+
     private IEnumerator Deactivate(float time)
     {
         yield return new WaitForSeconds(time);
