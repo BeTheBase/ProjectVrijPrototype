@@ -65,6 +65,7 @@ public class UpgradeTowerManager : MonoBehaviour
 
     public void UpgradeTower()
     {
+        if (gameManager.Gold <= (int)goldCost) return;
         gameManager.Gold -= (int)goldCost;
         var towerTurretScript =  tower.GetComponent<Turret>();
         towerTurretScript.TowerLevel += 1;
