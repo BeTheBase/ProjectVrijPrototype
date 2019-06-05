@@ -4767,7 +4767,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948423640247601069}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 3
@@ -4787,8 +4787,11 @@ MonoBehaviour:
   Target: {fileID: 0}
   Damage: 0
   Speed: 50
-  AreaRange: 0
+  AreaRange: 5
   TimeToWait: 8
+  BurnTicksAmount: 3
+  BurnDamage: 1
+  TimeBetweenTicks: 1.3
 --- !u!1 &1023897085121255049
 GameObject:
   m_ObjectHideFlags: 0

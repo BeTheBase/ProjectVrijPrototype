@@ -55,20 +55,6 @@ public class BaseEnemy : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, nextPointPosition, Speed * Time.deltaTime);
             transform.LookAt(nextPointPosition);
         }
-        /*
-        //Move from point to point
-        if (NextPoint < WavePath.EnemyMovePoints.Count -1)
-        {
-            if (Vector3.Distance(transform.position, WavePath.EnemyMovePoints[NextPoint].position) < 25f)
-            {
-                print("H");
-                NextPoint++;
-            }
-
-            transform.position = Vector3.MoveTowards(transform.position, WavePath.EnemyMovePoints[NextPoint].position, Speed * Time.deltaTime);
-            transform.LookAt(WavePath.EnemyMovePoints[NextPoint].transform.position);
-        }
-        */
 
 
         //Disable if fall from map
@@ -92,16 +78,6 @@ public class BaseEnemy : MonoBehaviour
             MadeIt();
     }
 
-    /*
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.transform.tag == "End")
-        {
-            enemySpawner.EnemiesAlive--;
-            gameObject.SetActive(false);
-        }
-    }
-    */
     public void Die()
     {
         objectPooler.SpawnFromPool("Blood", transform.position, Quaternion.identity);
@@ -148,6 +124,21 @@ public class BaseEnemy : MonoBehaviour
         else
         {
             Health -= Damage;
+        }
+    }
+
+    public void ApplyBurn(float ticks, float damage, float timeBetween)
+    {
+        StartCoroutine(Burn(ticks, damage, timeBetween));
+    }
+
+    private IEnumerator Burn(float burnTicks, float burnDamage, float timeBetween)
+    {
+        while(burnTicks >0)
+        {
+            burnTicks--;
+            TakeDamage(burnDamage);
+            yield return new WaitForSeconds(timeBetween);
         }
     }
 }

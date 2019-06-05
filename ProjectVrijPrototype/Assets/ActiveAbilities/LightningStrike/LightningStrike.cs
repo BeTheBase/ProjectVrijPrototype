@@ -7,7 +7,7 @@ public class LightningStrike : BaseProjectile
     public float AreaRange;
     public float TimeToWait = 1f;
 
-    private void OnEnable()
+    private void Start()
     {
         StartCoroutine(Deactivate(TimeToWait));
     }
