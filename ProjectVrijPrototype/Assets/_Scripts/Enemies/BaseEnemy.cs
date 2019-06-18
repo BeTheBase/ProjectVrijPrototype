@@ -87,7 +87,6 @@ public class BaseEnemy : MonoBehaviour
 	
 	private void LateUpdate()
     {
-        print(gameManager);
         if (Vector3.Distance(gameManager.EndPosition.position, transform.position) < 5f)
             MadeIt();
     }

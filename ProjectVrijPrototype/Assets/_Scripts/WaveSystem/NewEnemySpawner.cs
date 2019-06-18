@@ -79,7 +79,6 @@ public class NewEnemySpawner : MonoBehaviour
                 EnemiesAlive++;
                 Vector3 spawnPosition = EnemySpawners[index].StartPosition.position;
                 GameObject Enemy = objectPooler.SpawnFromPool(enemy, spawnPosition, Quaternion.identity);
-                print(Enemy);
                 Enemy.GetComponent<BaseEnemy>().WavePath = EnemySpawners[index].EnemyPath;
                 Enemy.transform.position = new Vector3(spawnPosition.x, Enemy.transform.localScale.y * 2f, spawnPosition.z);
             }
