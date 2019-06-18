@@ -23,7 +23,7 @@ public class NewEnemySpawner : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        uIManager = NewUIManager.Instance;
+        //uIManager = NewUIManager.Instance;
         objectPooler = ObjectPooler.Instance;
     }
 
