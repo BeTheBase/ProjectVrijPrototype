@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightningStrike : BaseProjectile
+public class FireStrike : BaseProjectile
 {
     public float AreaRange;
     public float TimeToWait = 1f;
+    public float BurnTicksAmount = 3f;
+    public float BurnDamage = 1f;
+    public float TimeBetweenTicks = 1.3f;
 
     private void Start()
     {
         StartCoroutine(Deactivate(TimeToWait));
+        transform.position = new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z);
     }
 
     private IEnumerator Deactivate(float time)
@@ -27,6 +31,6 @@ public class LightningStrike : BaseProjectile
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
-            other.GetComponent<BaseEnemy>().Health -= Damage;
+            other.GetComponent<BaseEnemy>().ApplyBurn(BurnTicksAmount, BurnDamage, TimeBetweenTicks);
     }
 }

@@ -26,7 +26,6 @@ public class UpgradeTowerManager : MonoBehaviour
         upgradeChildButton = transform.GetChild(0);
         deleteChildButton = transform.GetChild(1);
         gameObject.SetActive(false);
-
     }
 
     private void Start()
@@ -66,15 +65,15 @@ public class UpgradeTowerManager : MonoBehaviour
 
     public void UpgradeTower()
     {
+        if (gameManager.Gold <= (int)goldCost) return;
         gameManager.Gold -= (int)goldCost;
         var towerTurretScript =  tower.GetComponent<Turret>();
         towerTurretScript.TowerLevel += 1;
         var towerLevel = towerTurretScript.TowerLevel;
-        towerTurretScript.Damage = upgradeTowerData.TowerDamages[towerLevel];
-        towerTurretScript.Range = upgradeTowerData.TowerRanges[towerLevel];
-        towerTurretScript.FireRate = upgradeTowerData.TowerFireRates[towerLevel];
+        towerTurretScript.Damage = upgradeTowerData.TowerDamages[towerLevel-1];
+        towerTurretScript.Range = upgradeTowerData.TowerRanges[towerLevel-1];
+        towerTurretScript.FireRate = upgradeTowerData.TowerFireRates[towerLevel-1];
         StartCoroutine(WaitForLoadingBar());
-
     }
 
     public void DeleteTower()

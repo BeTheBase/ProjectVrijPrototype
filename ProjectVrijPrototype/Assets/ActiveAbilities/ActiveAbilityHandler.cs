@@ -30,7 +30,7 @@ public class ActiveAbilityHandler : MonoBehaviour
 
         for(int index = 0; index < CheckStrikeReadyImages.Count; index++)
         {
-            StartCoroutine(WaitForCooldown(Cooldown, CheckStrikeReadyImages[index], index));
+            StartCoroutine(WaitForCooldownBool(Cooldown, CheckStrikeReadyImages[index], AllActiveSkillsData[index].IsReady));
             AllActiveSkillsData[index].IsReady = CheckBool(CheckStrikeReadyImages[index]);
         }
     }
@@ -120,48 +120,6 @@ public class ActiveAbilityHandler : MonoBehaviour
             yield return null;
         }
         ready = true;
-    }
-
-
-    private IEnumerator WaitForCooldown(float cooldown, Image fillImage, int index)
-    {
-        switch(index)
-        {
-            case 0:
-                lightningStrikeReady = false;
-                break;
-            case 1:
-                fireStrikeReady = false;
-                break;
-            case 2:
-                iceStrikeReady = false;
-                break;
-            default:
-                lightningStrikeReady = false;
-                break;
-        }
-        float fillTime = cooldown;
-        while(fillTime > 0)
-        {
-            fillTime -= Time.deltaTime;
-            fillImage.fillAmount = fillTime / cooldown;
-            yield return null;
-        }
-        switch (index)
-        {
-            case 0:
-                lightningStrikeReady = true;
-                break;
-            case 1:
-                fireStrikeReady = true;
-                break;
-            case 2:
-                iceStrikeReady = true;
-                break;
-            default:
-                lightningStrikeReady = true;
-                break;
-        }
     }
 
     private void Update()

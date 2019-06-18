@@ -671,7 +671,10 @@ MonoBehaviour:
   Health: 3
   MaxShield: 8
   Shield: 8
-  GoldGiven: 8
+  GoldGiven: 30
+  enemySpawner: {fileID: 0}
+  gameManager: {fileID: 0}
+  objectPooler: {fileID: 0}
   WavePath: {fileID: 0}
   IsSlowed: 0
   HasShield: 1
