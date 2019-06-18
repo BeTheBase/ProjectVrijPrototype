@@ -23,6 +23,15 @@ public class BombProjectile : BaseProjectile
         Trigger.enabled = false;
     }
 
+    private void OnEnable()
+    {
+        objectPooler = ObjectPooler.Instance;
+        rigidBody = GetComponent<Rigidbody>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.enabled = true;
+        Trigger.enabled = false;
+    }
+
 
     //Trajectory for parabola
     /*
@@ -46,7 +55,6 @@ public class BombProjectile : BaseProjectile
 
         float distanceThisFrame = Speed * Time.deltaTime;
 
-
         if (dir.magnitude <= distanceThisFrame && !hit)
         {
             hit = true;
@@ -60,7 +68,9 @@ public class BombProjectile : BaseProjectile
 
     public override void HitTarget()
     {
+        print("boom");
         StartCoroutine(Explode());
+        hit = false;
     }
     
     IEnumerator Explode()
