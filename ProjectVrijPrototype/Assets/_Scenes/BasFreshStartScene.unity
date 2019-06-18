@@ -1793,11 +1793,11 @@ MonoBehaviour:
     size: 100
   - tag: Arrow
     prefab: {fileID: 135609444929465615, guid: bcbde476e99f13f4abf048c53df15843, type: 3}
-    size: 500
+    size: 100
   - tag: Bomb
     prefab: {fileID: 6094023973490576796, guid: 38ece42de4ca45b41a418ba32d230d1c,
       type: 3}
-    size: 3
+    size: 50
   - tag: DustProjectile
     prefab: {fileID: 744332127, guid: ce5da91af18284d48acfb56e0b91d91d, type: 3}
     size: 100
@@ -1827,6 +1827,9 @@ MonoBehaviour:
     size: 100
   - tag: FireStrike
     prefab: {fileID: 177820236}
+    size: 100
+  - tag: BulletExplosion
+    prefab: {fileID: 195742, guid: bf0846dcd0baf7e41ab97f14fb3f9d32, type: 3}
     size: 100
 --- !u!4 &976218857
 Transform:
