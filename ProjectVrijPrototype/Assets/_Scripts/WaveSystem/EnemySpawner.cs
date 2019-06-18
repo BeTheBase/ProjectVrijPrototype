@@ -33,7 +33,7 @@ public class EnemySpawner : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        uIManager = UIManager.Instance;
+        //uIManager = New.Instance;
         objectPooler = ObjectPooler.Instance;
     }
 

@@ -13,7 +13,7 @@ public class NewEnemySpawner : MonoBehaviour
     public static int waveIndex = 0;
 
     ObjectPooler objectPooler;
-    UIManager uIManager;
+    NewUIManager uIManager;
 
     private void Awake()
     {
@@ -23,7 +23,7 @@ public class NewEnemySpawner : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        uIManager = UIManager.Instance;
+        uIManager = NewUIManager.Instance;
         objectPooler = ObjectPooler.Instance;
     }
 

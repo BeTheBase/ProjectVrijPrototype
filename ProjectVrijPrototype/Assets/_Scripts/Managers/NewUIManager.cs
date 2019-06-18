@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class NewUIManager : MonoBehaviour
 {
+    public static NewUIManager Instance;
     private GameManager gameManager;
     private NewEnemySpawner enemySpawner;
 
@@ -15,6 +16,11 @@ public class NewUIManager : MonoBehaviour
     public Image TimerImage;
 
     public float CurrentTime;
+
+    private void Awake()
+    {
+        Instance = this;    
+    }
 
     // Start is called before the first frame update
     void Start()

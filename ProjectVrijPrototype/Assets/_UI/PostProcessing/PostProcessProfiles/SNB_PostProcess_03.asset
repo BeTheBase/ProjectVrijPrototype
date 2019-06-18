@@ -70,7 +70,7 @@ MonoBehaviour:
       screenEdgeMask:
         intensity: 0.03
   depthOfField:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       focusDistance: 8.18
       aperture: 9.1
@@ -78,7 +78,7 @@ MonoBehaviour:
       useCameraFov: 1
       kernelSize: 0
   motionBlur:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       shutterAngle: 270
       sampleCount: 10
@@ -98,11 +98,11 @@ MonoBehaviour:
       logMin: -8
       logMax: 4
   bloom:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.2
-        threshold: 0.7
+        intensity: 0.1
+        threshold: 1
         softKnee: 0.6
         radius: 2.96
         antiFlicker: 1
@@ -110,10 +110,10 @@ MonoBehaviour:
         texture: {fileID: 0}
         intensity: 1
   colorGrading:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       tonemapping:
-        tonemapper: 1
+        tonemapper: 2
         neutralBlackIn: 0.0154
         neutralWhiteIn: 10
         neutralBlackOut: 0.016
@@ -157,7 +157,7 @@ MonoBehaviour:
               inWeight: 0
               outWeight: 0
             - serializedVersion: 3
-              time: 0.9958506
+              time: 0.9746544
               value: 1
               inSlope: 0.027880749
               outSlope: 0.027880749
