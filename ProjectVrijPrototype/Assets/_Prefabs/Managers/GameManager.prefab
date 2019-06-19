@@ -46,7 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndPosition: {fileID: 0}
-  Gold: 1000
+  WaveSpawner: {fileID: 0}
+  EnemySpawner: {fileID: 0}
+  Gold: 300
   Lives: 20
 --- !u!114 &6526810247720380928
 MonoBehaviour:
@@ -63,6 +65,7 @@ MonoBehaviour:
   SelectedGameObject: {fileID: 0}
   UISelectTowerPrefab: {fileID: 0}
   UISelectUpgradePrefab: {fileID: 0}
+  currentTowerInfo: {fileID: 0}
 --- !u!114 &6526810247720380989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,23 +80,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerDatas:
   - name: CrossBowTower
-    Tower: {fileID: 6594468594117995904, guid: 9e78f503e628dc243abf0794f63a17ef, type: 3}
-    GoldCost: 90
+    Tower: {fileID: 8408892748960204495, guid: 22a5380dd6d0f1643a79ca7a6d7046b0, type: 3}
+    GoldCost: 
     UpgradeGoldCost: 110
-    TowerRanges: []
-    TowerDamages: []
-    TowerFireRates: []
+    TowerRanges:
+    - 12
+    - 12
+    - 12
+    TowerDamages:
+    - 6
+    - 7
+    - 8
+    TowerFireRates:
+    - 1
+    - 1.3
+    - 1.6
   - name: BombTower
-    Tower: {fileID: 5891830963228214072, guid: 42607e074230b88448e0e7f8bed51afd, type: 3}
-    GoldCost: 120
+    Tower: {fileID: 4219267441123661209, guid: abde7171454d57c4096796426c83fd35, type: 3}
+    GoldCost: 
     UpgradeGoldCost: 200
-    TowerRanges: []
-    TowerDamages: []
-    TowerFireRates: []
+    TowerRanges:
+    - 10
+    - 10
+    - 10
+    TowerDamages:
+    - 6
+    - 8
+    - 10
+    TowerFireRates:
+    - 1
+    - 1
+    - 1
   - name: MagicTower
-    Tower: {fileID: 7120660010649485998, guid: 04de35a1d2d837944aed8ca9d0dc0bbc, type: 3}
-    GoldCost: 160
+    Tower: {fileID: 4172490301956651611, guid: f0c082d6ebe0e2a488c03d6db3a46c6c, type: 3}
+    GoldCost: 
     UpgradeGoldCost: 300
-    TowerRanges: []
-    TowerDamages: []
-    TowerFireRates: []
+    TowerRanges:
+    - 10
+    - 10
+    - 10
+    TowerDamages:
+    - 10
+    - 12
+    - 14
+    TowerFireRates:
+    - 1
+    - 1
+    - 1

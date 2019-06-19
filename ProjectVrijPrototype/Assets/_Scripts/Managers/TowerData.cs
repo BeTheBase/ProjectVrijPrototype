@@ -10,7 +10,7 @@ public class TowerData
     [SerializeField]
     public GameObject Tower;
     [SerializeField]
-    public int GoldCost;
+    public List<int> GoldCost;
     [SerializeField]
     public int UpgradeGoldCost;
     [Header("Stats for each tower level")]

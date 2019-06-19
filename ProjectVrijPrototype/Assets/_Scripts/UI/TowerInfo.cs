@@ -11,6 +11,8 @@ public class TowerInfo : MonoBehaviour
     public Text DamageText;
     public Text RangeText;
     public Text FireText;
+    public Text GoldText;
+
     SelectTile selectTile;
 
     public void Awake()
@@ -30,5 +32,8 @@ public class TowerInfo : MonoBehaviour
         DamageText.text = "Damage\n" + towerDataManager.TowerDatas[Index].TowerDamages[0];
         RangeText.text = "Range\n" + towerDataManager.TowerDatas[Index].TowerRanges[0];
         FireText.text = "Fire Rate\n" + towerDataManager.TowerDatas[Index].TowerFireRates[0];
+        print(towerDataManager.TowerDatas[Index].GoldCost[0]);
+        GoldText.text = "Gold: " + towerDataManager.TowerDatas[Index].GoldCost[0];
+
     }
 }
