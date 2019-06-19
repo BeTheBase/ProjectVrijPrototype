@@ -671,11 +671,7 @@ MonoBehaviour:
   Health: 50
   MaxShield: 0
   Shield: 0
-<<<<<<< HEAD
-  GoldGiven: 4
-=======
   GoldGiven: 12
->>>>>>> Development
   enemySpawner: {fileID: 0}
   gameManager: {fileID: 0}
   objectPooler: {fileID: 0}
