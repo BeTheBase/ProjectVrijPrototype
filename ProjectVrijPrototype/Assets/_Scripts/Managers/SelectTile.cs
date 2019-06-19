@@ -62,7 +62,8 @@ public class SelectTile : MonoBehaviour
             }
             foreach (SetTowerButton button in setTowerButtons)
             {
-                button.ResetButton();
+                if(button != null)
+                    button.ResetButton();
             }
             return;
         }
