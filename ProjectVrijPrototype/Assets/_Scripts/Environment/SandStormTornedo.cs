@@ -14,6 +14,7 @@ public class SandStormTornedo : MonoBehaviour
     public float DamageRange;
     public bool CanSwirl = true;
     public string enemyTag = "Enemy";
+    public GameObject SpinChild;
 
     private ObjectPooler objectPooler;
 
@@ -44,7 +45,8 @@ public class SandStormTornedo : MonoBehaviour
             {
                 target = nearestEnemy.transform;
                 //target.gameObject.AddComponent<Rigidbody>();
-                Invoke("AttackEnemy", 0f);
+                //StartCoroutine(StartDelay(5f));
+                //AttackEnemy();
             }
 
             if (nearestEnemy != null && shortestDistance <= PickRange && CanSwirl)
@@ -57,18 +59,19 @@ public class SandStormTornedo : MonoBehaviour
 
     private IEnumerator StartDelay(float delayTime)
     {
+        AttackEnemy();
         yield return new WaitForSeconds(delayTime);
     }
 
     private void AttackEnemy()
     {
         GameObject dustAttack = objectPooler.SpawnFromPool("DustSlash", target.transform.position, transform.rotation);
-        /*DustProjectille dustProjectilleScript = dustAttack.GetComponent<DustProjectille>();
+        DustProjectille dustProjectilleScript = dustAttack.GetComponent<DustProjectille>();
         if (dustProjectilleScript != null)
         {
             dustProjectilleScript.Target = target;
             dustProjectilleScript.Damage = Damage;
-        }*/
+        }
 
     }
 
@@ -82,6 +85,21 @@ public class SandStormTornedo : MonoBehaviour
         Vector3 direction = transform.position - target.transform.position;
 
         target.GetComponent<Rigidbody>().AddForce(direction * TwirlForce * (1 / Vector3.Distance(transform.position, target.transform.position)), ForceMode.Impulse);
+    }
+
+    private void TornedoSpin()
+    {
+
+        if (SpinChild != null && target != null)
+        {
+            Rigidbody targetBody = target.gameObject.GetComponent<Rigidbody>();
+
+            //targetBody.AddForce(Vector3.up * (SwirlForce * UpwardsForce));
+            target.transform.SetParent(SpinChild.transform);
+        }
+
+
+
     }
 
     private void TornedoSwirl()
@@ -119,8 +137,9 @@ public class SandStormTornedo : MonoBehaviour
         if (target == null) return;
 
         if (!CanSwirl) return;
-        TornedoSwirl();
-        //TornedoPull();
+        TornedoSpin();
+
+        //TornedoSwirl();
     }
 
     private void OnDrawGizmosSelected()

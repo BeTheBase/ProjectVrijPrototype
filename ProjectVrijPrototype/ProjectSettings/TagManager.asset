@@ -13,6 +13,7 @@ TagManager:
   - MovePoints
   - WavePath1
   - WavePath2
+  - Tornedo
   layers:
   - Default
   - TransparentFX
