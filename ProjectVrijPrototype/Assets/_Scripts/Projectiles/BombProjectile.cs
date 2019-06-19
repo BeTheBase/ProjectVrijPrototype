@@ -16,6 +16,16 @@ public class BombProjectile : BaseProjectile
 
     private void Start()
     {
+        hit = false;
+        objectPooler = ObjectPooler.Instance;
+        rigidBody = GetComponent<Rigidbody>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.enabled = true;
+        Trigger.enabled = false;
+    }
+
+    private void OnEnable()
+    {
         objectPooler = ObjectPooler.Instance;
         rigidBody = GetComponent<Rigidbody>();
         meshRenderer = GetComponent<MeshRenderer>();
@@ -46,7 +56,6 @@ public class BombProjectile : BaseProjectile
 
         float distanceThisFrame = Speed * Time.deltaTime;
 
-
         if (dir.magnitude <= distanceThisFrame && !hit)
         {
             hit = true;
@@ -54,27 +63,31 @@ public class BombProjectile : BaseProjectile
             return;
         }
 
-        transform.Translate(dir.normalized * distanceThisFrame * 0.35f, Space.World);
+        transform.Translate(dir.normalized * distanceThisFrame, Space.World);
 
     }
 
     public override void HitTarget()
     {
+        print("boom");
         StartCoroutine(Explode());
+        hit = false;
     }
     
     IEnumerator Explode()
     {
         rigidBody.isKinematic = true;
-        GameObject Effect = objectPooler.SpawnFromPool("Explosion", transform.position, Quaternion.identity);
-        Effect.transform.localScale = new Vector3(Trigger.radius, Trigger.radius, Trigger.radius) / 7f;
+        GameObject Effect = objectPooler.SpawnFromPool("ExplosionNovaSmallFire", transform.position, Quaternion.identity);
+        Effect.transform.localScale = new Vector3(Trigger.radius, Trigger.radius, Trigger.radius) / 2f;
         meshRenderer.enabled = false;
         Trigger.enabled = true;
         yield return new WaitForSeconds(0.25f);
+        hit = false;
         Trigger.enabled = false;
         gameObject.SetActive(false);
         meshRenderer.enabled = true;
         rigidBody.isKinematic = false;
+
     }
 
     private void OnDrawGizmos()

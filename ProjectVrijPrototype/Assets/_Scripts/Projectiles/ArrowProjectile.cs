@@ -36,6 +36,8 @@ public class ArrowProjectile : BaseProjectile
 
     public override void HitTarget()
     {
+        GameObject Effect = objectPooler.SpawnFromPool("BulletExplosionFire", FirePoint.position, Quaternion.identity);
+
         GameObject BloodHit = objectPooler.SpawnFromPool("BloodHit", FirePoint.position, transform.rotation);
 
         Vector3 dir = FirePoint.position - Target.position;

@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 6094023973490576795}
   - component: {fileID: 6094023973490576797}
   - component: {fileID: 9188678683715958467}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
   Damage: 1
-  Speed: 400
+  Speed: 100
   Trigger: {fileID: 11918074898350676}
   Trajectory: {fileID: 8817127953919656996}
   FirePoint: {fileID: 0}
@@ -328,7 +328,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 12
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8038799511793214225
 GameObject:

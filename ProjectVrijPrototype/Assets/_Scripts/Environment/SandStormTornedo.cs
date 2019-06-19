@@ -62,13 +62,14 @@ public class SandStormTornedo : MonoBehaviour
 
     private void AttackEnemy()
     {
-        GameObject dustAttack = objectPooler.SpawnFromPool("DustProjectile", transform.position, transform.rotation);
-        DustProjectille dustProjectilleScript = dustAttack.GetComponent<DustProjectille>();
+        GameObject dustAttack = objectPooler.SpawnFromPool("DustSlash", target.transform.position, transform.rotation);
+        /*DustProjectille dustProjectilleScript = dustAttack.GetComponent<DustProjectille>();
         if (dustProjectilleScript != null)
         {
             dustProjectilleScript.Target = target;
             dustProjectilleScript.Damage = Damage;
-        }
+        }*/
+
     }
 
     private void PullEnemy()
@@ -78,7 +79,6 @@ public class SandStormTornedo : MonoBehaviour
 
     private void TornedoPull()
     {
-        target.GetComponent<NavMeshAgent>().enabled = false;
         Vector3 direction = transform.position - target.transform.position;
 
         target.GetComponent<Rigidbody>().AddForce(direction * TwirlForce * (1 / Vector3.Distance(transform.position, target.transform.position)), ForceMode.Impulse);
@@ -86,13 +86,12 @@ public class SandStormTornedo : MonoBehaviour
 
     private void TornedoSwirl()
     {
-        target.GetComponent<NavMeshAgent>().enabled = false;
  
         Vector3 direction = transform.position - target.transform.position;
         float distance = Vector3.Distance(transform.position, target.transform.position) * MoveRange;
         float swirlForce = SwirlForce - distance;
-        if (swirlForce < 0) swirlForce = 0;
-        if (swirlForce > 3) swirlForce = 3;
+        if (swirlForce < 1) swirlForce = 1;
+        if (swirlForce > 5) swirlForce = 5;
 
         //Adding rigidbody and force to enemy
         Rigidbody targetBody = target.gameObject.GetComponent<Rigidbody>();

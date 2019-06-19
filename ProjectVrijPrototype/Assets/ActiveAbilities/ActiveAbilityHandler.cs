@@ -39,18 +39,29 @@ public class ActiveAbilityHandler : MonoBehaviour
     {
         if (BluePrint == null) BluePrint = new GameObject();
 
-        BluePrint.SetActive(true);
         showBluePrint = true;
         strikeIndex = _index;
         strikeData = AllActiveSkillsData[strikeIndex];
-        if (_index == 0)
-            lightningStrikeReady = CheckBool(CheckStrikeReadyImages[strikeIndex]);
-        else if (_index == 1)
-            fireStrikeReady = CheckBool(CheckStrikeReadyImages[strikeIndex]);
-        else if (_index == 2)
-            iceStrikeReady = CheckBool(CheckStrikeReadyImages[strikeIndex]);
+        switch (_index)
+        {
+            case 0:
+                lightningStrikeReady = CheckBool(CheckStrikeReadyImages[strikeIndex]);
+                break;
+            case 1:
+                fireStrikeReady = CheckBool(CheckStrikeReadyImages[strikeIndex]);
+                break;
+            case 2:
+                iceStrikeReady = CheckBool(CheckStrikeReadyImages[strikeIndex]);
+                break;
+            default:
+                break;
+        }
+        BluePrint = AllActiveSkillsData[_index].StrikeBluePrint;
+
+        BluePrint.SetActive(true);
+
     }
-    
+
     public void LightningStrike()
     {
         GameObject strikeInstanceGameObject = objectPooler.SpawnFromPool(strikeData.Effect.name, strikeHitPosition, strikeData.Effect.transform.rotation);

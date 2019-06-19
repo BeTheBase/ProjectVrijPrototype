@@ -14,4 +14,6 @@ public class ActiveSkillData
     public float AreaRange;
     [SerializeField]
     public bool IsReady;
+    [SerializeField]
+    public GameObject StrikeBluePrint;
 }

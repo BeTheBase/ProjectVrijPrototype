@@ -671,7 +671,7 @@ MonoBehaviour:
   Health: 50
   MaxShield: 0
   Shield: 0
-  GoldGiven: 12
+  GoldGiven: 10
   enemySpawner: {fileID: 0}
   gameManager: {fileID: 0}
   objectPooler: {fileID: 0}
