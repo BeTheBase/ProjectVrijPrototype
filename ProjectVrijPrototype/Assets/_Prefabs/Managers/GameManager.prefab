@@ -81,7 +81,7 @@ MonoBehaviour:
   TowerDatas:
   - name: CrossBowTower
     Tower: {fileID: 8408892748960204495, guid: 22a5380dd6d0f1643a79ca7a6d7046b0, type: 3}
-    GoldCost: 4b0000004b0000004b000000
+    GoldCost: 4b0000004b0000004b0000004b000000
     UpgradeGoldCost: 75
     TowerRanges:
     - 12
@@ -91,15 +91,18 @@ MonoBehaviour:
     - 6
     - 7
     - 8
+    - 8
     TowerFireRates:
     - 1
     - 1.3
     - 1.6
+    - 1.6
   - name: BombTower
     Tower: {fileID: 4219267441123661209, guid: abde7171454d57c4096796426c83fd35, type: 3}
-    GoldCost: 8c0000008c0000008c000000
+    GoldCost: 8c0000008c0000008c0000008c000000
     UpgradeGoldCost: 140
     TowerRanges:
+    - 10
     - 10
     - 10
     - 10
@@ -107,15 +110,18 @@ MonoBehaviour:
     - 6
     - 8
     - 10
+    - 10
     TowerFireRates:
+    - 1
     - 1
     - 1
     - 1
   - name: MagicTower
     Tower: {fileID: 4172490301956651611, guid: f0c082d6ebe0e2a488c03d6db3a46c6c, type: 3}
-    GoldCost: 6e0000006e0000006e000000
+    GoldCost: 6e0000006e0000006e0000006e000000
     UpgradeGoldCost: 300
     TowerRanges:
+    - 10
     - 10
     - 10
     - 10
@@ -123,7 +129,9 @@ MonoBehaviour:
     - 10
     - 12
     - 14
+    - 14
     TowerFireRates:
+    - 1
     - 1
     - 1
     - 1

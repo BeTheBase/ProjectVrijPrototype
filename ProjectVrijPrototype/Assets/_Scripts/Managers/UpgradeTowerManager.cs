@@ -57,7 +57,7 @@ public class UpgradeTowerManager : MonoBehaviour
             return;
         }
         
-        if (tower.transform.GetChild(2).gameObject.activeSelf)
+        if (tower.transform.GetChild(3).gameObject.activeSelf)
             upgradeChildButton.gameObject.SetActive(false);
         else
             upgradeChildButton.gameObject.SetActive(true);
@@ -127,10 +127,22 @@ public class UpgradeTowerManager : MonoBehaviour
 
         if (tower.transform.childCount > 2)
         {
+            if (tower.transform.GetChild(2).gameObject.activeSelf)
+            {
+                tower.transform.GetChild(2).gameObject.SetActive(false);
+                tower.transform.GetChild(3).gameObject.SetActive(true);
+            }
             if (tower.transform.GetChild(1).gameObject.activeSelf)
+            {
+                tower.transform.GetChild(1).gameObject.SetActive(false);
                 tower.transform.GetChild(2).gameObject.SetActive(true);
-            else
+            }
+            if (tower.transform.GetChild(0).gameObject.activeSelf)
+            {
+                tower.transform.GetChild(0).gameObject.SetActive(false);
                 tower.transform.GetChild(1).gameObject.SetActive(true);
+            }
+
         }
 
         if (getChildUI.gameObject.activeSelf)
