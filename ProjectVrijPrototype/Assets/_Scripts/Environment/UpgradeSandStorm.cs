@@ -14,7 +14,6 @@ public class UpgradeSandStorm : MonoBehaviour
     private void Start()
     {
         gameManager = GameManager.Instance;
-        UpgradeText.text = "Cost:  "+GoldCost;
     }
 
     public void Buy()
@@ -24,8 +23,9 @@ public class UpgradeSandStorm : MonoBehaviour
             Upgrade();
             return;
         }
-        if (gameManager.Gold <= GoldCost) return;
-        GameObject sandStorm = Instantiate(SandStorm, transform.position, Quaternion.identity);
+        if (gameManager.Gold < GoldCost) return;
+        //GameObject sandStorm = Instantiate(SandStorm, transform.position, Quaternion.identity);
+        SandStorm.SetActive(true);
         UpgradeText.text = "Cost:  " + UpgradeCosts[Level];
         Level += 1;
         gameObject.SetActive(false);
