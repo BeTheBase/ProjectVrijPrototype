@@ -287,6 +287,7 @@ GameObject:
   - component: {fileID: 7570527443383881446}
   - component: {fileID: 8074674989452786908}
   - component: {fileID: 134271831704428646}
+  - component: {fileID: 1231516677851887795}
   m_Layer: 5
   m_Name: GoldText
   m_TagString: Untagged
@@ -355,6 +356,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Cost:100
+--- !u!114 &1231516677851887795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4298495545426467018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &6920871680256721137
 GameObject:
   m_ObjectHideFlags: 0
