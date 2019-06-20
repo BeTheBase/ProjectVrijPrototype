@@ -14,6 +14,8 @@ public class SelectTile : MonoBehaviour
     private Camera _mainCamera;
     private GameObject currentTowerUI;
     public GameObject currentTowerInfo;
+    public GameObject currentTowerBlue;
+
     private List<SetTowerButton> setTowerButtons;
 
 
@@ -72,7 +74,10 @@ public class SelectTile : MonoBehaviour
         if (SelectedGameObject.tag == "TowerTile")
         {
             FindObjectOfType<AudioManager>().Play("TowerPlacement");
-
+            if(currentTowerBlue != null)
+            {
+                currentTowerBlue.SetActive(false);
+            }
             if (UISelectTowerPrefab == null) return;
             UISelectTowerPrefab.SetActive(true);
             UISelectTowerPrefab.transform.SetParent(SelectedGameObject.transform);
