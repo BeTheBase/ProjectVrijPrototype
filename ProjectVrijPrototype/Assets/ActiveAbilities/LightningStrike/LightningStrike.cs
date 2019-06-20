@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightningStrike : BaseProjectile
+public class LightningStrike : StrikeBase
 {
-    public float AreaRange;
     public float TimeToWait = 1f;
 
     private void Start()
@@ -12,21 +11,9 @@ public class LightningStrike : BaseProjectile
         StartCoroutine(Deactivate(TimeToWait));
     }
 
-    private IEnumerator Deactivate(float time)
-    {
-        yield return new WaitForSeconds(time);
-        gameObject.SetActive(false);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, AreaRange);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
-            other.GetComponent<BaseEnemy>().Health -= Damage;
+            other.GetComponent<BaseEnemy>().Health -= StrikeDamage;
     }
 }

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireStrike : StrikeBase
+public class IceStrike : StrikeBase
 {
+    public float AreaRange;
     public float TimeToWait = 1f;
-    public float BurnTicksAmount = 3f;
+    public float IceSlowCount = 3f;
+    public float IceSlowDamage = 1f;
     public float TimeBetweenTicks = 1.3f;
 
     private bool IsInRange = false;
@@ -17,7 +19,7 @@ public class FireStrike : StrikeBase
 
     private void LateUpdate()
     {
-        if(IsInRange)
+        if (IsInRange)
         {
             StartCoroutine(Deactivate(TimeToWait));
             IsInRange = false;
@@ -29,7 +31,7 @@ public class FireStrike : StrikeBase
         if (other.gameObject.tag == "Enemy")
         {
             IsInRange = true;
-            other.GetComponent<BaseEnemy>().ApplyBurn(BurnTicksAmount, StrikeDamage, TimeBetweenTicks);
+            other.GetComponent<BaseEnemy>().ApplyIceSlow(IceSlowCount, IceSlowDamage, TimeBetweenTicks);
         }
     }
 }

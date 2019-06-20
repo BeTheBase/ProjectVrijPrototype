@@ -140,4 +140,20 @@ public class BaseEnemy : MonoBehaviour
             yield return new WaitForSeconds(timeBetween);
         }
     }
+
+    public void ApplyIceSlow(float ticks, float damage, float timeBetween)
+    {
+        StartCoroutine(IceSlow(ticks, damage, timeBetween));
+    }
+
+    private IEnumerator IceSlow(float slowTicks, float slowDamage, float timeBetween)
+    {
+        while (slowTicks > 0)
+        {
+            slowTicks--;
+            TakeDamage(slowDamage);
+            StartCoroutine(Slow(-slowTicks, slowTicks));
+            yield return new WaitForSeconds(timeBetween);
+        }
+    }
 }
