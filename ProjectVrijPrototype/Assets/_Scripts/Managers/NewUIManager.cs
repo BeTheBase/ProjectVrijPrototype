@@ -13,8 +13,15 @@ public class NewUIManager : MonoBehaviour
     public Text WaveText;
     public Text WaveTimerText;
     public Image TimerImage;
+    public static NewUIManager Instance;
 
     public float CurrentTime;
+
+    private void Awake()
+    {
+        Instance = this;
+
+    }
 
     // Start is called before the first frame update
     void Start()

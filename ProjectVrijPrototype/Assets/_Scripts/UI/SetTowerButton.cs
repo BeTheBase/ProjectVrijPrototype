@@ -17,6 +17,7 @@ public class SetTowerButton : MonoBehaviour
 
     public void Confirmation()
     {
+        FindObjectOfType<AudioManager>().Play("TowerPlacement");
         //Disable previous checkmark
         if(selectTowerManager.currentCheckmark != null)
         {

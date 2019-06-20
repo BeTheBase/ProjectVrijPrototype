@@ -665,12 +665,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71061d69ad46fd43abe2935d9107444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Speed: 2
   NextPoint: 0
-  MaxHealth: 3
-  Health: 3
-  MaxShield: 8
-  Shield: 8
+  MaxHealth: 80
+  Health: 80
+  MaxShield: 40
+  Shield: 40
   GoldGiven: 30
   enemySpawner: {fileID: 0}
   gameManager: {fileID: 0}

@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+       
+    }
+
+    private void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("theme1");
     }
 
     private void LateUpdate()

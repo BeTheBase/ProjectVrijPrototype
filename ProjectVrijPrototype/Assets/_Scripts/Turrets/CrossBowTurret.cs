@@ -6,6 +6,7 @@ public class CrossBowTurret : Turret
 {
     public override void Shoot()
     {
+        FindObjectOfType<AudioManager>().Play("arrow");
         GameObject Arrow = objectPooler.SpawnFromPool("Arrow", FirePoint.position, transform.rotation);
         ArrowProjectile ArrowScript = Arrow.GetComponent<ArrowProjectile>();
         if (ArrowScript != null)

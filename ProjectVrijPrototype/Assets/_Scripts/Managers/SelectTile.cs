@@ -10,6 +10,7 @@ public class SelectTile : MonoBehaviour
     public GameObject SelectedGameObject;
     public GameObject UISelectTowerPrefab;
     public GameObject UISelectUpgradePrefab;
+    public GameObject UISelectTornedo;
     private Camera _mainCamera;
     private GameObject currentTowerUI;
     public GameObject currentTowerInfo;
@@ -62,21 +63,33 @@ public class SelectTile : MonoBehaviour
             }
             foreach (SetTowerButton button in setTowerButtons)
             {
-                button.ResetButton();
+                if(button != null)
+                    button.ResetButton();
             }
             return;
         }
 
         if (SelectedGameObject.tag == "TowerTile")
         {
+            FindObjectOfType<AudioManager>().Play("TowerPlacement");
+
             if (UISelectTowerPrefab == null) return;
             UISelectTowerPrefab.SetActive(true);
             UISelectTowerPrefab.transform.SetParent(SelectedGameObject.transform);
             UISelectTowerPrefab.transform.position = SelectedGameObject.transform.position + new Vector3(0, 1f, 0);
         }
+        else if(SelectedGameObject.tag == "Tornedo")
+        {
+            FindObjectOfType<AudioManager>().Play("TowerPlacement");
+            if (UISelectTornedo == null) return;
+            UISelectTornedo.SetActive(true);
+            UISelectTowerPrefab.transform.SetParent(SelectedGameObject.transform);
+            
+        }
         else if(SelectedGameObject.tag == "Tower")
         {
-
+            FindObjectOfType<AudioManager>().Play("TowerPlacement");
+    
             UISelectTowerPrefab.SetActive(false);
             if (UISelectUpgradePrefab == null) return;
             if (!UpgradeTowerManager.CheckFillBarStatus) return;

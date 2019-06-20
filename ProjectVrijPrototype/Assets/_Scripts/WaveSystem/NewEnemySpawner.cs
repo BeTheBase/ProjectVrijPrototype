@@ -13,7 +13,7 @@ public class NewEnemySpawner : MonoBehaviour
     public static int waveIndex = 0;
 
     ObjectPooler objectPooler;
-    UIManager uIManager;
+    NewUIManager uIManager;
 
     private void Awake()
     {
@@ -23,7 +23,7 @@ public class NewEnemySpawner : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        uIManager = UIManager.Instance;
+        uIManager = NewUIManager.Instance;
         objectPooler = ObjectPooler.Instance;
     }
 
@@ -36,18 +36,16 @@ public class NewEnemySpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
 
-        for (int index = 0; index < EnemySpawners.Count; index++)
-        {
-            if (waveIndex < EnemySpawners[index].Waves.Length)
+        if (waveIndex < EnemySpawners[0].Waves.Length)
             {
-                Wave wave = EnemySpawners[index].Waves[waveIndex];
+                Wave wave = EnemySpawners[0].Waves[waveIndex];
                 StartCoroutine(SpawnAfterTime(wave.NextWaveTime));
 
                 waveIndex++;
 
                 for (int enemyType = 0; enemyType < wave.enemyAmounts.Count; enemyType++)
                 {
-                    EnemySpawners[index].enemiesToSpawn += wave.enemyAmounts[enemyType];
+                    EnemySpawners[0].enemiesToSpawn += wave.enemyAmounts[enemyType];
                 }
 
                 for (int enemyType = 0; enemyType < wave.enemyPrefabs.Count; enemyType++)
@@ -55,12 +53,33 @@ public class NewEnemySpawner : MonoBehaviour
                     for (int i = 0; i < wave.enemyAmounts[enemyType]; i++)
                     {
                         Spawn(wave.enemyPrefabs[enemyType].name);
-                        EnemySpawners[index].enemiesToSpawn--;
+                        EnemySpawners[0].enemiesToSpawn--;
                         yield return new WaitForSeconds(wave.spawnRate);
                     }
                 }
+          }
+
+        if (waveIndex < EnemySpawners[1].Waves.Length)
+        {
+            Wave wave = EnemySpawners[1].Waves[waveIndex];
+            StartCoroutine(SpawnAfterTime(wave.NextWaveTime));
+
+            for (int enemyType = 0; enemyType < wave.enemyAmounts.Count; enemyType++)
+            {
+                EnemySpawners[1].enemiesToSpawn += wave.enemyAmounts[enemyType];
+            }
+
+            for (int enemyType = 0; enemyType < wave.enemyPrefabs.Count; enemyType++)
+            {
+                for (int i = 0; i < wave.enemyAmounts[enemyType]; i++)
+                {
+                    Spawn(wave.enemyPrefabs[enemyType].name);
+                    EnemySpawners[1].enemiesToSpawn--;
+                    yield return new WaitForSeconds(wave.spawnRate);
+                }
             }
         }
+
     }
 
     IEnumerator SpawnAfterTime(float NextWaveTime)
