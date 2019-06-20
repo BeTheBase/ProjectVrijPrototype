@@ -8,6 +8,9 @@ public class SetTowerButton : MonoBehaviour
 {
     SelectTowerManager selectTowerManager;
     Button towerButton;
+    public GameObject TowerBlue;
+    public GameObject CurrentTowerBlue;
+    private SelectTile selectTile;
 
     private void Awake()
     {
@@ -17,6 +20,19 @@ public class SetTowerButton : MonoBehaviour
 
     public void Confirmation()
     {
+        selectTile = SelectTile.Instance;
+
+        if(selectTile.currentTowerBlue != null)
+        {
+            selectTile.currentTowerBlue.SetActive(false);
+        }
+        selectTile.currentTowerBlue = TowerBlue;
+        TowerBlue.transform.position = new Vector3(transform.parent.position.x, transform.parent.position.y -1f, transform.parent.position.z);
+        TowerBlue.SetActive(true);
+        print(selectTile);
+        selectTile.currentTowerBlue = TowerBlue;
+
+
         FindObjectOfType<AudioManager>().Play("TowerPlacement");
         //Disable previous checkmark
         if(selectTowerManager.currentCheckmark != null)
@@ -48,6 +64,10 @@ public class SetTowerButton : MonoBehaviour
         if (selectTowerManager.currentCheckmark != null)
         {
             selectTowerManager.currentCheckmark.SetActive(false);
+        }
+        if(CurrentTowerBlue != null)
+        {
+            CurrentTowerBlue.SetActive(false);
         }
     }
 }

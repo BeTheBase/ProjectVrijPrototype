@@ -19,7 +19,6 @@ public class SelectTowerManager : MonoBehaviour
     public GameObject currentTowerInfo;
     public Button currentButton;
 
-
     private void Awake()
     {
         Instance = this;
