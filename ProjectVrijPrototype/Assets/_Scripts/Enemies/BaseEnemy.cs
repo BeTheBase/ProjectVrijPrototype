@@ -126,9 +126,13 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    public void ApplyBurn(float ticks, float damage, float timeBetween)
+    public void ApplyBurn(float ticks, float damage, float timeBetween, string effect)
     {
         StartCoroutine(Burn(ticks, damage, timeBetween));
+        GameObject burnEffect = objectPooler.SpawnFromPool(effect, transform.position, transform.rotation);
+        DisableParticleSystem burnEffectScript = burnEffect.GetComponent<DisableParticleSystem>();
+        burnEffectScript.EffectDuration = ticks;
+        burnEffect.transform.SetParent(this.gameObject.transform);
     }
 
     private IEnumerator Burn(float burnTicks, float burnDamage, float timeBetween)
@@ -141,9 +145,13 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    public void ApplyIceSlow(float ticks, float damage, float timeBetween)
+    public void ApplyIceSlow(float ticks, float damage, float timeBetween, string effect)
     {
         StartCoroutine(IceSlow(ticks, damage, timeBetween));
+        GameObject slowEffect = objectPooler.SpawnFromPool(effect, transform.position, transform.rotation);
+        DisableParticleSystem slowEffectScript = slowEffect.GetComponent<DisableParticleSystem>();
+        slowEffectScript.EffectDuration = ticks;
+        slowEffect.transform.SetParent(this.gameObject.transform);
     }
 
     private IEnumerator IceSlow(float slowTicks, float slowDamage, float timeBetween)

@@ -72,7 +72,8 @@ public class ActiveAbilityHandler : MonoBehaviour
             strikeInstanceGameObject.GetComponent<SphereCollider>().radius = strikeData.AreaRange;
             lightningStrikeScript.StrikeDamage = strikeData.Damage;
             lightningStrikeScript.StrikeRange = strikeData.AreaRange;
-
+            if (strikeData.StrikeEffect != null)
+                lightningStrikeScript.StrikeEffect = strikeData.StrikeEffect;
         }
         CheckStrikeReadyImages[strikeIndex].fillAmount = 1f;
         StartCoroutine(WaitForCooldownBool(AllActiveSkillsData[strikeIndex].CoolDownTime, CheckStrikeReadyImages[strikeIndex], lightningStrikeReady));
@@ -89,7 +90,8 @@ public class ActiveAbilityHandler : MonoBehaviour
             strikeInstanceGameObject.GetComponent<SphereCollider>().radius = strikeData.AreaRange;
             iceStrike.StrikeDamage = strikeData.Damage;
             iceStrike.StrikeRange = strikeData.AreaRange;
-
+            if(strikeData.StrikeEffect != null)
+                iceStrike.StrikeEffect = strikeData.StrikeEffect;
         }
         CheckStrikeReadyImages[strikeIndex].fillAmount = 1f;
         StartCoroutine(WaitForCooldownBool(AllActiveSkillsData[strikeIndex].CoolDownTime, CheckStrikeReadyImages[strikeIndex], iceStrikeReady));
@@ -106,7 +108,8 @@ public class ActiveAbilityHandler : MonoBehaviour
             strikeInstanceGameObject.GetComponent<SphereCollider>().radius = strikeData.AreaRange;
             fireStrike.StrikeDamage = strikeData.Damage;
             fireStrike.StrikeRange = strikeData.AreaRange;
-
+            if (strikeData.StrikeEffect != null)
+                fireStrike.StrikeEffect = strikeData.StrikeEffect;
         }
         CheckStrikeReadyImages[strikeIndex].fillAmount = 1f;
         StartCoroutine(WaitForCooldownBool(AllActiveSkillsData[strikeIndex].CoolDownTime, CheckStrikeReadyImages[strikeIndex], fireStrikeReady));

@@ -60,6 +60,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StrikeDamage: 3
   StrikeRange: 20
+  StrikeEffect: {fileID: 766794181026996194, guid: 552a11aae96adea4fb90f2ba4ffc3d6a,
+    type: 3}
   TimeToWait: 7
   BurnTicksAmount: 3
   TimeBetweenTicks: 1.3

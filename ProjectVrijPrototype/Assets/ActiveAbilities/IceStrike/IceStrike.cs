@@ -5,7 +5,7 @@ using UnityEngine;
 public class IceStrike : StrikeBase
 {
     public float AreaRange;
-    public float TimeToWait = 1f;
+    public float TimeToWait;
     public float IceSlowCount = 3f;
     public float IceSlowDamage = 1f;
     public float TimeBetweenTicks = 1.3f;
@@ -31,7 +31,7 @@ public class IceStrike : StrikeBase
         if (other.gameObject.tag == "Enemy")
         {
             IsInRange = true;
-            other.GetComponent<BaseEnemy>().ApplyIceSlow(IceSlowCount, IceSlowDamage, TimeBetweenTicks);
+            other.GetComponent<BaseEnemy>().ApplyIceSlow(IceSlowCount, IceSlowDamage, TimeBetweenTicks, StrikeEffect.name);
         }
     }
 }

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class FireStrike : StrikeBase
 {
-    public float TimeToWait = 1f;
+    public float TimeToWait;
     public float BurnTicksAmount = 3f;
     public float TimeBetweenTicks = 1.3f;
+    
 
     private bool IsInRange = false;
 
@@ -29,7 +30,7 @@ public class FireStrike : StrikeBase
         if (other.gameObject.tag == "Enemy")
         {
             IsInRange = true;
-            other.GetComponent<BaseEnemy>().ApplyBurn(BurnTicksAmount, StrikeDamage, TimeBetweenTicks);
+            other.GetComponent<BaseEnemy>().ApplyBurn(BurnTicksAmount, StrikeDamage, TimeBetweenTicks, StrikeEffect.name);
         }
     }
 }

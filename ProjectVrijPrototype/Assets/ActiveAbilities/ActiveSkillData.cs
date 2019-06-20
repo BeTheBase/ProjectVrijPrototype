@@ -17,5 +17,7 @@ public class ActiveSkillData
     [SerializeField]
     public GameObject StrikeBluePrint;
     [SerializeField]
+    public GameObject StrikeEffect;
+    [SerializeField]
     public float CoolDownTime;
 }
