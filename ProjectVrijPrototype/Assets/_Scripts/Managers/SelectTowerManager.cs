@@ -34,7 +34,7 @@ public class SelectTowerManager : MonoBehaviour
 
     public void PlaceTower(int index)
     {
-        var towerCost = ReturnGoldCost(index);
+        int towerCost = ReturnGoldCost(index);
         if (!ContinueProgramm(towerCost)) return;
         parentGameObject = transform.parent.gameObject;
         if(parentGameObject.transform.childCount < 2 || !parentGameObject.transform.GetChild(1).gameObject.activeSelf)
@@ -52,7 +52,7 @@ public class SelectTowerManager : MonoBehaviour
 
     private int ReturnGoldCost(int _index)
     {
-        return towerDataManager.TowerDatas[_index].GoldCost;
+        return towerDataManager.TowerDatas[_index].GoldCost[0];
     }
 
     private bool ContinueProgramm(int _cost)

@@ -71,7 +71,6 @@ public class BombProjectile : BaseProjectile
     {
         print("boom");
         StartCoroutine(Explode());
-        hit = false;
     }
     
     IEnumerator Explode()
