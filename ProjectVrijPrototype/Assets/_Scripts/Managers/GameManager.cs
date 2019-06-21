@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public int Gold;
     public int Lives;
 
+    public float coinDropChance;
+
+
     private void Awake()
     {
         Instance = this;
@@ -23,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+
         FindObjectOfType<AudioManager>().Play("theme1");
     }
 

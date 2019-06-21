@@ -1642,6 +1642,108 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0c35781786270e64089c6d49ed343832, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5fbc5c03fb7ce4f90f27d5cfdf9cc8, type: 3}
+--- !u!1 &520861202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1810358250929829354, guid: a9c478139f42a6d428eff036a69660f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2100671746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &520861203
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520861202}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ec36d881443775843a19836a17d87cfd, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &568244790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,88 +2098,98 @@ MonoBehaviour:
   EnemySpawners:
   - Waves:
     - enemyPrefabs:
-      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      enemyAmounts: 14000000
+      - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
+      enemyAmounts: 0a000000
       spawnRate: 3
-      NextWaveTime: 60
+      NextWaveTime: 80
     - enemyPrefabs:
       - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
-      - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
-      enemyAmounts: 1400000005000000
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      enemyAmounts: 0800000003000000
+      spawnRate: 2.6
+      NextWaveTime: 83
+    - enemyPrefabs:
+      - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      enemyAmounts: 0a0000000600000002000000
       spawnRate: 3
       NextWaveTime: 90
     - enemyPrefabs:
+      - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
       - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
-      - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
-      enemyAmounts: 050000000200000001000000
-      spawnRate: 3
-      NextWaveTime: 120
-    - enemyPrefabs:
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
-      - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
-      enemyAmounts: 0a0000000200000003000000
+      enemyAmounts: 0a000000060000000300000002000000
       spawnRate: 3
-      NextWaveTime: 120
+      NextWaveTime: 146
     - enemyPrefabs:
-      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
-      - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
       - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
-      enemyAmounts: 1e000000050000000300000014000000
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
+      - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
+      enemyAmounts: 0600000005000000030000000100000001000000
       spawnRate: 3
       NextWaveTime: 120
     - enemyPrefabs:
+      - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
       - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
       - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
-      enemyAmounts: 0a00000014000000
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      enemyAmounts: 0a00000002000000050000000300000004000000
       spawnRate: 3
-      NextWaveTime: 120
+      NextWaveTime: 161
     Spawning: 1
     enemiesToSpawn: 0
     StartPosition: {fileID: 1907559446}
     EnemyPath: {fileID: 1159717632}
   - Waves:
     - enemyPrefabs:
-      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
       enemyAmounts: 0a000000
       spawnRate: 3
-      NextWaveTime: 60
+      NextWaveTime: 80
     - enemyPrefabs:
       - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
-      - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
-      enemyAmounts: 0500000002000000
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      enemyAmounts: 0800000003000000
       spawnRate: 3
+      NextWaveTime: 83
+    - enemyPrefabs:
+      - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      enemyAmounts: 0a0000000600000002000000
+      spawnRate: 2.6
       NextWaveTime: 90
     - enemyPrefabs:
       - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
       - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      enemyAmounts: 0a000000060000000300000002000000
+      spawnRate: 3
+      NextWaveTime: 146
+    - enemyPrefabs:
+      - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
       - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
-      enemyAmounts: 0a0000000300000001000000
+      - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
+      enemyAmounts: 0600000005000000030000000100000001000000
       spawnRate: 3
       NextWaveTime: 120
     - enemyPrefabs:
-      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
+      - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
       - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
-      enemyAmounts: 0a0000000500000002000000
-      spawnRate: 1
-      NextWaveTime: 120
-    - enemyPrefabs:
-      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
       - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
-      - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
-      enemyAmounts: 140000000500000002000000
-      spawnRate: 1
-      NextWaveTime: 120
-    - enemyPrefabs:
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
-      - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
-      enemyAmounts: 0a0000000a0000000a000000
-      spawnRate: 1
-      NextWaveTime: 120
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      enemyAmounts: 0a00000002000000050000000300000004000000
+      spawnRate: 3
+      NextWaveTime: 161
     Spawning: 1
     enemiesToSpawn: 0
     StartPosition: {fileID: 377353410}
@@ -2718,22 +2830,22 @@ PrefabInstance:
     - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
         type: 3}
       propertyPath: AllActiveSkillsData.Array.data[0].Damage
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
         type: 3}
       propertyPath: AllActiveSkillsData.Array.data[0].CoolDownTime
-      value: 3
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
         type: 3}
       propertyPath: AllActiveSkillsData.Array.data[1].CoolDownTime
-      value: 6
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
         type: 3}
       propertyPath: AllActiveSkillsData.Array.data[2].CoolDownTime
-      value: 7
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
         type: 3}
@@ -2760,7 +2872,7 @@ PrefabInstance:
     - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
         type: 3}
       propertyPath: AllActiveSkillsData.Array.data[1].AreaRange
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
         type: 3}
@@ -2770,7 +2882,7 @@ PrefabInstance:
     - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
         type: 3}
       propertyPath: AllActiveSkillsData.Array.data[2].Damage
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
         type: 3}
@@ -3610,6 +3722,11 @@ PrefabInstance:
       propertyPath: Gold
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380988, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: coinDropChance
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[0].TowerRanges.Array.size
@@ -3812,6 +3929,81 @@ PrefabInstance:
         type: 3}
       propertyPath: TowerDatas.Array.data[2].TowerFireRates.Array.data[2]
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].UpgradeGoldCost
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].GoldCost.Array.data[0]
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].GoldCost.Array.data[1]
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].GoldCost.Array.data[2]
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[1].GoldCost.Array.data[3]
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].GoldCost.Array.data[0]
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].GoldCost.Array.data[1]
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].GoldCost.Array.data[3]
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].GoldCost.Array.data[2]
+      value: 280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[2].UpgradeGoldCost
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].GoldCost.Array.data[0]
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].GoldCost.Array.data[1]
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].GoldCost.Array.data[2]
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].GoldCost.Array.data[3]
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
+        type: 3}
+      propertyPath: TowerDatas.Array.data[0].UpgradeGoldCost
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6526810247720380930, guid: 4df7691316f35f54fbce5cc612bef6b7, type: 3}
@@ -4552,6 +4744,13 @@ MonoBehaviour:
     SpacialSound: 0
     Loop: 0
     Source: {fileID: 0}
+  - name: TurretSpawn
+    Clip: {fileID: 8300000, guid: bfb92e3c0436a3945a7ccaf5f0ee4e28, type: 3}
+    Volume: 1
+    Pitch: 1
+    SpacialSound: 0
+    Loop: 0
+    Source: {fileID: 0}
 --- !u!4 &1562138754
 Transform:
   m_ObjectHideFlags: 0
@@ -4777,6 +4976,43 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4482394640869636717, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4482394640007829867, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8,
         type: 3}
       propertyPath: m_FontData.m_Alignment
@@ -4800,11 +5036,6 @@ PrefabInstance:
     - target: {fileID: 4482394640254318956, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8,
         type: 3}
       propertyPath: m_RaycastTarget
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4482394640869636717, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8,
-        type: 3}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4482394640321354084, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8,
@@ -5331,38 +5562,6 @@ PrefabInstance:
     - target: {fileID: 1786898634, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
-      propertyPath: m_Pivot.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 524522277, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
-      propertyPath: m_Pivot.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 524522276, guid: 7cd2e8c71b22ebd43a2e4aeee80bfcf8, type: 3}
       propertyPath: m_IsActive
@@ -6112,6 +6311,9 @@ MonoBehaviour:
   - tag: Coin
     prefab: {fileID: 1810358250929829354, guid: a9c478139f42a6d428eff036a69660f2,
       type: 3}
+    size: 100
+  - tag: Coin
+    prefab: {fileID: 110212, guid: beb58e505abad9f4295d4495539eb3a3, type: 3}
     size: 100
 --- !u!1 &1866661828
 GameObject:

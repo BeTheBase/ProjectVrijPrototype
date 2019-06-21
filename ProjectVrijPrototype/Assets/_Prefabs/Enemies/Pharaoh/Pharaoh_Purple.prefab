@@ -271,18 +271,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 4
   NextPoint: 0
-  MaxHealth: 15
-  Health: 15
+  MaxHealth: 25
+  Health: 25
   MaxShield: 0
   Shield: 0
-  GoldGiven: 3
+  GoldGiven: 4
   enemySpawner: {fileID: 0}
   gameManager: {fileID: 0}
   objectPooler: {fileID: 0}
   WavePath: {fileID: 0}
   IsSlowed: 0
   HasShield: 0
-  coinDropChance: 80
 --- !u!1 &6998841921056252343
 GameObject:
   m_ObjectHideFlags: 0

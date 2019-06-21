@@ -669,8 +669,8 @@ MonoBehaviour:
   NextPoint: 0
   MaxHealth: 80
   Health: 80
-  MaxShield: 40
-  Shield: 40
+  MaxShield: 60
+  Shield: 60
   GoldGiven: 30
   enemySpawner: {fileID: 0}
   gameManager: {fileID: 0}

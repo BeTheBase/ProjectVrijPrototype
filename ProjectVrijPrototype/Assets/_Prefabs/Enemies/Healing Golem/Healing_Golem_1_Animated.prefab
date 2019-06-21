@@ -679,8 +679,8 @@ MonoBehaviour:
   IsSlowed: 0
   HasShield: 0
   Range: 10
-  HealCooldown: 3
-  HealAmount: 3
+  HealCooldown: 6
+  HealAmount: 10
   Targets: []
 --- !u!54 &5691678084298939321
 Rigidbody:
