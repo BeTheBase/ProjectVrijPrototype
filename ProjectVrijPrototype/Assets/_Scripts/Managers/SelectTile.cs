@@ -31,7 +31,6 @@ public class SelectTile : MonoBehaviour
         setTowerButtons = new List<SetTowerButton>();
         for(int i = 0; i < UISelectTowerPrefab.transform.childCount; i++)
         {
-            print(i);
             setTowerButtons.Add(UISelectTowerPrefab.transform.GetChild(i).GetComponent<SetTowerButton>());
         }
         print(setTowerButtons.Count);
