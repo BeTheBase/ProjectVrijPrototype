@@ -27,6 +27,8 @@ public class BaseEnemy : MonoBehaviour
 
     public bool HasShield;
 
+    public float coinDropChance;
+
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -81,6 +83,7 @@ public class BaseEnemy : MonoBehaviour
     {
         objectPooler.SpawnFromPool("Blood", transform.position, Quaternion.identity);
         enemySpawner.EnemiesAlive--;
+        DropCoin();
         gameManager.Gold += GoldGiven;
         gameObject.SetActive(false);
     }
@@ -138,6 +141,15 @@ public class BaseEnemy : MonoBehaviour
             burnTicks--;
             TakeDamage(burnDamage);
             yield return new WaitForSeconds(timeBetween);
+        }
+    }
+
+    public void DropCoin()
+    {
+        float randomNumber = Random.Range(0,101);
+        if (randomNumber <= coinDropChance)
+        {
+            objectPooler.SpawnFromPool("Coin", transform.position, Quaternion.identity);
         }
     }
 }

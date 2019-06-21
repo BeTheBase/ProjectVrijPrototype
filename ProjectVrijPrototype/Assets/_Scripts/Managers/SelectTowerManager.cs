@@ -22,13 +22,17 @@ public class SelectTowerManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        gameObject.SetActive(false);
     }
 
     private void Start()
     {
         gameManager = GameManager.Instance;
         towerDataManager = TowerDataManager.Instance;
+        gameObject.SetActive(false);
+        for(int i = 0; i < TowerCostTextFields.Length; i++)
+        {
+            TowerCostTextFields[i].text = "" + towerDataManager.TowerDatas[i].GoldCost[0];
+        }
     }
 
     public void PlaceTower(int index)
