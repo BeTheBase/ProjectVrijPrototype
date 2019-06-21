@@ -11,7 +11,6 @@ public class NewUIManager : MonoBehaviour
     public Text GoldText;
     public Text LivesText;
     public Text WaveText;
-    public Text WaveTimerText;
     public Image TimerImage;
     public static NewUIManager Instance;
 
@@ -29,27 +28,30 @@ public class NewUIManager : MonoBehaviour
         gameManager = GameManager.Instance;
         enemySpawner = NewEnemySpawner.Instance;
 
-        GoldText.text = "Gold:" + gameManager.Gold;
-        LivesText.text = "Lives:" + gameManager.Lives;
-        WaveText.text = "Wave:" + NewEnemySpawner.waveIndex;
-        WaveTimerText.text = "Time:" + gameManager.Lives;
+        GoldText.text = "" + gameManager.Gold;
+        LivesText.text = "" + gameManager.Lives;
+        WaveText.text = "" + NewEnemySpawner.waveIndex;
+
+        CurrentTime = 0;
 
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        GoldText.text = "Gold:" + gameManager.Gold;
-        LivesText.text = "Lives:" + gameManager.Lives;
-        WaveText.text = "Wave:" + NewEnemySpawner.waveIndex + "/" + enemySpawner.EnemySpawners[0].Waves.Length;
-        if (CurrentTime >= 0)
+        GoldText.text = "" + gameManager.Gold;
+        LivesText.text = "" + gameManager.Lives;
+        WaveText.text = "" + NewEnemySpawner.waveIndex + "/" + enemySpawner.EnemySpawners[0].Waves.Length;
+        if (CurrentTime > 0)
         {
             CurrentTime -= Time.deltaTime;
         }
-        WaveTimerText.text = "Time:" + Mathf.RoundToInt(CurrentTime);
-        if (NewEnemySpawner.waveIndex < enemySpawner.EnemySpawners[0].Waves.Length)
+        if(NewEnemySpawner.waveIndex >= 1)
         {
-            TimerImage.fillAmount = CurrentTime / enemySpawner.EnemySpawners[0].Waves[NewEnemySpawner.waveIndex].NextWaveTime;
+            if (NewEnemySpawner.waveIndex < enemySpawner.EnemySpawners[0].Waves.Length)
+            {
+                TimerImage.fillAmount = CurrentTime / enemySpawner.EnemySpawners[0].Waves[NewEnemySpawner.waveIndex - 1].NextWaveTime;
+            }
         }
     }
 }

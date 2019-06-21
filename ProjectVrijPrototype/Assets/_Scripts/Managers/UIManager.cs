@@ -30,9 +30,9 @@ public class UIManager : MonoBehaviour
         gameManager = GameManager.Instance;
         enemySpawner = EnemySpawner.Instance;
 
-        GoldText.text = "Gold:" + gameManager.Gold;
-        LivesText.text = "Lives:" + gameManager.Lives;
-        WaveText.text = "Wave:" + EnemySpawner.waveIndex;
+        GoldText.text = "" + gameManager.Gold;
+        LivesText.text = "" + gameManager.Lives;
+        WaveText.text = "" + EnemySpawner.waveIndex;
         WaveTimerText.text = "Time:" + gameManager.Lives;
 
     }
@@ -40,9 +40,9 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        GoldText.text = "Gold:" + gameManager.Gold;
-        LivesText.text = "Lives:" + gameManager.Lives;
-        WaveText.text = "Wave:" + EnemySpawner.waveIndex + "/" + enemySpawner.Waves.Length;
+        GoldText.text = "" + gameManager.Gold;
+        LivesText.text = "" + gameManager.Lives;
+        WaveText.text = "" + EnemySpawner.waveIndex + "/" + enemySpawner.Waves.Length;
         if(CurrentTime >= 0)
         {
             CurrentTime -= Time.deltaTime;
