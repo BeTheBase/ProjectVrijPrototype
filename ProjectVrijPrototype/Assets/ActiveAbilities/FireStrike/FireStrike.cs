@@ -31,6 +31,7 @@ public class FireStrike : StrikeBase
             IsInRange = true;
             other.GetComponent<BaseEnemy>().ApplyBurn(BurnTicksAmount, StrikeDamage, TimeBetweenTicks, StrikeEffect.name);
             FireArea.SetActive(true);
+            GlowOrb.SetActive(false);
         }
     }
 }

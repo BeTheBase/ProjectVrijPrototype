@@ -34,6 +34,7 @@ public class IceStrike : StrikeBase
             IsInRange = true;
             other.GetComponent<BaseEnemy>().ApplyIceSlow(IceSlowCount, IceSlowDamage, TimeBetweenTicks, StrikeEffect.name, IceSlowMultiplier);
             FireArea.SetActive(true);
+            GlowOrb.SetActive(false);
         }
     }
 }
