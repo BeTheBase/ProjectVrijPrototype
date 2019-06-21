@@ -16,4 +16,8 @@ public class ActiveSkillData
     public bool IsReady;
     [SerializeField]
     public GameObject StrikeBluePrint;
+    [SerializeField]
+    public GameObject StrikeEffect;
+    [SerializeField]
+    public float CoolDownTime;
 }

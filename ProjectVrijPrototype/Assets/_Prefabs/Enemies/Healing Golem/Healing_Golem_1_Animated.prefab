@@ -678,7 +678,7 @@ MonoBehaviour:
   WavePath: {fileID: 0}
   IsSlowed: 0
   HasShield: 0
-  Range: 25
+  Range: 10
   HealCooldown: 3
   HealAmount: 3
   Targets: []
