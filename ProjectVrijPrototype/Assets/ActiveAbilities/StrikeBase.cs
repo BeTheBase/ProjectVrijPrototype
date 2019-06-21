@@ -7,6 +7,7 @@ public class StrikeBase : MonoBehaviour
     public float StrikeDamage = 3f;
     public float StrikeRange = 20f;
     public GameObject StrikeEffect;
+    public GameObject FireArea;
 
     public IEnumerator Deactivate(float time)
     {

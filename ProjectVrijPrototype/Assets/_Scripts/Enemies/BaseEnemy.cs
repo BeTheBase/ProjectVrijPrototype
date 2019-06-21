@@ -129,7 +129,7 @@ public class BaseEnemy : MonoBehaviour
     public void ApplyBurn(float ticks, float damage, float timeBetween, string effect)
     {
         StartCoroutine(Burn(ticks, damage, timeBetween));
-        GameObject burnEffect = objectPooler.SpawnFromPool(effect, transform.position, transform.rotation);
+        GameObject burnEffect = objectPooler.SpawnFromPool(effect, transform.position, Quaternion.identity);
         DisableParticleSystem burnEffectScript = burnEffect.GetComponent<DisableParticleSystem>();
         burnEffectScript.EffectDuration = ticks;
         burnEffect.transform.SetParent(this.gameObject.transform);
@@ -145,22 +145,22 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    public void ApplyIceSlow(float ticks, float damage, float timeBetween, string effect)
+    public void ApplyIceSlow(float ticks, float damage, float timeBetween, string effect, float slowMultiplier)
     {
-        StartCoroutine(IceSlow(ticks, damage, timeBetween));
-        GameObject slowEffect = objectPooler.SpawnFromPool(effect, transform.position, transform.rotation);
+        StartCoroutine(IceSlow(ticks, damage, timeBetween, slowMultiplier));
+        GameObject slowEffect = objectPooler.SpawnFromPool(effect, transform.position, Quaternion.identity);
         DisableParticleSystem slowEffectScript = slowEffect.GetComponent<DisableParticleSystem>();
         slowEffectScript.EffectDuration = ticks;
         slowEffect.transform.SetParent(this.gameObject.transform);
     }
 
-    private IEnumerator IceSlow(float slowTicks, float slowDamage, float timeBetween)
+    private IEnumerator IceSlow(float slowTicks, float slowDamage, float timeBetween, float slowMultiplier)
     {
         while (slowTicks > 0)
         {
             slowTicks--;
             TakeDamage(slowDamage);
-            StartCoroutine(Slow(-slowTicks, slowTicks));
+            StartCoroutine(Slow(slowMultiplier, slowTicks));
             yield return new WaitForSeconds(timeBetween);
         }
     }

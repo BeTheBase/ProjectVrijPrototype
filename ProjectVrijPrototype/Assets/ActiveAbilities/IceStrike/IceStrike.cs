@@ -6,9 +6,10 @@ public class IceStrike : StrikeBase
 {
     public float AreaRange;
     public float TimeToWait;
-    public float IceSlowCount = 3f;
-    public float IceSlowDamage = 1f;
-    public float TimeBetweenTicks = 1.3f;
+    public float IceSlowCount;
+    public float IceSlowDamage;
+    public float TimeBetweenTicks;
+    public float IceSlowMultiplier;
 
     private bool IsInRange = false;
 
@@ -31,7 +32,8 @@ public class IceStrike : StrikeBase
         if (other.gameObject.tag == "Enemy")
         {
             IsInRange = true;
-            other.GetComponent<BaseEnemy>().ApplyIceSlow(IceSlowCount, IceSlowDamage, TimeBetweenTicks, StrikeEffect.name);
+            other.GetComponent<BaseEnemy>().ApplyIceSlow(IceSlowCount, IceSlowDamage, TimeBetweenTicks, StrikeEffect.name, IceSlowMultiplier);
+            FireArea.SetActive(true);
         }
     }
 }
