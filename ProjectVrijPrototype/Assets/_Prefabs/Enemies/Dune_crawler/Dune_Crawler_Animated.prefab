@@ -1333,20 +1333,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71061d69ad46fd43abe2935d9107444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4
+  Speed: 6
   NextPoint: 0
-  MaxHealth: 15
-  Health: 15
+  MaxHealth: 25
+  Health: 25
   MaxShield: 0
   Shield: 0
-  GoldGiven: 3
+  GoldGiven: 6
   enemySpawner: {fileID: 0}
   gameManager: {fileID: 0}
   objectPooler: {fileID: 0}
   WavePath: {fileID: 0}
   IsSlowed: 0
   HasShield: 0
-  coinDropChance: 50
 --- !u!1 &8113347069703697784
 GameObject:
   m_ObjectHideFlags: 0

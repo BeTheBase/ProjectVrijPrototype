@@ -667,8 +667,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 2
   NextPoint: 0
-  MaxHealth: 70
-  Health: 70
+  MaxHealth: 80
+  Health: 80
   MaxShield: 0
   Shield: 0
   GoldGiven: 7

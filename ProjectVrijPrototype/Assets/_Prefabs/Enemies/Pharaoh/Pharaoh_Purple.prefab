@@ -271,11 +271,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 4
   NextPoint: 0
-  MaxHealth: 15
-  Health: 15
+  MaxHealth: 25
+  Health: 25
   MaxShield: 0
   Shield: 0
-  GoldGiven: 3
+  GoldGiven: 4
   enemySpawner: {fileID: 0}
   gameManager: {fileID: 0}
   objectPooler: {fileID: 0}

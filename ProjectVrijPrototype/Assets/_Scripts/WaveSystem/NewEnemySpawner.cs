@@ -36,10 +36,11 @@ public class NewEnemySpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
 
+        StartCoroutine(SpawnAfterTime(EnemySpawners[0].Waves[0].NextWaveTime));
+
         if (waveIndex < EnemySpawners[0].Waves.Length)
             {
                 Wave wave = EnemySpawners[0].Waves[waveIndex];
-                StartCoroutine(SpawnAfterTime(wave.NextWaveTime));
 
                 waveIndex++;
 
@@ -62,7 +63,6 @@ public class NewEnemySpawner : MonoBehaviour
         if (waveIndex < EnemySpawners[1].Waves.Length)
         {
             Wave wave = EnemySpawners[1].Waves[waveIndex];
-            StartCoroutine(SpawnAfterTime(wave.NextWaveTime));
 
             for (int enemyType = 0; enemyType < wave.enemyAmounts.Count; enemyType++)
             {
@@ -78,7 +78,7 @@ public class NewEnemySpawner : MonoBehaviour
                     yield return new WaitForSeconds(wave.spawnRate);
                 }
             }
-        }
+        }        
 
     }
 

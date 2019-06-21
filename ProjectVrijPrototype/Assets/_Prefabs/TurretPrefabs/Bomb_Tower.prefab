@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 6435262008806598678}
   - component: {fileID: 4508711076454027492}
   - component: {fileID: 5937671051683078047}
+  - component: {fileID: 2001931528087247993}
   m_Layer: 0
   m_Name: Bomb_Tower
   m_TagString: Tower
@@ -103,6 +104,102 @@ MonoBehaviour:
   HasFireDelay: 0
   TowerUI: {fileID: 8737756621699539262}
   TowerBlue: {fileID: 0}
+--- !u!82 &2001931528087247993
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4219267441123661209}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0e0b7d8df6cb4ab4884f6ad2d4e8762b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &2561551272573026765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -536,6 +633,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6435262008806598678}
     m_Modifications:
+    - target: {fileID: 4813211172337448162, guid: 956dcadefdd548f43a5602cf53d70744,
+        type: 3}
+      propertyPath: m_Name
+      value: bomb_tower_lvl_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813211172337448162, guid: 956dcadefdd548f43a5602cf53d70744,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4813211172337281218, guid: 956dcadefdd548f43a5602cf53d70744,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -605,16 +712,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813211172337448162, guid: 956dcadefdd548f43a5602cf53d70744,
-        type: 3}
-      propertyPath: m_Name
-      value: bomb_tower_lvl_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813211172337448162, guid: 956dcadefdd548f43a5602cf53d70744,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 956dcadefdd548f43a5602cf53d70744, type: 3}

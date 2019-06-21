@@ -27,8 +27,6 @@ public class BaseEnemy : MonoBehaviour
 
     public bool HasShield;
 
-    public float coinDropChance;
-
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -171,7 +169,7 @@ public class BaseEnemy : MonoBehaviour
     public void DropCoin()
     {
         float randomNumber = Random.Range(0,101);
-        if (randomNumber <= coinDropChance)
+        if (randomNumber <= gameManager.coinDropChance)
         {
             objectPooler.SpawnFromPool("Coin", transform.position, Quaternion.identity);
         }
