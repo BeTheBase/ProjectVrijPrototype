@@ -13,6 +13,7 @@ public class FireStrike : StrikeBase
     private void Start()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z);
+        FireArea.SetActive(false);
     }
 
     private void LateUpdate()

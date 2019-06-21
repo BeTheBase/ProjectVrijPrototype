@@ -148,7 +148,12 @@ public class ActiveAbilityHandler : MonoBehaviour
                 return;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
+        {
+            showBluePrint = false;
+            BluePrint.SetActive(false);
+        }
+        else if (Input.GetMouseButtonDown(0))
         {
             if (BluePrint == null) BluePrint = new GameObject();
 
