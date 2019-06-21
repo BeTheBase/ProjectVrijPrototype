@@ -44,8 +44,8 @@ public class UpgradeTowerManager : MonoBehaviour
             goldCost = upgradeTowerData.UpgradeGoldCost;
         else
             goldCost = 90;
-        UpgradeCostTextField.text = "Upgrade Cost:" + goldCost;
-        DeleteMoneyBackTextField.text = "Delete/Money Back:" + goldCost / 2;
+        UpgradeCostTextField.text = "" + goldCost;
+        DeleteMoneyBackTextField.text = "+" + goldCost / 2;
 
         for (int childIndex = 0; childIndex < tower.transform.childCount; childIndex++)
         {

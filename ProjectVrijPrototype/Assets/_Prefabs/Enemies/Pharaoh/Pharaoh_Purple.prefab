@@ -282,6 +282,7 @@ MonoBehaviour:
   WavePath: {fileID: 0}
   IsSlowed: 0
   HasShield: 0
+  coinDropChance: 80
 --- !u!1 &6998841921056252343
 GameObject:
   m_ObjectHideFlags: 0
