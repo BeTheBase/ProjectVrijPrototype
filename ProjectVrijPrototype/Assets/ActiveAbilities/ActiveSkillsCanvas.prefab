@@ -118,23 +118,35 @@ MonoBehaviour:
   - {fileID: 5546710960824892708}
   - {fileID: 5546710961690152853}
   AllActiveSkillsData:
-  - name: LightningStrikeBaseMade
-    Effect: {fileID: 318754015362460602, guid: 78ad432b587a1b3438c10ca44207e3da, type: 3}
-    Damage: 50
+  - name: LightningStrikeFinal
+    Effect: {fileID: 1037219253158537949, guid: 8c5f4d4e7e0b0024dbc3bce6e9b7af1c,
+      type: 3}
+    Damage: 10
     AreaRange: 5
     IsReady: 0
-  - name: FireStrike
-    Effect: {fileID: 7173154967555423253, guid: d09795ae5f510ac4ca2591a593b31000,
+    StrikeBluePrint: {fileID: 0}
+    StrikeEffect: {fileID: 0}
+    CoolDownTime: 3
+  - name: IceStrikeFinal
+    Effect: {fileID: 2304097256435757098, guid: ef57de070772336498e2f59e18bf65d4,
       type: 3}
-    Damage: 30
-    AreaRange: 13
+    Damage: 1
+    AreaRange: 1
     IsReady: 0
-  - name: FireStrike
-    Effect: {fileID: 7173154967555423253, guid: d09795ae5f510ac4ca2591a593b31000,
+    StrikeBluePrint: {fileID: 0}
+    StrikeEffect: {fileID: 775753592031211319, guid: 552a11aae96adea4fb90f2ba4ffc3d6a,
       type: 3}
-    Damage: 30
-    AreaRange: 13
+    CoolDownTime: 6
+  - name: FireStrikeFinal
+    Effect: {fileID: 3035143097622690362, guid: b2143770a8402ea41b147c349bd85ef6,
+      type: 3}
+    Damage: 3
+    AreaRange: 1
     IsReady: 0
+    StrikeBluePrint: {fileID: 0}
+    StrikeEffect: {fileID: 9141633484960552856, guid: e37e554dc35ff2f41be557066146c631,
+      type: 3}
+    CoolDownTime: 7
   BluePrint: {fileID: 0}
 --- !u!1 &5546710960824408807
 GameObject:
@@ -165,7 +177,7 @@ RectTransform:
   m_GameObject: {fileID: 5546710960824408807}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 5546710961690152854}
   m_Father: {fileID: 5546710962072248934}
@@ -420,7 +432,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 186fe2b3a9e39e74eac465a9710a12a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26df6644ed7e78d4ba01f6795c24c3df, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -458,7 +470,7 @@ RectTransform:
   m_GameObject: {fileID: 5546710961188088519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 5546710960869225449}
   m_Father: {fileID: 5546710962072248934}
@@ -497,7 +509,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 186fe2b3a9e39e74eac465a9710a12a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26df6644ed7e78d4ba01f6795c24c3df, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -778,7 +790,7 @@ RectTransform:
   m_GameObject: {fileID: 5546710962144202881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 5546710960824892710}
   m_Father: {fileID: 5546710962072248934}
