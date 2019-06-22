@@ -5366,6 +5366,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1320848559}
+    - target: {fileID: 4029852828612058756, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,
+        type: 3}
+      propertyPath: m_Text
+      value: Mage Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023250321497076194, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,
+        type: 3}
+      propertyPath: m_Text
+      value: Bomb Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412647233951634907, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,
+        type: 3}
+      propertyPath: m_Text
+      value: Ground Targets
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
 --- !u!1 &1825037232 stripped
