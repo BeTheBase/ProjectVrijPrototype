@@ -255,7 +255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45702213}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 74.1, y: 0, z: -25.8}
+  m_LocalPosition: {x: 73.53, y: 0, z: -28.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1159717631}
@@ -285,7 +285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50783761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 130.9, y: 0, z: -66.8}
+  m_LocalPosition: {x: 133.35, y: 0, z: -66.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1159717631}
@@ -877,7 +877,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196509005}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 104.2, y: 0, z: -30.7}
+  m_LocalPosition: {x: 93.42, y: 0, z: -36.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1159717631}
@@ -1361,7 +1361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382651333}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 98.1, y: 0, z: -69.4}
+  m_LocalPosition: {x: 98.1, y: 0, z: -70.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1702894879}
@@ -1391,7 +1391,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430404999}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 137, y: 0, z: -43.7}
+  m_LocalPosition: {x: 136, y: 0, z: -43.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1702894879}
@@ -1904,7 +1904,7 @@ MonoBehaviour:
     - enemyPrefabs:
       - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      - {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
       enemyAmounts: 0a0000000600000002000000
       spawnRate: 2.6
       NextWaveTime: 90
@@ -1912,14 +1912,14 @@ MonoBehaviour:
       - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
       - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
-      - {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
       enemyAmounts: 0a000000060000000300000002000000
       spawnRate: 3
       NextWaveTime: 146
     - enemyPrefabs:
       - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      - {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
       - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
       - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
       enemyAmounts: 0600000005000000030000000100000001000000
@@ -1930,7 +1930,7 @@ MonoBehaviour:
       - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
       - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      - {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a, type: 3}
+      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
       enemyAmounts: 0a00000002000000050000000300000004000000
       spawnRate: 3
       NextWaveTime: 161
@@ -2098,7 +2098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732706683}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 166.1, y: 0, z: -64.8}
+  m_LocalPosition: {x: 164.97, y: 0, z: -71.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1159717631}
@@ -2252,7 +2252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759135064}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 195.2, y: 0, z: -40.1}
+  m_LocalPosition: {x: 195.2, y: 0, z: -40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1702894879}
@@ -3246,7 +3246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071012389}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 134.1, y: 0, z: -42.8}
+  m_LocalPosition: {x: 129.28, y: 0, z: -42.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1159717631}
@@ -3535,7 +3535,7 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].TowerFireRates.Array.data[0]
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -3545,7 +3545,7 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[2].TowerDamages.Array.data[0]
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -3600,22 +3600,22 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].TowerDamages.Array.data[1]
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].TowerDamages.Array.data[2]
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].TowerFireRates.Array.data[1]
-      value: 0.8
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].TowerFireRates.Array.data[2]
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -3630,12 +3630,12 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[2].TowerDamages.Array.data[1]
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[2].TowerDamages.Array.data[2]
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -4035,7 +4035,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447130624}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 117, y: 0, z: -31.1}
+  m_LocalPosition: {x: 108.3, y: 0, z: -29.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1159717631}
@@ -5084,7 +5084,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712886806}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 152.1, y: 0, z: -75.1}
+  m_LocalPosition: {x: 142.93, y: 0, z: -76.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1159717631}
@@ -5120,7 +5120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743738115}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 204.8, y: 0, z: -35.4}
+  m_LocalPosition: {x: 205.4, y: 0, z: -35.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1159717631}
@@ -5342,7 +5342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828388215}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 170.4, y: 0, z: -51.5}
+  m_LocalPosition: {x: 172.2, y: 0, z: -53.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1159717631}
@@ -5416,7 +5416,7 @@ MonoBehaviour:
     size: 100
   - tag: Explosion
     prefab: {fileID: 1025285306637258, guid: 3c6137df55413d143991030d16c857df, type: 3}
-    size: 100
+    size: 1000
   - tag: Blood
     prefab: {fileID: 4384990470017186315, guid: 7c15c281ffbc22040ad50b7c0a336cba,
       type: 3}
@@ -5476,7 +5476,7 @@ MonoBehaviour:
     prefab: {fileID: 3860781706545748440, guid: 71f6d86f087a82942b0a7508b4c4f75e,
       type: 3}
     size: 100
-  - tag: Flyer
+  - tag: Flyer_Animated_V2
     prefab: {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a,
       type: 3}
     size: 100
@@ -5953,7 +5953,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918824677}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 194.47, y: 13.2, z: -52.89}
+  m_LocalPosition: {x: 189.4, y: 0, z: -45.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1159717631}
@@ -6384,7 +6384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074997917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 160.2, y: 0, z: -42.2}
+  m_LocalPosition: {x: 156.3, y: 0, z: -40.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1702894879}
@@ -6637,7 +6637,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129750292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 80.2, y: 0, z: -93.4}
+  m_LocalPosition: {x: 78.37, y: 0, z: -96.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1702894879}

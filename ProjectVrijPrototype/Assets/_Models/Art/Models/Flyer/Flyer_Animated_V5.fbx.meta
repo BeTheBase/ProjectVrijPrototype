@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f3b57f0fc87002d44bf06a2b8e211f84
+guid: 13fa45ce3adf4ad49b8fbc5d9b5e90d7
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -75,8 +75,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Default Take
       takeName: Default Take
-      firstFrame: 2
-      lastFrame: 826
+      firstFrame: 1
+      lastFrame: 26
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -180,7 +180,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
+    previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
