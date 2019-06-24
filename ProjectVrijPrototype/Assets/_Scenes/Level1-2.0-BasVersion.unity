@@ -5366,20 +5366,31 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1320848559}
-    - target: {fileID: 4029852828612058756, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,
+    - target: {fileID: 3081632701454742358, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,
         type: 3}
-      propertyPath: m_Text
-      value: Mage Tower
+      propertyPath: Speed
+      value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 4023250321497076194, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,
+    - target: {fileID: 3081632701454742357, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,
         type: 3}
-      propertyPath: m_Text
-      value: Bomb Tower
+      propertyPath: m_Name
+      value: NotEnough
       objectReference: {fileID: 0}
-    - target: {fileID: 1412647233951634907, guid: e7dca6a6a2ac0fb42a2b35e273455c2f,
-        type: 3}
-      propertyPath: m_Text
-      value: Ground Targets
+    - target: {fileID: 1825037241, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825037240, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825037239, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825037239, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7dca6a6a2ac0fb42a2b35e273455c2f, type: 3}
@@ -5542,6 +5553,10 @@ MonoBehaviour:
     size: 100
   - tag: Coin
     prefab: {fileID: 110212, guid: beb58e505abad9f4295d4495539eb3a3, type: 3}
+    size: 100
+  - tag: NotEnough
+    prefab: {fileID: 3860781706545748440, guid: 71f6d86f087a82942b0a7508b4c4f75e,
+      type: 3}
     size: 100
 --- !u!1 &1866661828
 GameObject:

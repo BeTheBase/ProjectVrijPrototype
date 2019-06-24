@@ -3060,6 +3060,11 @@ PrefabInstance:
       propertyPath: Index
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5039687215210285849, guid: 29424dfb1df303a469daf243279491fc,
+        type: 3}
+      propertyPath: m_Text
+      value: Mage Tower
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29424dfb1df303a469daf243279491fc, type: 3}
 --- !u!224 &4683199167853455323 stripped
@@ -3190,15 +3195,25 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7117553507584921696, guid: 29424dfb1df303a469daf243279491fc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -25
+      objectReference: {fileID: 0}
     - target: {fileID: 3666609377288581707, guid: 29424dfb1df303a469daf243279491fc,
         type: 3}
       propertyPath: Index
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7117553507584921696, guid: 29424dfb1df303a469daf243279491fc,
+    - target: {fileID: 7043452965255966496, guid: 29424dfb1df303a469daf243279491fc,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -25
+      propertyPath: m_Text
+      value: Ground Targets
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039687215210285849, guid: 29424dfb1df303a469daf243279491fc,
+        type: 3}
+      propertyPath: m_Text
+      value: Bomb Tower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29424dfb1df303a469daf243279491fc, type: 3}
