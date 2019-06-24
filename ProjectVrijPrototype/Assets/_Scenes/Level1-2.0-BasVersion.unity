@@ -1014,92 +1014,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1256447881, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256447881, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256447881, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256447881, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 455477282, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1320848559}
-    - target: {fileID: 191585061, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 191585063, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_Value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 191585062, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 265354241, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 265354241, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -16
-      objectReference: {fileID: 0}
-    - target: {fileID: 265354241, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 265354241, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -10.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 481454321, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 29896942b2013274ebc952318e98c055,
-        type: 3}
-    - target: {fileID: 481454321, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 481454321, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256447882, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7574a5e668e80e54097c56e860068eab,
-        type: 3}
-    - target: {fileID: 1256447882, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256447882, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256447882, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256447882, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256447882, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55cf7a36229ebe24b87dcaeddaaa852e, type: 3}
 --- !u!1 &230488773 stripped
@@ -4510,7 +4428,7 @@ MonoBehaviour:
     Source: {fileID: 0}
   - name: explosion
     Clip: {fileID: 8300000, guid: c4c159e5f202eea42a7c3e81161af519, type: 3}
-    Volume: 0.5
+    Volume: 0.3
     Pitch: 1
     SpacialSound: 0
     Loop: 0
