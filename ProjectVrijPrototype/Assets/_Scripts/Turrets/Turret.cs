@@ -84,10 +84,7 @@ public class Turret : MonoBehaviour
             Shoot();
             FireCooldown = 1 / FireRate;
         }
-        if(!HasFireDelay)
-        {
-            transform.LookAt(Target);
-        }
+
     }
 
     public virtual void Shoot()

@@ -23,8 +23,8 @@ public class UpgradeTowerManager : MonoBehaviour
 
     private void Awake()
     {
-        upgradeChildButton = transform.GetChild(0);
-        deleteChildButton = transform.GetChild(1);
+        upgradeChildButton = transform.GetChild(1);
+        deleteChildButton = transform.GetChild(2);
         gameObject.SetActive(false);
     }
 
@@ -56,11 +56,16 @@ public class UpgradeTowerManager : MonoBehaviour
             transform.position += Vector3.up*4;
             return;
         }
-        
         if (tower.transform.GetChild(3).gameObject.activeSelf)
+        {
+            print(upgradeChildButton.gameObject);
+
             upgradeChildButton.gameObject.SetActive(false);
+        }
         else
+        {
             upgradeChildButton.gameObject.SetActive(true);
+        }
     }
 
     public void UpgradeTower()
@@ -68,11 +73,12 @@ public class UpgradeTowerManager : MonoBehaviour
         if (gameManager.Gold <= (int)goldCost) return;
         gameManager.Gold -= (int)goldCost;
         var towerTurretScript =  tower.GetComponent<Turret>();
-        towerTurretScript.TowerLevel += 1;
         var towerLevel = towerTurretScript.TowerLevel;
         towerTurretScript.Damage = upgradeTowerData.TowerDamages[towerLevel-1];
         towerTurretScript.Range = upgradeTowerData.TowerRanges[towerLevel-1];
         towerTurretScript.FireRate = upgradeTowerData.TowerFireRates[towerLevel-1];
+        towerTurretScript.TowerLevel += 1;
+
         StartCoroutine(WaitForLoadingBar());
     }
 
@@ -94,6 +100,7 @@ public class UpgradeTowerManager : MonoBehaviour
     {
         tower.GetComponent<Turret>().enabled = false;
 
+        LoadingSlider.gameObject.SetActive(true);
 
         /*
         switch(tower.transform.childCount)
@@ -152,6 +159,8 @@ public class UpgradeTowerManager : MonoBehaviour
             transform.GetChild(1).gameObject.SetActive(true);
             getChildUI.gameObject.SetActive(false);
         }
+
+        LoadingSlider.gameObject.SetActive(false);    
 
         tower.GetComponent<Turret>().enabled = true;
 

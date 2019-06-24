@@ -18,9 +18,11 @@ public class SelectTowerManager : MonoBehaviour
     public GameObject currentCheckmark;
     public GameObject currentTowerInfo;
     public Button currentButton;
+    ObjectPooler objectPooler;
 
     private void Awake()
     {
+        objectPooler = ObjectPooler.Instance;
         Instance = this;
     }
 
@@ -38,7 +40,12 @@ public class SelectTowerManager : MonoBehaviour
     public void PlaceTower(int index)
     {
         int towerCost = ReturnGoldCost(index);
-        if (!ContinueProgramm(towerCost)) return;
+        if (!ContinueProgramm(towerCost))
+        {
+            GameObject text = objectPooler.SpawnFromPool("NotEnough", transform.position, transform.rotation);
+            text.transform.parent = transform;
+            return;
+        }
         parentGameObject = transform.parent.gameObject;
         if(parentGameObject.transform.childCount < 2 || !parentGameObject.transform.GetChild(1).gameObject.activeSelf)
         {      
@@ -51,6 +58,7 @@ public class SelectTowerManager : MonoBehaviour
             towerTurretScript.Range = towerDataManager.TowerDatas[index].TowerRanges[0];
             towerTurretScript.FireRate = towerDataManager.TowerDatas[index].TowerFireRates[0];
         }
+        gameObject.SetActive(false);
     }
 
     private int ReturnGoldCost(int _index)
@@ -61,7 +69,9 @@ public class SelectTowerManager : MonoBehaviour
     private bool ContinueProgramm(int _cost)
     {
         if (gameManager.Gold < _cost)
+        {
             return false;
+        }
         else
             return true;
     }
