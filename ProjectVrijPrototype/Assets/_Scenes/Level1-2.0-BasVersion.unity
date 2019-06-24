@@ -4510,7 +4510,7 @@ MonoBehaviour:
     Source: {fileID: 0}
   - name: explosion
     Clip: {fileID: 8300000, guid: c4c159e5f202eea42a7c3e81161af519, type: 3}
-    Volume: 0.6
+    Volume: 0.5
     Pitch: 1
     SpacialSound: 0
     Loop: 0
