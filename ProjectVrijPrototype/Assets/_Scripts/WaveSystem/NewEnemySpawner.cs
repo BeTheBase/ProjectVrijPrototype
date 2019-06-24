@@ -79,7 +79,6 @@ public class NewEnemySpawner : MonoBehaviour
                 }
             }
         }        
-
     }
 
     IEnumerator SpawnAfterTime(float NextWaveTime)
