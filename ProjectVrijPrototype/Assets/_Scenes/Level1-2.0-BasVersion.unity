@@ -1855,7 +1855,7 @@ MonoBehaviour:
     - enemyPrefabs:
       - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a, type: 3}
       enemyAmounts: 0a0000000600000002000000
       spawnRate: 3
       NextWaveTime: 90
@@ -1863,14 +1863,14 @@ MonoBehaviour:
       - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
       - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
-      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a, type: 3}
       enemyAmounts: 0a000000060000000300000002000000
       spawnRate: 3
       NextWaveTime: 146
     - enemyPrefabs:
       - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a, type: 3}
       - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
       - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
       enemyAmounts: 0600000005000000030000000100000001000000
@@ -1881,7 +1881,7 @@ MonoBehaviour:
       - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
       - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a, type: 3}
       enemyAmounts: 0a00000002000000050000000300000004000000
       spawnRate: 3
       NextWaveTime: 161
@@ -1904,7 +1904,7 @@ MonoBehaviour:
     - enemyPrefabs:
       - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a, type: 3}
       enemyAmounts: 0a0000000600000002000000
       spawnRate: 2.6
       NextWaveTime: 90
@@ -1912,14 +1912,14 @@ MonoBehaviour:
       - {fileID: 6998841921056252341, guid: 78285cd78e25a314194f06ad34092bd8, type: 3}
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
       - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
-      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a, type: 3}
       enemyAmounts: 0a000000060000000300000002000000
       spawnRate: 3
       NextWaveTime: 146
     - enemyPrefabs:
       - {fileID: 1465958684, guid: 47cb28c8b9b88ed488b2597c9fa7f35f, type: 3}
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a, type: 3}
       - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
       - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
       enemyAmounts: 0600000005000000030000000100000001000000
@@ -1930,7 +1930,7 @@ MonoBehaviour:
       - {fileID: 1465958684, guid: aa9be0573ac7a1d4fa7cdeeba19226e3, type: 3}
       - {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
       - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
-      - {fileID: 8113347069703697778, guid: 67c5c3899dda9104b8dbf6dafb0b4766, type: 3}
+      - {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a, type: 3}
       enemyAmounts: 0a00000002000000050000000300000004000000
       spawnRate: 3
       NextWaveTime: 161
@@ -3530,7 +3530,7 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].TowerDamages.Array.data[0]
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -3545,7 +3545,7 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[2].TowerDamages.Array.data[0]
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -3600,12 +3600,12 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].TowerDamages.Array.data[1]
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].TowerDamages.Array.data[2]
-      value: 15
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -3630,12 +3630,12 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[2].TowerDamages.Array.data[1]
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[2].TowerDamages.Array.data[2]
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -5474,6 +5474,10 @@ MonoBehaviour:
     size: 100
   - tag: NotEnough
     prefab: {fileID: 3860781706545748440, guid: 71f6d86f087a82942b0a7508b4c4f75e,
+      type: 3}
+    size: 100
+  - tag: Flyer
+    prefab: {fileID: 4031772628989176337, guid: db2ca3fb8997bad43a5603b5b5a5672a,
       type: 3}
     size: 100
 --- !u!1 &1866661828
