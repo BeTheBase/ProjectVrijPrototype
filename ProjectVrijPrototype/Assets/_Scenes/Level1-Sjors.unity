@@ -4020,7 +4020,7 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[0].TowerDamages.Array.data[0]
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -4070,12 +4070,12 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[0].TowerDamages.Array.data[1]
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[0].TowerDamages.Array.data[2]
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -4105,12 +4105,12 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].TowerDamages.Array.data[1]
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].TowerDamages.Array.data[2]
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -4165,17 +4165,17 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].GoldCost.Array.data[1]
-      value: 180
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].GoldCost.Array.data[2]
-      value: 230
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].GoldCost.Array.data[3]
-      value: 250
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -7153,7 +7153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2d59d558489524bab9a8ebcd33dd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GoldCost: 300
+  GoldCost: 100
   UpgradeCosts: 2c01000090010000f4010000
   SandStorm: {fileID: 1096161630}
   UpgradeText: {fileID: 568244793}
