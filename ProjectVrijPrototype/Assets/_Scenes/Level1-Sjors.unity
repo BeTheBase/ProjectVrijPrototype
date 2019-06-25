@@ -2815,6 +2815,26 @@ PrefabInstance:
       propertyPath: AllActiveSkillsData.Array.data[2].StrikeBluePrint
       value: 
       objectReference: {fileID: 63114911}
+    - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
+        type: 3}
+      propertyPath: AllActiveSkillsData.Array.data[1].CoolDownTime
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
+        type: 3}
+      propertyPath: AllActiveSkillsData.Array.data[2].CoolDownTime
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
+        type: 3}
+      propertyPath: AllActiveSkillsData.Array.data[0].CoolDownTime
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
+        type: 3}
+      propertyPath: AllActiveSkillsData.Array.data[0].Damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5546710960188934759, guid: b9343de9f78dea249a3d12570db8727b,
         type: 3}
       propertyPath: m_LocalPosition.x
