@@ -20,19 +20,19 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
-       
+        Instance = this;    
     }
 
     private void Start()
     {
-
         FindObjectOfType<AudioManager>().Play("theme1");
     }
 
     private void LateUpdate()
     {
-        if(Lives <= 0)
-            SceneManager.LoadSceneAsync(0);
+        if (Lives <= 0)
+        {
+            SceneManager.LoadSceneAsync(1);
+        }
     }
 }
