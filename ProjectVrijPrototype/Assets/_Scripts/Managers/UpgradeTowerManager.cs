@@ -85,8 +85,10 @@ public class UpgradeTowerManager : MonoBehaviour
     public void DeleteTower()
     {
         gameManager.Gold += (int)goldCost / 2;
-        tower.SetActive(false);
+        //tower.SetActive(false);
         tower.transform.parent.GetComponent<CapsuleCollider>().enabled = true;
+        this.gameObject.transform.SetParent(null);
+        Destroy(tower.gameObject);
         this.gameObject.SetActive(false);
     }
 

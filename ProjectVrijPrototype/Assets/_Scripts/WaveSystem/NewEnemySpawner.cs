@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NewEnemySpawner : MonoBehaviour
 {
     public static NewEnemySpawner Instance;
-
+    public GameObject Popup;
+    public float PopupTime = 5f;
     public List<EnemySpawnData> EnemySpawners;
     [HideInInspector]
     public int EnemiesAlive = 0;
@@ -29,6 +31,8 @@ public class NewEnemySpawner : MonoBehaviour
 
     public void NextWave()
     {
+        Popup.SetActive(true);
+        StartCoroutine(Deactivate(PopupTime));
         StartCoroutine(SpawnWave());
     }
 
@@ -79,7 +83,16 @@ public class NewEnemySpawner : MonoBehaviour
                 }
             }
         }        
+    }
 
+    IEnumerator Deactivate(float time)
+    {
+        Popup.transform.GetChild(1).GetComponent<Image>().CrossFadeAlpha(0, time, true);
+        Popup.transform.GetChild(2).GetComponent<Image>().CrossFadeAlpha(0, time, true);
+        Popup.transform.GetChild(2).GetChild(0).GetComponent<Text>().CrossFadeAlpha(0, time, true);
+        yield return new WaitForSeconds(time);
+
+        Popup.SetActive(false);
     }
 
     IEnumerator SpawnAfterTime(float NextWaveTime)
