@@ -2823,7 +2823,7 @@ PrefabInstance:
     - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
         type: 3}
       propertyPath: AllActiveSkillsData.Array.data[2].CoolDownTime
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5546710960188934756, guid: b9343de9f78dea249a3d12570db8727b,
         type: 3}
@@ -3610,12 +3610,12 @@ PrefabInstance:
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].TowerDamages.Array.data[1]
-      value: 6
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
       propertyPath: TowerDatas.Array.data[1].TowerDamages.Array.data[2]
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6526810247720380989, guid: 4df7691316f35f54fbce5cc612bef6b7,
         type: 3}
@@ -5710,7 +5710,7 @@ MonoBehaviour:
   - tag: BloodHit
     prefab: {fileID: 4384990470017186315, guid: 26c47ec6f5863994e9480d07d487e5a6,
       type: 3}
-    size: 100
+    size: 1000
   - tag: Shield Golem
     prefab: {fileID: 1465958684, guid: f5605a28b4c05374482c91be9feb0b1f, type: 3}
     size: 100
