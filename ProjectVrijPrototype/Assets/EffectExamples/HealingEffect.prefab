@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4000014129045996}
   - component: {fileID: 198000012368742472}
   - component: {fileID: 199000010504584546}
-  - component: {fileID: 2246564961841836700}
+  - component: {fileID: 1834229439133513577}
   m_Layer: 0
   m_Name: HealingEffect
   m_TagString: Untagged
@@ -4532,7 +4532,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &2246564961841836700
+--- !u!114 &1834229439133513577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4541,7 +4541,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011945391522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64c954d32dc6db6498290e43169fd5e9, type: 3}
+  m_Script: {fileID: 11500000, guid: cb8e6fedc0ec4c047b756fd73a51c91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EffectDuration: 5
