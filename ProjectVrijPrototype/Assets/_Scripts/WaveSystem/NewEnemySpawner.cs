@@ -27,6 +27,7 @@ public class NewEnemySpawner : MonoBehaviour
     {
         uIManager = NewUIManager.Instance;
         objectPooler = ObjectPooler.Instance;
+        waveIndex = 0;
     }
 
     public void NextWave()
