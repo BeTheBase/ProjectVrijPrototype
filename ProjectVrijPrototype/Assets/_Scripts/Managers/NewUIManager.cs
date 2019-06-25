@@ -12,6 +12,9 @@ public class NewUIManager : MonoBehaviour
     public Text LivesText;
     public Text WaveText;
     public Image TimerImage;
+
+    public GameObject PauseMenu;
+
     public static NewUIManager Instance;
 
     public float CurrentTime;
@@ -33,12 +36,16 @@ public class NewUIManager : MonoBehaviour
         WaveText.text = "" + NewEnemySpawner.waveIndex;
 
         CurrentTime = 0;
-
+        PauseMenu.SetActive(false);
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseMenu.SetActive(!PauseMenu.activeSelf);
+        }
         GoldText.text = "" + gameManager.Gold;
         LivesText.text = "" + gameManager.Lives;
         WaveText.text = "" + NewEnemySpawner.waveIndex + "/" + enemySpawner.EnemySpawners[0].Waves.Length;
